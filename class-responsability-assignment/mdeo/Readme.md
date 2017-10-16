@@ -10,5 +10,5 @@ Add the followind dependencies to the classpath:
 * org.eclipse.emf.ecore_2.13.0.jar
 * org.eclipse.emf.common_2.13.0.jar
 
-
+These jars of any other greater minor version should work without any issues.
 
