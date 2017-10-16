@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="con" path="org.eclipse.xtend.XTEND_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="xtend-gen"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/alxbrd/Desktop/eclipse/plugins/uk.ac.kcl.mdeoptimise_1.0.0.201710150050.jar"/>
+	<classpathentry kind="lib" path="/home/alxbrd/Desktop/eclipse/plugins/org.eclipse.emf.ecore_2.13.0.v20170609-0707.jar"/>
+	<classpathentry kind="lib" path="/home/alxbrd/Desktop/eclipse/plugins/org.eclipse.emf.common_2.13.0.v20170609-0707.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
