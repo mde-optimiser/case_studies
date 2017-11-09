@@ -10,7 +10,7 @@ abstract class AbstractModelQueryFitnessFunction implements IGuidanceFunction {
 	 */
 	def Object getFeature (EObject o, String feature) {
 		
-		if(o == null){
+		if(o === null){
 			println("Null object given")
 		}
 		

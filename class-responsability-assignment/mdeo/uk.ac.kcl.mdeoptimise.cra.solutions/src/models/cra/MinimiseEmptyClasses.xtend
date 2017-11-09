@@ -2,7 +2,6 @@ package models.cra
 
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
-import java.util.LinkedList
 
 class MinimiseEmptyClasses extends AbstractModelQueryFitnessFunction {
 	
