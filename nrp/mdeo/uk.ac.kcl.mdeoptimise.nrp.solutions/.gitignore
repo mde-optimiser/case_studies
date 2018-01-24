@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ignore Intellij project files
 *.iml
 .idea/
@@ -29,3 +30,7 @@ local.properties
 # .classpath
 
 mdeo-results/
+=======
+bin/
+xtend-gen/
+>>>>>>> nrp
