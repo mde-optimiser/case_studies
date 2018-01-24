@@ -1,0 +1,24 @@
+@namespace(uri="NextReleaseProblem", prefix="NextReleaseProblem")
+package NextReleaseProblem;
+
+class NRP {
+   val Customer[*] customers;
+   val Requirement[*] requirements;
+   val CustomerDesire[*] customerDesires;
+}
+
+class Customer {
+   attr int importance;
+   ref CustomerDesire[*]#customer desires;
+}
+
+class Requirement {
+	attr int cost;
+	ref CustomerDesire[*]#requirement desires;
+}
+
+class CustomerDesire {
+	ref Customer#desires customer;
+	ref Requirement#desires requirement;
+	attr int importance;
+}

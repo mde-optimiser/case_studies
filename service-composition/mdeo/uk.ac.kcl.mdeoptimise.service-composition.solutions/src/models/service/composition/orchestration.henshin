@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_r_dKoN6HEeeou-KZ_LTI6Q">
+  <imports href="OrchestrationMM.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_tMXEcOWfEee9Z6M7iloqeA" name="createOrchestrator">
+    <lhs xmi:id="_tNTfoOWfEee9Z6M7iloqeA" name="Lhs">
+      <nodes xmi:id="_4HG6wOWfEee9Z6M7iloqeA" incoming="_iN4vQOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="__ystcOWfEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcreteService"/>
+      </nodes>
+      <nodes xmi:id="_D4W7QOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//AbstractService"/>
+      </nodes>
+      <nodes xmi:id="_PCa_8OWgEee9Z6M7iloqeA" incoming="_evIwcOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+      </nodes>
+      <nodes xmi:id="_b4zcgOWgEee9Z6M7iloqeA" outgoing="_evIwcOWgEee9Z6M7iloqeA _iN4vQOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+      <edges xmi:id="_evIwcOWgEee9Z6M7iloqeA" source="_b4zcgOWgEee9Z6M7iloqeA" target="_PCa_8OWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+      </edges>
+      <edges xmi:id="_iN4vQOWgEee9Z6M7iloqeA" source="_b4zcgOWgEee9Z6M7iloqeA" target="_4HG6wOWfEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/networkNodes"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_Vm9rAOWgEee9Z6M7iloqeA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_Vm9rAeWgEee9Z6M7iloqeA">
+          <conclusion xmi:id="_Vm9rAuWgEee9Z6M7iloqeA">
+            <nodes xmi:id="_Vm9rA-WgEee9Z6M7iloqeA" incoming="_rux2suWgEee9Z6M7iloqeA" outgoing="_YDUtAACtEeizgZB7fty-2w">
+              <type href="OrchestrationMM.ecore#//Node"/>
+            </nodes>
+            <nodes xmi:id="_Vm9rBeWgEee9Z6M7iloqeA" incoming="_vMwZcOWgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//ConcreteService"/>
+            </nodes>
+            <nodes xmi:id="_Vm9rB-WgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//AbstractService"/>
+            </nodes>
+            <nodes xmi:id="_Vm9rCeWgEee9Z6M7iloqeA" incoming="_rux2s-WgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+            </nodes>
+            <nodes xmi:id="_rux2sOWgEee9Z6M7iloqeA" outgoing="_rux2suWgEee9Z6M7iloqeA _rux2s-WgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+            </nodes>
+            <nodes xmi:id="_uo0l8OWgEee9Z6M7iloqeA" outgoing="_vMwZcOWgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator"/>
+            </nodes>
+            <nodes xmi:id="_XYEwkACtEeizgZB7fty-2w" incoming="_YDUtAACtEeizgZB7fty-2w">
+              <type href="OrchestrationMM.ecore#//Orchestrator"/>
+            </nodes>
+            <edges xmi:id="_rux2suWgEee9Z6M7iloqeA" source="_rux2sOWgEee9Z6M7iloqeA" target="_Vm9rA-WgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//CompositeApplication/networkNodes"/>
+            </edges>
+            <edges xmi:id="_rux2s-WgEee9Z6M7iloqeA" source="_rux2sOWgEee9Z6M7iloqeA" target="_Vm9rCeWgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+            </edges>
+            <edges xmi:id="_vMwZcOWgEee9Z6M7iloqeA" source="_uo0l8OWgEee9Z6M7iloqeA" target="_Vm9rBeWgEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator/concreteServices"/>
+            </edges>
+            <edges xmi:id="_YDUtAACtEeizgZB7fty-2w" source="_Vm9rA-WgEee9Z6M7iloqeA" target="_XYEwkACtEeizgZB7fty-2w">
+              <type href="OrchestrationMM.ecore#//Node/orchestratedBy"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_Vm9rBOWgEee9Z6M7iloqeA" origin="_4HG6wOWfEee9Z6M7iloqeA" image="_Vm9rA-WgEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_Vm9rBuWgEee9Z6M7iloqeA" origin="__ystcOWfEee9Z6M7iloqeA" image="_Vm9rBeWgEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_Vm9rCOWgEee9Z6M7iloqeA" origin="_D4W7QOWgEee9Z6M7iloqeA" image="_Vm9rB-WgEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_Vm9rCuWgEee9Z6M7iloqeA" origin="_PCa_8OWgEee9Z6M7iloqeA" image="_Vm9rCeWgEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_rux2seWgEee9Z6M7iloqeA" origin="_b4zcgOWgEee9Z6M7iloqeA" image="_rux2sOWgEee9Z6M7iloqeA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_tNTfoeWfEee9Z6M7iloqeA" name="Rhs">
+      <nodes xmi:id="_v5Ty4OWfEee9Z6M7iloqeA" incoming="_P8W4oOWgEee9Z6M7iloqeA" outgoing="_5PCzMOWfEee9Z6M7iloqeA _ALIbkOWgEee9Z6M7iloqeA _FNPDgOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator"/>
+      </nodes>
+      <nodes xmi:id="_4HHh0OWfEee9Z6M7iloqeA" incoming="_5PCzMOWfEee9Z6M7iloqeA _iN4vQeWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="__ystceWfEee9Z6M7iloqeA" incoming="_ALIbkOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcreteService"/>
+      </nodes>
+      <nodes xmi:id="_D4W7QeWgEee9Z6M7iloqeA" incoming="_FNPDgOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//AbstractService"/>
+      </nodes>
+      <nodes xmi:id="_PCa_8eWgEee9Z6M7iloqeA" incoming="_evIwceWgEee9Z6M7iloqeA" outgoing="_P8W4oOWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+      </nodes>
+      <nodes xmi:id="_b4zcgeWgEee9Z6M7iloqeA" outgoing="_evIwceWgEee9Z6M7iloqeA _iN4vQeWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+      <edges xmi:id="_5PCzMOWfEee9Z6M7iloqeA" source="_v5Ty4OWfEee9Z6M7iloqeA" target="_4HHh0OWfEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/deployedOn"/>
+      </edges>
+      <edges xmi:id="_ALIbkOWgEee9Z6M7iloqeA" source="_v5Ty4OWfEee9Z6M7iloqeA" target="__ystceWfEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/concreteServices"/>
+      </edges>
+      <edges xmi:id="_FNPDgOWgEee9Z6M7iloqeA" source="_v5Ty4OWfEee9Z6M7iloqeA" target="_D4W7QeWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/abstractServices"/>
+      </edges>
+      <edges xmi:id="_P8W4oOWgEee9Z6M7iloqeA" source="_PCa_8eWgEee9Z6M7iloqeA" target="_v5Ty4OWfEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan/orchestrators"/>
+      </edges>
+      <edges xmi:id="_evIwceWgEee9Z6M7iloqeA" source="_b4zcgeWgEee9Z6M7iloqeA" target="_PCa_8eWgEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+      </edges>
+      <edges xmi:id="_iN4vQeWgEee9Z6M7iloqeA" source="_b4zcgeWgEee9Z6M7iloqeA" target="_4HHh0OWfEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/networkNodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_4HHh0eWfEee9Z6M7iloqeA" origin="_4HG6wOWfEee9Z6M7iloqeA" image="_4HHh0OWfEee9Z6M7iloqeA"/>
+    <mappings xmi:id="__ystcuWfEee9Z6M7iloqeA" origin="__ystcOWfEee9Z6M7iloqeA" image="__ystceWfEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_D4W7QuWgEee9Z6M7iloqeA" origin="_D4W7QOWgEee9Z6M7iloqeA" image="_D4W7QeWgEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_PCa_8uWgEee9Z6M7iloqeA" origin="_PCa_8OWgEee9Z6M7iloqeA" image="_PCa_8eWgEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_b40DkOWgEee9Z6M7iloqeA" origin="_b4zcgOWgEee9Z6M7iloqeA" image="_b4zcgeWgEee9Z6M7iloqeA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_dSjBMOWhEee9Z6M7iloqeA" name="deleteOrchestrator">
+    <lhs xmi:id="_dSjBMeWhEee9Z6M7iloqeA" name="Lhs">
+      <nodes xmi:id="_dSjBMuWhEee9Z6M7iloqeA" incoming="_dSjBOOWhEee9Z6M7iloqeA _dSjBZuWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_dSjBM-WhEee9Z6M7iloqeA" incoming="_dSjBZ-WhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcreteService"/>
+      </nodes>
+      <nodes xmi:id="_dSjBNOWhEee9Z6M7iloqeA" incoming="_dSjBaOWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//AbstractService"/>
+      </nodes>
+      <nodes xmi:id="_dSjBNeWhEee9Z6M7iloqeA" incoming="_dSjBN-WhEee9Z6M7iloqeA" outgoing="_dSjBaeWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+      </nodes>
+      <nodes xmi:id="_dSjBNuWhEee9Z6M7iloqeA" outgoing="_dSjBN-WhEee9Z6M7iloqeA _dSjBOOWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+      <nodes xmi:id="_dSjBYOWhEee9Z6M7iloqeA" incoming="_dSjBaeWhEee9Z6M7iloqeA" outgoing="_dSjBZuWhEee9Z6M7iloqeA _dSjBZ-WhEee9Z6M7iloqeA _dSjBaOWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator"/>
+      </nodes>
+      <edges xmi:id="_dSjBN-WhEee9Z6M7iloqeA" source="_dSjBNuWhEee9Z6M7iloqeA" target="_dSjBNeWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+      </edges>
+      <edges xmi:id="_dSjBOOWhEee9Z6M7iloqeA" source="_dSjBNuWhEee9Z6M7iloqeA" target="_dSjBMuWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/networkNodes"/>
+      </edges>
+      <edges xmi:id="_dSjBaeWhEee9Z6M7iloqeA" source="_dSjBNeWhEee9Z6M7iloqeA" target="_dSjBYOWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan/orchestrators"/>
+      </edges>
+      <edges xmi:id="_dSjBZuWhEee9Z6M7iloqeA" source="_dSjBYOWhEee9Z6M7iloqeA" target="_dSjBMuWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/deployedOn"/>
+      </edges>
+      <edges xmi:id="_dSjBZ-WhEee9Z6M7iloqeA" source="_dSjBYOWhEee9Z6M7iloqeA" target="_dSjBM-WhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/concreteServices"/>
+      </edges>
+      <edges xmi:id="_dSjBaOWhEee9Z6M7iloqeA" source="_dSjBYOWhEee9Z6M7iloqeA" target="_dSjBNOWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/abstractServices"/>
+      </edges>
+      <formula xsi:type="henshin:And" xmi:id="_dSjBOeWhEee9Z6M7iloqeA">
+        <left xsi:type="henshin:Not" xmi:id="_dSjBOuWhEee9Z6M7iloqeA">
+          <child xsi:type="henshin:NestedCondition" xmi:id="_dSjBO-WhEee9Z6M7iloqeA">
+            <conclusion xmi:id="_dSjBPOWhEee9Z6M7iloqeA">
+              <nodes xmi:id="_dSjBPeWhEee9Z6M7iloqeA" incoming="_dSjBReWhEee9Z6M7iloqeA _dSjBRuWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//Node"/>
+              </nodes>
+              <nodes xmi:id="_dSjBPuWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//ConcreteService"/>
+              </nodes>
+              <nodes xmi:id="_dSjBP-WhEee9Z6M7iloqeA" incoming="_dSjBSOWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//AbstractService"/>
+              </nodes>
+              <nodes xmi:id="_dSjBQOWhEee9Z6M7iloqeA" incoming="_dSjBR-WhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+              </nodes>
+              <nodes xmi:id="_dSjBQeWhEee9Z6M7iloqeA" outgoing="_dSjBReWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//Orchestrator"/>
+              </nodes>
+              <nodes xmi:id="_dSjBQuWhEee9Z6M7iloqeA" outgoing="_dSjBRuWhEee9Z6M7iloqeA _dSjBR-WhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+              </nodes>
+              <nodes xmi:id="_dSjBQ-WhEee9Z6M7iloqeA" outgoing="_dSjBSOWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//Orchestrator"/>
+              </nodes>
+              <edges xmi:id="_dSjBReWhEee9Z6M7iloqeA" source="_dSjBQeWhEee9Z6M7iloqeA" target="_dSjBPeWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//Orchestrator/deployedOn"/>
+              </edges>
+              <edges xmi:id="_dSjBRuWhEee9Z6M7iloqeA" source="_dSjBQuWhEee9Z6M7iloqeA" target="_dSjBPeWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//CompositeApplication/networkNodes"/>
+              </edges>
+              <edges xmi:id="_dSjBR-WhEee9Z6M7iloqeA" source="_dSjBQuWhEee9Z6M7iloqeA" target="_dSjBQOWhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+              </edges>
+              <edges xmi:id="_dSjBSOWhEee9Z6M7iloqeA" source="_dSjBQ-WhEee9Z6M7iloqeA" target="_dSjBP-WhEee9Z6M7iloqeA">
+                <type href="OrchestrationMM.ecore#//Orchestrator/abstractServices"/>
+              </edges>
+            </conclusion>
+            <mappings xmi:id="_dSjBSuWhEee9Z6M7iloqeA" origin="_dSjBMuWhEee9Z6M7iloqeA" image="_dSjBPeWhEee9Z6M7iloqeA"/>
+            <mappings xmi:id="_dSjBS-WhEee9Z6M7iloqeA" origin="_dSjBM-WhEee9Z6M7iloqeA" image="_dSjBPuWhEee9Z6M7iloqeA"/>
+            <mappings xmi:id="_dSjBTOWhEee9Z6M7iloqeA" origin="_dSjBNOWhEee9Z6M7iloqeA" image="_dSjBP-WhEee9Z6M7iloqeA"/>
+            <mappings xmi:id="_dSjBTeWhEee9Z6M7iloqeA" origin="_dSjBNeWhEee9Z6M7iloqeA" image="_dSjBQOWhEee9Z6M7iloqeA"/>
+            <mappings xmi:id="_dSjBTuWhEee9Z6M7iloqeA" origin="_dSjBNuWhEee9Z6M7iloqeA" image="_dSjBQuWhEee9Z6M7iloqeA"/>
+          </child>
+        </left>
+        <right xsi:type="henshin:NestedCondition" xmi:id="_dSjBT-WhEee9Z6M7iloqeA">
+          <conclusion xmi:id="_dSjBUOWhEee9Z6M7iloqeA">
+            <nodes xmi:id="_dSjBUeWhEee9Z6M7iloqeA" incoming="_dSjBV-WhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Node"/>
+            </nodes>
+            <nodes xmi:id="_dSjBUuWhEee9Z6M7iloqeA" outgoing="_dSjBV-WhEee9Z6M7iloqeA _dSjBWOWhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+            </nodes>
+            <nodes xmi:id="_dSjBU-WhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//ConcreteService"/>
+            </nodes>
+            <nodes xmi:id="_dSjBVOWhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//AbstractService"/>
+            </nodes>
+            <nodes xmi:id="_dSjBVeWhEee9Z6M7iloqeA" incoming="_dSjBWOWhEee9Z6M7iloqeA" outgoing="_dSjBWeWhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+            </nodes>
+            <nodes xmi:id="_dSjBVuWhEee9Z6M7iloqeA" incoming="_dSjBWeWhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator"/>
+            </nodes>
+            <edges xmi:id="_dSjBV-WhEee9Z6M7iloqeA" source="_dSjBUuWhEee9Z6M7iloqeA" target="_dSjBUeWhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//CompositeApplication/networkNodes"/>
+            </edges>
+            <edges xmi:id="_dSjBWOWhEee9Z6M7iloqeA" source="_dSjBUuWhEee9Z6M7iloqeA" target="_dSjBVeWhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+            </edges>
+            <edges xmi:id="_dSjBWeWhEee9Z6M7iloqeA" source="_dSjBVeWhEee9Z6M7iloqeA" target="_dSjBVuWhEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//ConcretePlan/orchestrators"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_dSjBWuWhEee9Z6M7iloqeA" origin="_dSjBMuWhEee9Z6M7iloqeA" image="_dSjBUeWhEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_dSjBW-WhEee9Z6M7iloqeA" origin="_dSjBNuWhEee9Z6M7iloqeA" image="_dSjBUuWhEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_dSjBXOWhEee9Z6M7iloqeA" origin="_dSjBM-WhEee9Z6M7iloqeA" image="_dSjBU-WhEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_dSjBXeWhEee9Z6M7iloqeA" origin="_dSjBNOWhEee9Z6M7iloqeA" image="_dSjBVOWhEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_dSjBXuWhEee9Z6M7iloqeA" origin="_dSjBNeWhEee9Z6M7iloqeA" image="_dSjBVeWhEee9Z6M7iloqeA"/>
+        </right>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_dSjBX-WhEee9Z6M7iloqeA" name="Rhs">
+      <nodes xmi:id="_dSjBYeWhEee9Z6M7iloqeA" incoming="_dSjBa-WhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <nodes xmi:id="_dSjBYuWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcreteService"/>
+      </nodes>
+      <nodes xmi:id="_dSjBY-WhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//AbstractService"/>
+      </nodes>
+      <nodes xmi:id="_dSjBZOWhEee9Z6M7iloqeA" incoming="_dSjBauWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+      </nodes>
+      <nodes xmi:id="_dSjBZeWhEee9Z6M7iloqeA" outgoing="_dSjBauWhEee9Z6M7iloqeA _dSjBa-WhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+      <edges xmi:id="_dSjBauWhEee9Z6M7iloqeA" source="_dSjBZeWhEee9Z6M7iloqeA" target="_dSjBZOWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+      </edges>
+      <edges xmi:id="_dSjBa-WhEee9Z6M7iloqeA" source="_dSjBZeWhEee9Z6M7iloqeA" target="_dSjBYeWhEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/networkNodes"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_dSjBbOWhEee9Z6M7iloqeA" origin="_dSjBMuWhEee9Z6M7iloqeA" image="_dSjBYeWhEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_dSjBbeWhEee9Z6M7iloqeA" origin="_dSjBM-WhEee9Z6M7iloqeA" image="_dSjBYuWhEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_dSjBbuWhEee9Z6M7iloqeA" origin="_dSjBNOWhEee9Z6M7iloqeA" image="_dSjBY-WhEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_dSjBb-WhEee9Z6M7iloqeA" origin="_dSjBNeWhEee9Z6M7iloqeA" image="_dSjBZOWhEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_dSjBcOWhEee9Z6M7iloqeA" origin="_dSjBNuWhEee9Z6M7iloqeA" image="_dSjBZeWhEee9Z6M7iloqeA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_PCyhcOWiEee9Z6M7iloqeA" name="createConcretePlan">
+    <lhs xmi:id="_PC09sOWiEee9Z6M7iloqeA" name="Lhs">
+      <nodes xmi:id="_RO7B0OWiEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+      <nodes xmi:id="_QtUXUOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//AbstractService"/>
+      </nodes>
+      <nodes xmi:id="_RhJoAOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcreteService"/>
+      </nodes>
+      <nodes xmi:id="_bXCvEOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_BWy2EuWjEee9Z6M7iloqeA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_BWy2E-WjEee9Z6M7iloqeA">
+          <conclusion xmi:id="_BWy2FOWjEee9Z6M7iloqeA">
+            <nodes xmi:id="_BWy2FeWjEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+            </nodes>
+            <nodes xmi:id="_dGIuIOWnEee9Z6M7iloqeA" incoming="_lXQ20OWnEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//AbstractService"/>
+            </nodes>
+            <nodes xmi:id="_dGIuIuWnEee9Z6M7iloqeA" incoming="_kwo7sOWnEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//ConcreteService"/>
+            </nodes>
+            <nodes xmi:id="_dGIuJOWnEee9Z6M7iloqeA" incoming="_dskcAOWnEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Node"/>
+            </nodes>
+            <nodes xmi:id="_dGIHEOWnEee9Z6M7iloqeA" outgoing="_dskcAOWnEee9Z6M7iloqeA _kwo7sOWnEee9Z6M7iloqeA _lXQ20OWnEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator"/>
+            </nodes>
+            <edges xmi:id="_dskcAOWnEee9Z6M7iloqeA" source="_dGIHEOWnEee9Z6M7iloqeA" target="_dGIuJOWnEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator/deployedOn"/>
+            </edges>
+            <edges xmi:id="_kwo7sOWnEee9Z6M7iloqeA" source="_dGIHEOWnEee9Z6M7iloqeA" target="_dGIuIuWnEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator/concreteServices"/>
+            </edges>
+            <edges xmi:id="_lXQ20OWnEee9Z6M7iloqeA" source="_dGIHEOWnEee9Z6M7iloqeA" target="_dGIuIOWnEee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator/abstractServices"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_BWy2FuWjEee9Z6M7iloqeA" origin="_RO7B0OWiEee9Z6M7iloqeA" image="_BWy2FeWjEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_dGIuIeWnEee9Z6M7iloqeA" origin="_QtUXUOWnEee9Z6M7iloqeA" image="_dGIuIOWnEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_dGIuI-WnEee9Z6M7iloqeA" origin="_RhJoAOWnEee9Z6M7iloqeA" image="_dGIuIuWnEee9Z6M7iloqeA"/>
+          <mappings xmi:id="_dGIuJeWnEee9Z6M7iloqeA" origin="_bXCvEOWnEee9Z6M7iloqeA" image="_dGIuJOWnEee9Z6M7iloqeA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_PC09seWiEee9Z6M7iloqeA" name="Rhs">
+      <nodes xmi:id="_RO7B0eWiEee9Z6M7iloqeA" outgoing="_iWVOsOWiEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+      <nodes xmi:id="_cah-oOWiEee9Z6M7iloqeA" incoming="_iWVOsOWiEee9Z6M7iloqeA" outgoing="_OerVgOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+      </nodes>
+      <nodes xmi:id="_NtCdMOWnEee9Z6M7iloqeA" incoming="_OerVgOWnEee9Z6M7iloqeA" outgoing="_T2IiYOWnEee9Z6M7iloqeA _UFYfUOWnEee9Z6M7iloqeA _bw1IEOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator"/>
+      </nodes>
+      <nodes xmi:id="_QtUXUeWnEee9Z6M7iloqeA" incoming="_T2IiYOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//AbstractService"/>
+      </nodes>
+      <nodes xmi:id="_RhJoAeWnEee9Z6M7iloqeA" incoming="_UFYfUOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcreteService"/>
+      </nodes>
+      <nodes xmi:id="_bXCvEeWnEee9Z6M7iloqeA" incoming="_bw1IEOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <edges xmi:id="_iWVOsOWiEee9Z6M7iloqeA" source="_RO7B0eWiEee9Z6M7iloqeA" target="_cah-oOWiEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+      </edges>
+      <edges xmi:id="_OerVgOWnEee9Z6M7iloqeA" source="_cah-oOWiEee9Z6M7iloqeA" target="_NtCdMOWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan/orchestrators"/>
+      </edges>
+      <edges xmi:id="_T2IiYOWnEee9Z6M7iloqeA" source="_NtCdMOWnEee9Z6M7iloqeA" target="_QtUXUeWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/abstractServices"/>
+      </edges>
+      <edges xmi:id="_UFYfUOWnEee9Z6M7iloqeA" source="_NtCdMOWnEee9Z6M7iloqeA" target="_RhJoAeWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/concreteServices"/>
+      </edges>
+      <edges xmi:id="_bw1IEOWnEee9Z6M7iloqeA" source="_NtCdMOWnEee9Z6M7iloqeA" target="_bXCvEeWnEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/deployedOn"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_RO7B0uWiEee9Z6M7iloqeA" origin="_RO7B0OWiEee9Z6M7iloqeA" image="_RO7B0eWiEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_QtU-YOWnEee9Z6M7iloqeA" origin="_QtUXUOWnEee9Z6M7iloqeA" image="_QtUXUeWnEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_RhJoAuWnEee9Z6M7iloqeA" origin="_RhJoAOWnEee9Z6M7iloqeA" image="_RhJoAeWnEee9Z6M7iloqeA"/>
+    <mappings xmi:id="_bXCvEuWnEee9Z6M7iloqeA" origin="_bXCvEOWnEee9Z6M7iloqeA" image="_bXCvEeWnEee9Z6M7iloqeA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_FxhU8OWjEee9Z6M7iloqeA" name="deleteConcretePlan">
+    <lhs xmi:id="_FxhU8eWjEee9Z6M7iloqeA" name="Lhs">
+      <nodes xmi:id="_FxhU8uWjEee9Z6M7iloqeA" outgoing="_FxhVAeWjEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+      <nodes xmi:id="_FxhU_-WjEee9Z6M7iloqeA" incoming="_FxhVAeWjEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//ConcretePlan"/>
+      </nodes>
+      <edges xmi:id="_FxhVAeWjEee9Z6M7iloqeA" source="_FxhU8uWjEee9Z6M7iloqeA" target="_FxhU_-WjEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication/concretePlans"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_FxhU_eWjEee9Z6M7iloqeA" name="Rhs">
+      <nodes xmi:id="_FxhU_uWjEee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//CompositeApplication"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_FxhVA-WjEee9Z6M7iloqeA" origin="_FxhU8uWjEee9Z6M7iloqeA" image="_FxhU_uWjEee9Z6M7iloqeA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_FQxO8OW8Eee9Z6M7iloqeA" name="assignNodeToOrchestrator">
+    <lhs xmi:id="_FQzEIOW8Eee9Z6M7iloqeA" name="Lhs">
+      <nodes xmi:id="_OpR2cOW8Eee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator"/>
+      </nodes>
+      <nodes xmi:id="_PTt6kOW8Eee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_SDMYkuW8Eee9Z6M7iloqeA">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_SDMYk-W8Eee9Z6M7iloqeA">
+          <conclusion xmi:id="_SDMYlOW8Eee9Z6M7iloqeA">
+            <nodes xmi:id="_SDMYleW8Eee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator"/>
+            </nodes>
+            <nodes xmi:id="_SDMYl-W8Eee9Z6M7iloqeA" incoming="_S1NrYOW8Eee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Node"/>
+            </nodes>
+            <nodes xmi:id="_SDLxgOW8Eee9Z6M7iloqeA" outgoing="_S1NrYOW8Eee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator"/>
+            </nodes>
+            <edges xmi:id="_S1NrYOW8Eee9Z6M7iloqeA" source="_SDLxgOW8Eee9Z6M7iloqeA" target="_SDMYl-W8Eee9Z6M7iloqeA">
+              <type href="OrchestrationMM.ecore#//Orchestrator/deployedOn"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_SDMYluW8Eee9Z6M7iloqeA" origin="_OpR2cOW8Eee9Z6M7iloqeA" image="_SDMYleW8Eee9Z6M7iloqeA"/>
+          <mappings xmi:id="_SDMYmOW8Eee9Z6M7iloqeA" origin="_PTt6kOW8Eee9Z6M7iloqeA" image="_SDMYl-W8Eee9Z6M7iloqeA"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_FQzEIeW8Eee9Z6M7iloqeA" name="Rhs">
+      <nodes xmi:id="_OpR2ceW8Eee9Z6M7iloqeA" outgoing="_UWB94OW8Eee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator"/>
+      </nodes>
+      <nodes xmi:id="_PTt6keW8Eee9Z6M7iloqeA" incoming="_UWB94OW8Eee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Node"/>
+      </nodes>
+      <edges xmi:id="_UWB94OW8Eee9Z6M7iloqeA" source="_OpR2ceW8Eee9Z6M7iloqeA" target="_PTt6keW8Eee9Z6M7iloqeA">
+        <type href="OrchestrationMM.ecore#//Orchestrator/deployedOn"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_OpR2cuW8Eee9Z6M7iloqeA" origin="_OpR2cOW8Eee9Z6M7iloqeA" image="_OpR2ceW8Eee9Z6M7iloqeA"/>
+    <mappings xmi:id="_PTt6kuW8Eee9Z6M7iloqeA" origin="_PTt6kOW8Eee9Z6M7iloqeA" image="_PTt6keW8Eee9Z6M7iloqeA"/>
+  </units>
+</henshin:Module>

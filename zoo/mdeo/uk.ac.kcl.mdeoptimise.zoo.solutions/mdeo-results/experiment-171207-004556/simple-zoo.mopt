@@ -1,0 +1,6 @@
+basepath <src/models/zoo/>
+metamodel <zoo.ecore>
+model <SimpleZoo.xmi>
+objective EmptyCages minimise java { "models.zoo.ZooFitnessFunction" }
+mutate using <zoo_evolution.henshin> unit "MoveAnimal"
+optimisation provider moea algorithm NSGAII variation mutation evolutions 100 population 30 experiments 5

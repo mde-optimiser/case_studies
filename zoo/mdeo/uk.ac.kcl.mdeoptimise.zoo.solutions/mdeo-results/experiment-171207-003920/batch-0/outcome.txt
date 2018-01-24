@@ -1,0 +1,11 @@
+Batch duration: 00:00:05.258
+
+============================================
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/zoo/mdeo/uk.ac.kcl.mdeoptimise.zoo.solutions/mdeo-results/experiment-171207-003920/batch-0/2935FD2C.xmi
+
+Objective values:
+EmptyCages: 1.0
+
+
+============================================
+
