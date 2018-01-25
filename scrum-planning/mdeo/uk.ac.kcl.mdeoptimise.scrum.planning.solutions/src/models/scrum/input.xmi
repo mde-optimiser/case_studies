@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<NextReleaseProblem:NRP xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:NextReleaseProblem="NextReleaseProblem">
+  <customers importance="1" desires="//@customerDesires.0 //@customerDesires.1 //@customerDesires.2 //@customerDesires.3 //@customerDesires.4"/>
+  <customers importance="2" desires="//@customerDesires.5 //@customerDesires.6 //@customerDesires.7 //@customerDesires.8 //@customerDesires.9"/>
+  <customers importance="3" desires="//@customerDesires.10 //@customerDesires.11 //@customerDesires.12 //@customerDesires.13 //@customerDesires.14"/>
+  <requirements cost="2" desires="//@customerDesires.0 //@customerDesires.5 //@customerDesires.10"/>
+  <requirements cost="1" desires="//@customerDesires.1 //@customerDesires.6 //@customerDesires.11"/>
+  <requirements cost="4" desires="//@customerDesires.2 //@customerDesires.7 //@customerDesires.12"/>
+  <requirements cost="1" desires="//@customerDesires.3 //@customerDesires.8 //@customerDesires.13"/>
+  <requirements cost="5" desires="//@customerDesires.4 //@customerDesires.9 //@customerDesires.14"/>
+  <customerDesires customer="//@customers.0" requirement="//@requirements.0" importance="2"/>
+  <customerDesires customer="//@customers.0" requirement="//@requirements.1"/>
+  <customerDesires customer="//@customers.0" requirement="//@requirements.2" importance="4"/>
+  <customerDesires customer="//@customers.0" requirement="//@requirements.3" importance="1"/>
+  <customerDesires customer="//@customers.0" requirement="//@requirements.4" importance="6"/>
+  <customerDesires customer="//@customers.1" requirement="//@requirements.0" importance="3"/>
+  <customerDesires customer="//@customers.1" requirement="//@requirements.1" importance="9"/>
+  <customerDesires customer="//@customers.1" requirement="//@requirements.2" importance="9"/>
+  <customerDesires customer="//@customers.1" requirement="//@requirements.3"/>
+  <customerDesires customer="//@customers.1" requirement="//@requirements.4" importance="8"/>
+  <customerDesires customer="//@customers.2" requirement="//@requirements.0" importance="9"/>
+  <customerDesires customer="//@customers.2" requirement="//@requirements.1"/>
+  <customerDesires customer="//@customers.2" requirement="//@requirements.2" importance="8"/>
+  <customerDesires customer="//@customers.2" requirement="//@requirements.3" importance="5"/>
+  <customerDesires customer="//@customers.2" requirement="//@requirements.4" importance="4"/>
+</NextReleaseProblem:NRP>
