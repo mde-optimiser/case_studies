@@ -5,6 +5,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:OrchestrationMM="http://OrchestrationMM/1.0"
     xsi:schemaLocation="http://OrchestrationMM/1.0 OrchestrationMM.ecore">
+    <concretePlans>
+  </concretePlans>
   <abstractPlan
       start="//@abstractPlan/@abstractServices.0"
       end="//@abstractPlan/@abstractServices.4">
