@@ -294,9 +294,9 @@
     </multiRules>
   </units>
   <units xsi:type="henshin:IndependentUnit" xmi:id="_uNGO0AEhEeilXOOc9hG_FA" name="modifySingleSelection" description="" subUnits="_mZu1oAEgEeilXOOc9hG_FA _-avXkAEgEeilXOOc9hG_FA"/>
-  <units xsi:type="henshin:Rule" xmi:id="_rHNxEAEjEeilXOOc9hG_FA" name="addHighestContribution">
+  <units xsi:type="henshin:Rule" xmi:id="_rHNxEAEjEeilXOOc9hG_FA" name="addHighestRealisation">
     <parameters xmi:id="__B594AEjEeilXOOc9hG_FA" name="x" kind="VAR">
-      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </parameters>
     <parameters xmi:id="__B6k8AEjEeilXOOc9hG_FA" name="y" kind="VAR">
       <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -349,15 +349,9 @@
           <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
         </attributes>
       </nodes>
-      <nodes xmi:id="_I4tLMQHlEeigD_hJbWzwRg" name="key" outgoing="_WfWAAQHlEeigD_hJbWzwRg">
+      <nodes xmi:id="_M12WMQHlEeigD_hJbWzwRg" name="value" outgoing="_xgt7oQHlEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
-        <attributes xmi:id="_KJIRQAHlEeigD_hJbWzwRg" value="&quot;data&quot;">
-          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
-        </attributes>
-      </nodes>
-      <nodes xmi:id="_M12WMQHlEeigD_hJbWzwRg" name="value" incoming="_WfWAAQHlEeigD_hJbWzwRg" outgoing="_xgt7oQHlEeigD_hJbWzwRg">
-        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
-        <attributes xmi:id="_S8mSAQHlEeigD_hJbWzwRg" value="(y>=(parseFloat(x)))">
+        <attributes xmi:id="_S8mSAQHlEeigD_hJbWzwRg" value="x">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
@@ -367,17 +361,14 @@
       <edges xmi:id="_dRJ-8AHNEeils_QRgrfFmw" source="_yCpSIQEjEeilXOOc9hG_FA" target="_zW_O4QEjEeilXOOc9hG_FA">
         <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
       </edges>
-      <edges xmi:id="_WfWAAQHlEeigD_hJbWzwRg" source="_I4tLMQHlEeigD_hJbWzwRg" target="_M12WMQHlEeigD_hJbWzwRg">
-        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
-      </edges>
       <edges xmi:id="_xgt7oQHlEeigD_hJbWzwRg" source="_M12WMQHlEeigD_hJbWzwRg" target="_zW_O4QEjEeilXOOc9hG_FA">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
       </edges>
     </rhs>
+    <attributeConditions xmi:id="_AsfzIAKzEeiFGPlFGyLpHA" name="HighestRealisationValue" conditionText="y>=x"/>
     <mappings xmi:id="_yCpSIgEjEeilXOOc9hG_FA" origin="_yCpSIAEjEeilXOOc9hG_FA" image="_yCpSIQEjEeilXOOc9hG_FA"/>
     <mappings xmi:id="_zW_O4gEjEeilXOOc9hG_FA" origin="_zW_O4AEjEeilXOOc9hG_FA" image="_zW_O4QEjEeilXOOc9hG_FA"/>
     <mappings xmi:id="_B1ijIAEkEeilXOOc9hG_FA" origin="_B1h8EAEkEeilXOOc9hG_FA" image="_B1h8EQEkEeilXOOc9hG_FA"/>
-    <mappings xmi:id="_I4tLMgHlEeigD_hJbWzwRg" origin="_I4tLMAHlEeigD_hJbWzwRg" image="_I4tLMQHlEeigD_hJbWzwRg"/>
     <mappings xmi:id="_M12WMgHlEeigD_hJbWzwRg" origin="_M12WMAHlEeigD_hJbWzwRg" image="_M12WMQHlEeigD_hJbWzwRg"/>
   </units>
   <units xsi:type="henshin:Rule" xmi:id="_JCPn4AHIEeils_QRgrfFmw" name="markUnselected">
@@ -459,9 +450,9 @@
     </multiRules>
   </units>
   <units xsi:type="henshin:LoopUnit" xmi:id="_VkZ-kAHhEeigD_hJbWzwRg" name="getHighestRealisation" subUnit="_ZJl8kAHhEeigD_hJbWzwRg"/>
-  <units xsi:type="henshin:Rule" xmi:id="_ZJl8kAHhEeigD_hJbWzwRg" name="storeBetterRealisation">
+  <units xsi:type="henshin:Rule" xmi:id="_ZJl8kAHhEeigD_hJbWzwRg" name="storeBetterRealisation" description="">
     <parameters xmi:id="_vXp6MAHhEeigD_hJbWzwRg" name="x" kind="VAR">
-      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </parameters>
     <parameters xmi:id="_MAbRcAHiEeigD_hJbWzwRg" name="y" kind="VAR">
       <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
@@ -546,6 +537,12 @@
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
+      <nodes xmi:id="_v9KhUAKtEeiFGPlFGyLpHA" name="trc">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+        <attributes xmi:id="_v9KhUQKtEeiFGPlFGyLpHA" value="&quot;unselected&quot;">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+        </attributes>
+      </nodes>
       <edges xmi:id="_w4R_cAHhEeigD_hJbWzwRg" source="_r0DQkQHhEeigD_hJbWzwRg" target="_skl8sQHhEeigD_hJbWzwRg">
         <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
       </edges>
@@ -560,6 +557,7 @@
     <mappings xmi:id="_r0DQkgHhEeigD_hJbWzwRg" origin="_r0DQkAHhEeigD_hJbWzwRg" image="_r0DQkQHhEeigD_hJbWzwRg"/>
     <mappings xmi:id="_skl8sgHhEeigD_hJbWzwRg" origin="_skl8sAHhEeigD_hJbWzwRg" image="_skl8sQHhEeigD_hJbWzwRg"/>
     <mappings xmi:id="_JQeAYQHkEeigD_hJbWzwRg" origin="_JQcyQAHkEeigD_hJbWzwRg" image="_JQeAYAHkEeigD_hJbWzwRg"/>
+    <mappings xmi:id="_v9M9kAKtEeiFGPlFGyLpHA" origin="_xz1owAHhEeigD_hJbWzwRg" image="_v9KhUAKtEeiFGPlFGyLpHA"/>
   </units>
   <units xsi:type="henshin:Rule" xmi:id="_GyDSoAHjEeigD_hJbWzwRg" name="createDataTrace">
     <lhs xmi:id="_GyJZQAHjEeigD_hJbWzwRg" name="Lhs"/>
