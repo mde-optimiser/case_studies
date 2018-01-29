@@ -1,6 +1,6 @@
 basepath <src/models/nrp/>
 metamodel <nextReleaseProblem.ecore>
-model <shop-example.xmi>
+model <NRP.xmi>
 objective MinimiseCost minimise java { "models.nrp.MinimiseCost" }
 objective MaximiseSatisfaction maximise java { "models.nrp.MaximiseSatisfaction" }
 mutate using <mutation.henshin> unit "modifySelectionWithHierarchy"

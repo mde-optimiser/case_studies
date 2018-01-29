@@ -8,24 +8,19 @@ class MinimiseCost  implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
-		val selectedArtifacts =  model.getReferenceFeature("solutions").get(0).getReferenceFeature("selectedArtifacts")
-		val selectedRealisations = selectedArtifacts.map(sa | sa.getReferenceFeature("realisations")).flatten
-		selectedRealisations.forEach(sr | sr.calcFitnessImpact)
+		val selectedArtifactsCost =  model.getReferenceFeature("solutions").head
+				.getReferenceFeature("selectedArtifacts").fold(0d)[
+					result, artifact | 
+					
+					new Double(
+						result + artifact.getReferenceFeature("costs").head.getFeature("amount") as Integer
+					)
+				]
 		
-		return 1.0d
+		println("Calculated selectedArtifacts cost: " + selectedArtifactsCost)
 		
-	}
-	
-	def double calcFitnessImpact(EObject realisation) {
-		val list = newArrayList(1,2,3)
-		list.reduce[p1, p2| p1 + p2]
-		val valuedRequirements = realisation.getReferenceFeature("requirement").get(0).getReferenceFeature("valuations")
-		for (valuedReq : valuedRequirements) {
-			val sumOfCustomerValues = valuedReq.getReferenceFeature("desiredBy")
-			
-			//valuedReq.getFeature("value") * realisation.getFeature("percentage")
-		}
-		return 1.0d
+		return -1 * selectedArtifactsCost
+		
 	}
 	
 	override getName() {
