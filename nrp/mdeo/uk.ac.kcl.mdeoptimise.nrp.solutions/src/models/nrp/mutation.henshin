@@ -299,16 +299,16 @@
       <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </parameters>
     <parameters xmi:id="__B6k8AEjEeilXOOc9hG_FA" name="y" kind="VAR">
-      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </parameters>
     <lhs xmi:id="_rHWT8AEjEeilXOOc9hG_FA" name="Lhs">
       <nodes xmi:id="_yCpSIAEjEeilXOOc9hG_FA" name="sol">
         <type href="../nextReleaseProblem.ecore#//Solution"/>
       </nodes>
-      <nodes xmi:id="_zW_O4AEjEeilXOOc9hG_FA" name="sa" incoming="_xgt7oAHlEeigD_hJbWzwRg" outgoing="_FSM3QAEkEeilXOOc9hG_FA">
+      <nodes xmi:id="_zW_O4AEjEeilXOOc9hG_FA" name="sa" outgoing="_FSM3QAEkEeilXOOc9hG_FA">
         <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
-      <nodes xmi:id="_B1h8EAEkEeilXOOc9hG_FA" name="real" incoming="_FSM3QAEkEeilXOOc9hG_FA">
+      <nodes xmi:id="_B1h8EAEkEeilXOOc9hG_FA" name="real" incoming="_FSM3QAEkEeilXOOc9hG_FA _q2HEkAT1EeioA9WpIRynHw">
         <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
         <attributes xmi:id="_OBGhEAEkEeilXOOc9hG_FA" value="y">
           <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
@@ -320,19 +320,19 @@
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
-      <nodes xmi:id="_M12WMAHlEeigD_hJbWzwRg" name="value" incoming="_WfWAAAHlEeigD_hJbWzwRg" outgoing="_xgt7oAHlEeigD_hJbWzwRg">
+      <nodes xmi:id="_M12WMAHlEeigD_hJbWzwRg" name="value" incoming="_WfWAAAHlEeigD_hJbWzwRg" outgoing="_q2HEkAT1EeioA9WpIRynHw">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
         <attributes xmi:id="_S8mSAAHlEeigD_hJbWzwRg" value="x">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
       <edges xmi:id="_FSM3QAEkEeilXOOc9hG_FA" source="_zW_O4AEjEeilXOOc9hG_FA" target="_B1h8EAEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
+        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisations"/>
       </edges>
       <edges xmi:id="_WfWAAAHlEeigD_hJbWzwRg" source="_I4tLMAHlEeigD_hJbWzwRg" target="_M12WMAHlEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
       </edges>
-      <edges xmi:id="_xgt7oAHlEeigD_hJbWzwRg" source="_M12WMAHlEeigD_hJbWzwRg" target="_zW_O4AEjEeilXOOc9hG_FA">
+      <edges xmi:id="_q2HEkAT1EeioA9WpIRynHw" source="_M12WMAHlEeigD_hJbWzwRg" target="_B1h8EAEkEeilXOOc9hG_FA">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
       </edges>
     </lhs>
@@ -340,28 +340,28 @@
       <nodes xmi:id="_yCpSIQEjEeilXOOc9hG_FA" name="sol" outgoing="_dRJ-8AHNEeils_QRgrfFmw">
         <type href="../nextReleaseProblem.ecore#//Solution"/>
       </nodes>
-      <nodes xmi:id="_zW_O4QEjEeilXOOc9hG_FA" name="sa" incoming="_dRJ-8AHNEeils_QRgrfFmw _xgt7oQHlEeigD_hJbWzwRg" outgoing="_FSNeUAEkEeilXOOc9hG_FA">
+      <nodes xmi:id="_zW_O4QEjEeilXOOc9hG_FA" name="sa" incoming="_dRJ-8AHNEeils_QRgrfFmw" outgoing="_FSNeUAEkEeilXOOc9hG_FA">
         <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
-      <nodes xmi:id="_B1h8EQEkEeilXOOc9hG_FA" name="real" incoming="_FSNeUAEkEeilXOOc9hG_FA">
+      <nodes xmi:id="_B1h8EQEkEeilXOOc9hG_FA" name="real" incoming="_FSNeUAEkEeilXOOc9hG_FA _q2HEkQT1EeioA9WpIRynHw">
         <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
         <attributes xmi:id="_OBHIIAEkEeilXOOc9hG_FA" value="y">
           <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
         </attributes>
       </nodes>
-      <nodes xmi:id="_M12WMQHlEeigD_hJbWzwRg" name="value" outgoing="_xgt7oQHlEeigD_hJbWzwRg">
+      <nodes xmi:id="_M12WMQHlEeigD_hJbWzwRg" name="value" outgoing="_q2HEkQT1EeioA9WpIRynHw">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
         <attributes xmi:id="_S8mSAQHlEeigD_hJbWzwRg" value="x">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
       <edges xmi:id="_FSNeUAEkEeilXOOc9hG_FA" source="_zW_O4QEjEeilXOOc9hG_FA" target="_B1h8EQEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
+        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisations"/>
       </edges>
       <edges xmi:id="_dRJ-8AHNEeils_QRgrfFmw" source="_yCpSIQEjEeilXOOc9hG_FA" target="_zW_O4QEjEeilXOOc9hG_FA">
         <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
       </edges>
-      <edges xmi:id="_xgt7oQHlEeigD_hJbWzwRg" source="_M12WMQHlEeigD_hJbWzwRg" target="_zW_O4QEjEeilXOOc9hG_FA">
+      <edges xmi:id="_q2HEkQT1EeioA9WpIRynHw" source="_M12WMQHlEeigD_hJbWzwRg" target="_B1h8EQEkEeilXOOc9hG_FA">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
       </edges>
     </rhs>
@@ -437,16 +437,16 @@
     </multiRules>
   </units>
   <units xsi:type="henshin:SequentialUnit" xmi:id="_uuII8AHJEeils_QRgrfFmw" name="selectHighestRealisation" subUnits="_JCPn4AHIEeils_QRgrfFmw _GyDSoAHjEeigD_hJbWzwRg _VkZ-kAHhEeigD_hJbWzwRg _rHNxEAEjEeilXOOc9hG_FA _a02b8AHKEeils_QRgrfFmw"/>
-  <units xsi:type="henshin:Rule" xmi:id="_a02b8AHKEeils_QRgrfFmw" name="clearTraces" checkDangling="false">
+  <units xsi:type="henshin:Rule" xmi:id="_a02b8AHKEeils_QRgrfFmw" name="clearTraces">
     <lhs xmi:id="_a0--0AHKEeils_QRgrfFmw" name="Lhs"/>
     <rhs xmi:id="_a0_l4AHKEeils_QRgrfFmw" name="Rhs"/>
-    <multiRules xmi:id="_dQsMQAHKEeils_QRgrfFmw">
-      <lhs xmi:id="_dQsMQQHKEeils_QRgrfFmw" name="Lhs">
-        <nodes xmi:id="_b1-hwAHKEeils_QRgrfFmw" name="trc">
+    <multiRules xmi:id="_cw7dIAT2EeioA9WpIRynHw" checkDangling="false">
+      <lhs xmi:id="_cw7dIQT2EeioA9WpIRynHw" name="Lhs">
+        <nodes xmi:id="_aIHn0AT2EeioA9WpIRynHw" name="trc">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
         </nodes>
       </lhs>
-      <rhs xmi:id="_dQsMQgHKEeils_QRgrfFmw" name="Rhs"/>
+      <rhs xmi:id="_cw7dIgT2EeioA9WpIRynHw" name="Rhs"/>
     </multiRules>
   </units>
   <units xsi:type="henshin:LoopUnit" xmi:id="_VkZ-kAHhEeigD_hJbWzwRg" name="getHighestRealisation" subUnit="_ZJl8kAHhEeigD_hJbWzwRg"/>
@@ -455,23 +455,17 @@
       <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </parameters>
     <parameters xmi:id="_MAbRcAHiEeigD_hJbWzwRg" name="y" kind="VAR">
-      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </parameters>
     <lhs xmi:id="_ZJpm8AHhEeigD_hJbWzwRg" name="Lhs">
       <nodes xmi:id="_n6haQAHhEeigD_hJbWzwRg" name="value" incoming="_LSYNwAHkEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
-        <attributes xmi:id="_pk7GkAHhEeigD_hJbWzwRg" value="y">
+        <attributes xmi:id="_pk7GkAHhEeigD_hJbWzwRg" value="x">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_r0DQkAHhEeigD_hJbWzwRg" name="sa" incoming="_20vW0AHhEeigD_hJbWzwRg" outgoing="_w4RYYAHhEeigD_hJbWzwRg">
         <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
-      </nodes>
-      <nodes xmi:id="_skl8sAHhEeigD_hJbWzwRg" name="real" incoming="_w4RYYAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
-        <attributes xmi:id="_9PArkAHhEeigD_hJbWzwRg" value="x">
-          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
-        </attributes>
       </nodes>
       <nodes xmi:id="_xz1owAHhEeigD_hJbWzwRg" name="trc" outgoing="_20vW0AHhEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
@@ -485,51 +479,54 @@
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
-      <edges xmi:id="_w4RYYAHhEeigD_hJbWzwRg" source="_r0DQkAHhEeigD_hJbWzwRg" target="_skl8sAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
-      </edges>
+      <nodes xmi:id="_skl8sAHhEeigD_hJbWzwRg" name="real" incoming="_w4RYYAHhEeigD_hJbWzwRg">
+        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+        <attributes xmi:id="_9PArkAHhEeigD_hJbWzwRg" value="y">
+          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+        </attributes>
+      </nodes>
       <edges xmi:id="_20vW0AHhEeigD_hJbWzwRg" source="_xz1owAHhEeigD_hJbWzwRg" target="_r0DQkAHhEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
       </edges>
       <edges xmi:id="_LSYNwAHkEeigD_hJbWzwRg" source="_JQcyQAHkEeigD_hJbWzwRg" target="_n6haQAHhEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
       </edges>
-      <formula xsi:type="henshin:Not" xmi:id="_3RAKIAHjEeigD_hJbWzwRg">
-        <child xsi:type="henshin:NestedCondition" xmi:id="_3RAKIQHjEeigD_hJbWzwRg">
-          <conclusion xmi:id="_3RAKIgHjEeigD_hJbWzwRg">
-            <nodes xmi:id="_3RAKIwHjEeigD_hJbWzwRg" name="bestReal" outgoing="_xHcx8AHjEeigD_hJbWzwRg">
+      <edges xmi:id="_w4RYYAHhEeigD_hJbWzwRg" source="_r0DQkAHhEeigD_hJbWzwRg" target="_skl8sAHhEeigD_hJbWzwRg">
+        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisations"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_YrUvIAT1EeioA9WpIRynHw">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_YrUvIQT1EeioA9WpIRynHw">
+          <conclusion xmi:id="_YrUvIgT1EeioA9WpIRynHw">
+            <nodes xmi:id="_YrUvIwT1EeioA9WpIRynHw" name="value" outgoing="_X1FDoAT1EeioA9WpIRynHw">
               <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
-              <attributes xmi:id="_3RAKJAHjEeigD_hJbWzwRg" value="y">
+              <attributes xmi:id="_YrUvJAT1EeioA9WpIRynHw" value="x">
                 <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
               </attributes>
             </nodes>
-            <nodes xmi:id="_3RAKJgHjEeigD_hJbWzwRg" name="sa" incoming="_xHcx8AHjEeigD_hJbWzwRg">
-              <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+            <nodes xmi:id="_YrVWMAT1EeioA9WpIRynHw" name="real" incoming="_X1FDoAT1EeioA9WpIRynHw">
+              <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+              <attributes xmi:id="_YrVWMQT1EeioA9WpIRynHw" value="y">
+                <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+              </attributes>
             </nodes>
-            <edges xmi:id="_xHcx8AHjEeigD_hJbWzwRg" source="_3RAKIwHjEeigD_hJbWzwRg" target="_3RAKJgHjEeigD_hJbWzwRg">
+            <edges xmi:id="_X1FDoAT1EeioA9WpIRynHw" source="_YrUvIwT1EeioA9WpIRynHw" target="_YrVWMAT1EeioA9WpIRynHw">
               <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
             </edges>
           </conclusion>
-          <mappings xmi:id="_3RAKJQHjEeigD_hJbWzwRg" origin="_n6haQAHhEeigD_hJbWzwRg" image="_3RAKIwHjEeigD_hJbWzwRg"/>
-          <mappings xmi:id="_3RAKJwHjEeigD_hJbWzwRg" origin="_r0DQkAHhEeigD_hJbWzwRg" image="_3RAKJgHjEeigD_hJbWzwRg"/>
+          <mappings xmi:id="_YrUvJQT1EeioA9WpIRynHw" origin="_n6haQAHhEeigD_hJbWzwRg" image="_YrUvIwT1EeioA9WpIRynHw"/>
+          <mappings xmi:id="_YrVWMgT1EeioA9WpIRynHw" origin="_skl8sAHhEeigD_hJbWzwRg" image="_YrVWMAT1EeioA9WpIRynHw"/>
         </child>
       </formula>
     </lhs>
     <rhs xmi:id="_ZJpm8QHhEeigD_hJbWzwRg" name="Rhs">
-      <nodes xmi:id="_n6haQQHhEeigD_hJbWzwRg" name="value" incoming="_LSY00AHkEeigD_hJbWzwRg" outgoing="_33jMwAHjEeigD_hJbWzwRg">
+      <nodes xmi:id="_n6haQQHhEeigD_hJbWzwRg" name="value" incoming="_LSY00AHkEeigD_hJbWzwRg" outgoing="_aZ6-8AT1EeioA9WpIRynHw">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
-        <attributes xmi:id="_FKvMAAHiEeigD_hJbWzwRg" value="(x>y? x : y)">
+        <attributes xmi:id="_FKvMAAHiEeigD_hJbWzwRg" value="(y>x ? y : x)">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
-      <nodes xmi:id="_r0DQkQHhEeigD_hJbWzwRg" name="sa" incoming="_33jMwAHjEeigD_hJbWzwRg" outgoing="_w4R_cAHhEeigD_hJbWzwRg">
+      <nodes xmi:id="_r0DQkQHhEeigD_hJbWzwRg" name="sa" incoming="_IfQJIAT1EeioA9WpIRynHw" outgoing="_w4R_cAHhEeigD_hJbWzwRg">
         <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
-      </nodes>
-      <nodes xmi:id="_skl8sQHhEeigD_hJbWzwRg" name="real" incoming="_w4R_cAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
-        <attributes xmi:id="_9PBSoAHhEeigD_hJbWzwRg" value="x">
-          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
-        </attributes>
       </nodes>
       <nodes xmi:id="_JQeAYAHkEeigD_hJbWzwRg" name="key" outgoing="_LSY00AHkEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
@@ -537,27 +534,138 @@
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
-      <nodes xmi:id="_v9KhUAKtEeiFGPlFGyLpHA" name="trc">
+      <nodes xmi:id="_v9KhUAKtEeiFGPlFGyLpHA" name="trc" outgoing="_IfQJIAT1EeioA9WpIRynHw">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
         <attributes xmi:id="_v9KhUQKtEeiFGPlFGyLpHA" value="&quot;unselected&quot;">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
-      <edges xmi:id="_w4R_cAHhEeigD_hJbWzwRg" source="_r0DQkQHhEeigD_hJbWzwRg" target="_skl8sQHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
-      </edges>
-      <edges xmi:id="_33jMwAHjEeigD_hJbWzwRg" source="_n6haQQHhEeigD_hJbWzwRg" target="_r0DQkQHhEeigD_hJbWzwRg">
-        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
-      </edges>
+      <nodes xmi:id="_skl8sQHhEeigD_hJbWzwRg" name="real" incoming="_w4R_cAHhEeigD_hJbWzwRg _aZ6-8AT1EeioA9WpIRynHw">
+        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+        <attributes xmi:id="_9PBSoAHhEeigD_hJbWzwRg" value="y">
+          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+        </attributes>
+      </nodes>
       <edges xmi:id="_LSY00AHkEeigD_hJbWzwRg" source="_JQeAYAHkEeigD_hJbWzwRg" target="_n6haQQHhEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
+      </edges>
+      <edges xmi:id="_IfQJIAT1EeioA9WpIRynHw" source="_v9KhUAKtEeiFGPlFGyLpHA" target="_r0DQkQHhEeigD_hJbWzwRg">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+      </edges>
+      <edges xmi:id="_w4R_cAHhEeigD_hJbWzwRg" source="_r0DQkQHhEeigD_hJbWzwRg" target="_skl8sQHhEeigD_hJbWzwRg">
+        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisations"/>
+      </edges>
+      <edges xmi:id="_aZ6-8AT1EeioA9WpIRynHw" source="_n6haQQHhEeigD_hJbWzwRg" target="_skl8sQHhEeigD_hJbWzwRg">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
       </edges>
     </rhs>
     <mappings xmi:id="_n6haQgHhEeigD_hJbWzwRg" origin="_n6haQAHhEeigD_hJbWzwRg" image="_n6haQQHhEeigD_hJbWzwRg"/>
     <mappings xmi:id="_r0DQkgHhEeigD_hJbWzwRg" origin="_r0DQkAHhEeigD_hJbWzwRg" image="_r0DQkQHhEeigD_hJbWzwRg"/>
-    <mappings xmi:id="_skl8sgHhEeigD_hJbWzwRg" origin="_skl8sAHhEeigD_hJbWzwRg" image="_skl8sQHhEeigD_hJbWzwRg"/>
     <mappings xmi:id="_JQeAYQHkEeigD_hJbWzwRg" origin="_JQcyQAHkEeigD_hJbWzwRg" image="_JQeAYAHkEeigD_hJbWzwRg"/>
     <mappings xmi:id="_v9M9kAKtEeiFGPlFGyLpHA" origin="_xz1owAHhEeigD_hJbWzwRg" image="_v9KhUAKtEeiFGPlFGyLpHA"/>
+    <mappings xmi:id="_skl8sgHhEeigD_hJbWzwRg" origin="_skl8sAHhEeigD_hJbWzwRg" image="_skl8sQHhEeigD_hJbWzwRg"/>
+    <multiRules xmi:id="_CBaYcAT0EeioA9WpIRynHw">
+      <parameters xmi:id="_CBxk0AT0EeioA9WpIRynHw" name="x" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </parameters>
+      <parameters xmi:id="_CByL4AT0EeioA9WpIRynHw" name="y" kind="VAR">
+        <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      </parameters>
+      <lhs xmi:id="_CBgfEAT0EeioA9WpIRynHw" name="Lhs">
+        <nodes xmi:id="_CBjiYQT0EeioA9WpIRynHw" name="value" incoming="_CBkJcQT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+          <attributes xmi:id="_CBjiYgT0EeioA9WpIRynHw" value="y">
+            <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_CBjiZAT0EeioA9WpIRynHw" name="key" outgoing="_CBkJcQT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+          <attributes xmi:id="_CBjiZQT0EeioA9WpIRynHw" value="&quot;data&quot;">
+            <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_CBkwggT0EeioA9WpIRynHw" name="sa" incoming="_CBlXkQT0EeioA9WpIRynHw" outgoing="_KYdtgAT1EeioA9WpIRynHw">
+          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_CBkwhAT0EeioA9WpIRynHw" name="trc" outgoing="_CBlXkQT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+          <attributes xmi:id="_CBkwhQT0EeioA9WpIRynHw" value="&quot;unselected&quot;">
+            <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_KYdGdAT1EeioA9WpIRynHw" name="real" incoming="_KYdtgAT1EeioA9WpIRynHw">
+          <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+          <attributes xmi:id="_KYdGdQT1EeioA9WpIRynHw" value="y">
+            <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_CBkJcQT0EeioA9WpIRynHw" source="_CBjiZAT0EeioA9WpIRynHw" target="_CBjiYQT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
+        </edges>
+        <edges xmi:id="_CBlXkQT0EeioA9WpIRynHw" source="_CBkwhAT0EeioA9WpIRynHw" target="_CBkwggT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+        </edges>
+        <edges xmi:id="_KYdtgAT1EeioA9WpIRynHw" source="_CBkwggT0EeioA9WpIRynHw" target="_KYdGdAT1EeioA9WpIRynHw">
+          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisations"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_CBhGIAT0EeioA9WpIRynHw" name="Rhs">
+        <nodes xmi:id="_CBhtMAT0EeioA9WpIRynHw" name="value" incoming="_CBi7UAT0EeioA9WpIRynHw" outgoing="_aZ6-8QT1EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+          <attributes xmi:id="_CBhtMQT0EeioA9WpIRynHw" value="(x>y? x : y)">
+            <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_CBiUQAT0EeioA9WpIRynHw" name="key" outgoing="_CBi7UAT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+          <attributes xmi:id="_CBiUQQT0EeioA9WpIRynHw" value="&quot;data&quot;">
+            <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_CBi7UQT0EeioA9WpIRynHw" name="sa" incoming="_IfRXQAT1EeioA9WpIRynHw" outgoing="_KYdGcwT1EeioA9WpIRynHw">
+          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_CBl-pAT0EeioA9WpIRynHw" name="trc" outgoing="_IfRXQAT1EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+          <attributes xmi:id="_CBl-pQT0EeioA9WpIRynHw" value="&quot;unselected&quot;">
+            <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+          </attributes>
+        </nodes>
+        <nodes xmi:id="_KYdGcAT1EeioA9WpIRynHw" name="real" incoming="_KYdGcwT1EeioA9WpIRynHw _aZ6-8QT1EeioA9WpIRynHw">
+          <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+          <attributes xmi:id="_KYdGcQT1EeioA9WpIRynHw" value="y">
+            <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+          </attributes>
+        </nodes>
+        <edges xmi:id="_CBi7UAT0EeioA9WpIRynHw" source="_CBiUQAT0EeioA9WpIRynHw" target="_CBhtMAT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
+        </edges>
+        <edges xmi:id="_IfRXQAT1EeioA9WpIRynHw" source="_CBl-pAT0EeioA9WpIRynHw" target="_CBi7UQT0EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+        </edges>
+        <edges xmi:id="_KYdGcwT1EeioA9WpIRynHw" source="_CBi7UQT0EeioA9WpIRynHw" target="_KYdGcAT1EeioA9WpIRynHw">
+          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisations"/>
+        </edges>
+        <edges xmi:id="_aZ6-8QT1EeioA9WpIRynHw" source="_CBhtMAT0EeioA9WpIRynHw" target="_KYdGcAT1EeioA9WpIRynHw">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_CBkJcgT0EeioA9WpIRynHw" origin="_CBjiYQT0EeioA9WpIRynHw" image="_CBhtMAT0EeioA9WpIRynHw"/>
+      <mappings xmi:id="_CBl-ogT0EeioA9WpIRynHw" origin="_CBkwggT0EeioA9WpIRynHw" image="_CBi7UQT0EeioA9WpIRynHw"/>
+      <mappings xmi:id="_CBmlsAT0EeioA9WpIRynHw" origin="_CBkwhAT0EeioA9WpIRynHw" image="_CBl-pAT0EeioA9WpIRynHw"/>
+      <mappings xmi:id="_CBmlsQT0EeioA9WpIRynHw" origin="_CBjiZAT0EeioA9WpIRynHw" image="_CBiUQAT0EeioA9WpIRynHw"/>
+      <mappings xmi:id="_KYdtgQT1EeioA9WpIRynHw" origin="_KYdGdAT1EeioA9WpIRynHw" image="_KYdGcAT1EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBhtMgT0EeioA9WpIRynHw" origin="_n6haQQHhEeigD_hJbWzwRg" image="_CBhtMAT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBiUQgT0EeioA9WpIRynHw" origin="_JQeAYAHkEeigD_hJbWzwRg" image="_CBiUQAT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBi7UgT0EeioA9WpIRynHw" origin="_r0DQkQHhEeigD_hJbWzwRg" image="_CBi7UQT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBjiYwT0EeioA9WpIRynHw" origin="_n6haQAHhEeigD_hJbWzwRg" image="_CBjiYQT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBkJcAT0EeioA9WpIRynHw" origin="_JQcyQAHkEeigD_hJbWzwRg" image="_CBjiZAT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBkwgwT0EeioA9WpIRynHw" origin="_r0DQkAHhEeigD_hJbWzwRg" image="_CBkwggT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBlXkAT0EeioA9WpIRynHw" origin="_xz1owAHhEeigD_hJbWzwRg" image="_CBkwhAT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_CBl-pgT0EeioA9WpIRynHw" origin="_v9KhUAKtEeiFGPlFGyLpHA" image="_CBl-pAT0EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_KYdGcgT1EeioA9WpIRynHw" origin="_skl8sQHhEeigD_hJbWzwRg" image="_KYdGcAT1EeioA9WpIRynHw"/>
+      <multiMappings xmi:id="_KYdGdgT1EeioA9WpIRynHw" origin="_skl8sAHhEeigD_hJbWzwRg" image="_KYdGdAT1EeioA9WpIRynHw"/>
+    </multiRules>
   </units>
   <units xsi:type="henshin:Rule" xmi:id="_GyDSoAHjEeigD_hJbWzwRg" name="createDataTrace">
     <lhs xmi:id="_GyJZQAHjEeigD_hJbWzwRg" name="Lhs"/>

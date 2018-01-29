@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Solutions
+Bundle-SymbolicName: uk.ac.kcl.mdeoptimise.nrp.solutions
+Bundle-Version: 1.0.0.qualifier
+Export-Package: models.cra,
+ models.nrp
+Require-Bundle: org.eclipse.emf.ecore.xmi;bundle-version="2.12.0",
+ org.eclipse.emf.henshin.interpreter;bundle-version="1.5.0"

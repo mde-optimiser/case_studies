@@ -1,15 +1,31 @@
 package models.nrp
 
-import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
 import uk.ac.kcl.interpreter.IGuidanceFunction
+import org.eclipse.emf.common.util.BasicEList
 
 class MinimiseCost  implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
-		var fitness = 0
-		return fitness
+		val selectedArtifacts =  model.getReferenceFeature("solutions").get(0).getReferenceFeature("selectedArtifacts")
+		val selectedRealisations = selectedArtifacts.map(sa | sa.getReferenceFeature("realisations")).flatten
+		selectedRealisations.forEach(sr | sr.calcFitnessImpact)
+		
+		return 1.0d
+		
+	}
+	
+	def double calcFitnessImpact(EObject realisation) {
+		val list = newArrayList(1,2,3)
+		list.reduce[p1, p2| p1 + p2]
+		val valuedRequirements = realisation.getReferenceFeature("requirement").get(0).getReferenceFeature("valuations")
+		for (valuedReq : valuedRequirements) {
+			val sumOfCustomerValues = valuedReq.getReferenceFeature("desiredBy")
+			
+			//valuedReq.getFeature("value") * realisation.getFeature("percentage")
+		}
+		return 1.0d
 	}
 	
 	override getName() {
@@ -27,5 +43,18 @@ class MinimiseCost  implements IGuidanceFunction {
 		
 		o.eGet(o.eClass.getEStructuralFeature(feature))
 		
+	}
+	
+	def Iterable<EObject> getReferenceFeature(EObject o, String feature) {
+		
+		val object = (o.getFeature(feature))
+		var features = new BasicEList<EObject>();
+		
+		if(object instanceof EObject) {
+					features.add(object)
+		} else {
+			features = object as BasicEList<EObject>;
+		}		
+		return features
 	}	
 }

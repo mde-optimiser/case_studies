@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NRP:NRP xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:NRP="http://model.nrp"
+    xsi:schemaLocation="http://model.nrp nextReleaseProblem.ecore">
+  <customers
+      name="C1"
+      value="0.8"
+      desires="//@requirements.0/@valuations.0"/>
+  <customers
+      name="C2"
+      value="0.4"
+      desires="//@requirements.0/@valuations.0 //@requirements.1/@valuations.0"/>
+  <customers
+      name="C3"
+      value="0.2"
+      desires="//@requirements.2/@valuations.0"/>
+  <availableArtifacts
+      name="a"
+      realisations="//@requirements.0/@realisations.0"
+      solutions="//@solutions.0"/>
+  <availableArtifacts
+      name="b"
+      realisations="//@requirements.1/@realisations.0"
+      solutions="//@solutions.0"/>
+  <availableArtifacts
+      name="c"
+      realisations="//@requirements.2/@realisations.0 //@requirements.1/@realisations.0"
+      solutions="//@solutions.0"/>
+  <requirements
+      name="A">
+    <valuations
+        value="1.0"
+        desiredBy="//@customers.0 //@customers.1"/>
+    <realisations
+        softwareartifacts="//@availableArtifacts.0"/>
+  </requirements>
+  <requirements
+      name="B">
+    <valuations
+        value="0.5"
+        desiredBy="//@customers.1"/>
+    <realisations
+        softwareartifacts="//@availableArtifacts.1 //@availableArtifacts.2"/>
+  </requirements>
+  <requirements
+      name="C">
+    <valuations
+        value="1.0"
+        desiredBy="//@customers.2"/>
+    <realisations
+        softwareartifacts="//@availableArtifacts.2"/>
+  </requirements>
+  <solutions
+      selectedArtifacts="//@availableArtifacts.0 //@availableArtifacts.1 //@availableArtifacts.2"/>
+</NRP:NRP>
