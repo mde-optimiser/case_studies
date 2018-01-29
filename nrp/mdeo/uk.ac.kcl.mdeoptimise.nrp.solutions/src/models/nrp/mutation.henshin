@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_8Pw_sAEeEeilXOOc9hG_FA">
-  <imports href="../nextReleaseProblem.ecore#/"/>
+  <imports href="nextReleaseProblem.ecore#/"/>
   <imports href="http://www.eclipse.org/emf/2011/Henshin/Trace#/"/>
   <units xsi:type="henshin:IndependentUnit" xmi:id="_e7FvQAEfEeilXOOc9hG_FA" name="modifySelectionWithHierarchy" subUnits="_jPs_EAEfEeilXOOc9hG_FA _tCNa8AEfEeilXOOc9hG_FA"/>
   <units xsi:type="henshin:Rule" xmi:id="_jPs_EAEfEeilXOOc9hG_FA" name="addSaWithHierarchy">
     <lhs xmi:id="_jPyeoAEfEeilXOOc9hG_FA" name="Lhs">
       <nodes xmi:id="_lzcHIAEfEeilXOOc9hG_FA" name="sol">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_mi4AAAEfEeilXOOc9hG_FA" name="sa">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
     </lhs>
     <rhs xmi:id="_jPyeoQEfEeilXOOc9hG_FA" name="Rhs">
       <nodes xmi:id="_lzcHIQEfEeilXOOc9hG_FA" name="sol" outgoing="_nSbNoAEfEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_mi4AAQEfEeilXOOc9hG_FA" name="sa" incoming="_nSbNoAEfEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <edges xmi:id="_nSbNoAEfEeilXOOc9hG_FA" source="_lzcHIQEfEeilXOOc9hG_FA" target="_mi4AAQEfEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
       </edges>
     </rhs>
     <mappings xmi:id="_lzcHIgEfEeilXOOc9hG_FA" origin="_lzcHIAEfEeilXOOc9hG_FA" image="_lzcHIQEfEeilXOOc9hG_FA"/>
@@ -28,36 +28,36 @@
     <multiRules xmi:id="_byH9wwEgEeilXOOc9hG_FA">
       <lhs xmi:id="_byH9xAEgEeilXOOc9hG_FA" name="Lhs">
         <nodes xmi:id="_byIk1QEgEeilXOOc9hG_FA" name="sol">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_byIk2AEgEeilXOOc9hG_FA" name="sa" outgoing="_dYL8oAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_byH9wAEgEeilXOOc9hG_FA" name="dep" incoming="_dYL8oAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_dYL8oAEgEeilXOOc9hG_FA" source="_byIk2AEgEeilXOOc9hG_FA" target="_byH9wAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
       </lhs>
       <rhs xmi:id="_byH9xQEgEeilXOOc9hG_FA" name="Rhs">
         <nodes xmi:id="_byIk0AEgEeilXOOc9hG_FA" name="sol" outgoing="_byIk1AEgEeilXOOc9hG_FA _izmccAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_byIk0gEgEeilXOOc9hG_FA" name="sa" incoming="_byIk1AEgEeilXOOc9hG_FA" outgoing="_dYMjsAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_byH9wQEgEeilXOOc9hG_FA" name="dep" incoming="_dYMjsAEgEeilXOOc9hG_FA _izmccAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_byIk1AEgEeilXOOc9hG_FA" source="_byIk0AEgEeilXOOc9hG_FA" target="_byIk0gEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
         </edges>
         <edges xmi:id="_dYMjsAEgEeilXOOc9hG_FA" source="_byIk0gEgEeilXOOc9hG_FA" target="_byH9wQEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
         <edges xmi:id="_izmccAEgEeilXOOc9hG_FA" source="_byIk0AEgEeilXOOc9hG_FA" target="_byH9wQEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
         </edges>
       </rhs>
       <mappings xmi:id="_byIk1wEgEeilXOOc9hG_FA" origin="_byIk1QEgEeilXOOc9hG_FA" image="_byIk0AEgEeilXOOc9hG_FA"/>
@@ -72,21 +72,21 @@
   <units xsi:type="henshin:Rule" xmi:id="_tCNa8AEfEeilXOOc9hG_FA" name="removeSaWithHierarchy">
     <lhs xmi:id="_tCPQIAEfEeilXOOc9hG_FA" name="Lhs">
       <nodes xmi:id="_uRq3sAEfEeilXOOc9hG_FA" name="sol" outgoing="_wcH9EAEfEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_vlny4AEfEeilXOOc9hG_FA" name="sa" incoming="_wcH9EAEfEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <edges xmi:id="_wcH9EAEfEeilXOOc9hG_FA" source="_uRq3sAEfEeilXOOc9hG_FA" target="_vlny4AEfEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
       </edges>
     </lhs>
     <rhs xmi:id="_tCPQIQEfEeilXOOc9hG_FA" name="Rhs">
       <nodes xmi:id="_uRq3sQEfEeilXOOc9hG_FA" name="sol">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_vlny4QEfEeilXOOc9hG_FA" name="sa">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
     </rhs>
     <mappings xmi:id="_uRrewAEfEeilXOOc9hG_FA" origin="_uRq3sAEfEeilXOOc9hG_FA" image="_uRq3sQEfEeilXOOc9hG_FA"/>
@@ -94,36 +94,36 @@
     <multiRules xmi:id="_BnCw8AEgEeilXOOc9hG_FA">
       <lhs xmi:id="_BnDYAAEgEeilXOOc9hG_FA" name="Lhs">
         <nodes xmi:id="_BnD_EgEgEeilXOOc9hG_FA" name="sol" outgoing="_BnEmIQEgEeilXOOc9hG_FA _IG9asAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_BnD_FAEgEeilXOOc9hG_FA" name="sa" incoming="_BnEmIQEgEeilXOOc9hG_FA _FWMjQAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_BnCJ4AEgEeilXOOc9hG_FA" name="dep" incoming="_IG9asAEgEeilXOOc9hG_FA" outgoing="_FWMjQAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_BnEmIQEgEeilXOOc9hG_FA" source="_BnD_EgEgEeilXOOc9hG_FA" target="_BnD_FAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
         </edges>
         <edges xmi:id="_FWMjQAEgEeilXOOc9hG_FA" source="_BnCJ4AEgEeilXOOc9hG_FA" target="_BnD_FAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
         <edges xmi:id="_IG9asAEgEeilXOOc9hG_FA" source="_BnD_EgEgEeilXOOc9hG_FA" target="_BnCJ4AEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
         </edges>
       </lhs>
       <rhs xmi:id="_BnDYAQEgEeilXOOc9hG_FA" name="Rhs">
         <nodes xmi:id="_BnD_EAEgEeilXOOc9hG_FA" name="sol">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_BnEmIwEgEeilXOOc9hG_FA" name="sa" incoming="_FWMjQQEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_BnCJ4QEgEeilXOOc9hG_FA" name="dep" outgoing="_FWMjQQEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_FWMjQQEgEeilXOOc9hG_FA" source="_BnCJ4QEgEeilXOOc9hG_FA" target="_BnEmIwEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
       </rhs>
       <mappings xmi:id="_BnEmIgEgEeilXOOc9hG_FA" origin="_BnD_EgEgEeilXOOc9hG_FA" image="_BnD_EAEgEeilXOOc9hG_FA"/>
@@ -138,21 +138,21 @@
   <units xsi:type="henshin:Rule" xmi:id="_mZu1oAEgEeilXOOc9hG_FA" name="addSingleSa">
     <lhs xmi:id="_mZ2xcAEgEeilXOOc9hG_FA" name="Lhs">
       <nodes xmi:id="_qW4AoAEgEeilXOOc9hG_FA" name="sol">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_r7oX8AEgEeilXOOc9hG_FA" name="sa">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
     </lhs>
     <rhs xmi:id="_mZ2xcQEgEeilXOOc9hG_FA" name="Rhs">
       <nodes xmi:id="_qW4AoQEgEeilXOOc9hG_FA" name="sol" outgoing="_1Pd60AEgEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_r7oX8QEgEeilXOOc9hG_FA" name="sa" incoming="_1Pd60AEgEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <edges xmi:id="_1Pd60AEgEeilXOOc9hG_FA" source="_qW4AoQEgEeilXOOc9hG_FA" target="_r7oX8QEgEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
       </edges>
     </rhs>
     <mappings xmi:id="_qW4AogEgEeilXOOc9hG_FA" origin="_qW4AoAEgEeilXOOc9hG_FA" image="_qW4AoQEgEeilXOOc9hG_FA"/>
@@ -160,27 +160,27 @@
     <multiRules xmi:id="_tUzKUAEgEeilXOOc9hG_FA">
       <lhs xmi:id="_tUzKUQEgEeilXOOc9hG_FA" name="Lhs">
         <nodes xmi:id="_tUzKVQEgEeilXOOc9hG_FA" name="sol">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_tUzKWgEgEeilXOOc9hG_FA" name="sa" outgoing="_7uZtIAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_tUyjQAEgEeilXOOc9hG_FA" name="dep" incoming="_7uZtIAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_7uZtIAEgEeilXOOc9hG_FA" source="_tUzKWgEgEeilXOOc9hG_FA" target="_tUyjQAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
         <formula xsi:type="henshin:NestedCondition" xmi:id="_6GpFIAEgEeilXOOc9hG_FA">
           <conclusion xmi:id="_6GpFIQEgEeilXOOc9hG_FA">
             <nodes xmi:id="_6GpsMAEgEeilXOOc9hG_FA" name="sol" outgoing="_5MhmQAEgEeilXOOc9hG_FA">
-              <type href="../nextReleaseProblem.ecore#//Solution"/>
+              <type href="nextReleaseProblem.ecore#//Solution"/>
             </nodes>
             <nodes xmi:id="_6GpsMgEgEeilXOOc9hG_FA" name="dep" incoming="_5MhmQAEgEeilXOOc9hG_FA">
-              <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
             </nodes>
             <edges xmi:id="_5MhmQAEgEeilXOOc9hG_FA" source="_6GpsMAEgEeilXOOc9hG_FA" target="_6GpsMgEgEeilXOOc9hG_FA">
-              <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+              <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
             </edges>
           </conclusion>
           <mappings xmi:id="_6GpsMQEgEeilXOOc9hG_FA" origin="_tUzKVQEgEeilXOOc9hG_FA" image="_6GpsMAEgEeilXOOc9hG_FA"/>
@@ -189,19 +189,19 @@
       </lhs>
       <rhs xmi:id="_tUzKUgEgEeilXOOc9hG_FA" name="Rhs">
         <nodes xmi:id="_tUzKUwEgEeilXOOc9hG_FA" name="sol" outgoing="_1Peh4QEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_tUzKWAEgEeilXOOc9hG_FA" name="sa" incoming="_1Peh4QEgEeilXOOc9hG_FA" outgoing="_7uaUMAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_tUyjQQEgEeilXOOc9hG_FA" name="dep" incoming="_7uaUMAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_1Peh4QEgEeilXOOc9hG_FA" source="_tUzKUwEgEeilXOOc9hG_FA" target="_tUzKWAEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
         </edges>
         <edges xmi:id="_7uaUMAEgEeilXOOc9hG_FA" source="_tUzKWAEgEeilXOOc9hG_FA" target="_tUyjQQEgEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
       </rhs>
       <mappings xmi:id="_tUzKVwEgEeilXOOc9hG_FA" origin="_tUzKVQEgEeilXOOc9hG_FA" image="_tUzKUwEgEeilXOOc9hG_FA"/>
@@ -216,21 +216,21 @@
   <units xsi:type="henshin:Rule" xmi:id="_-avXkAEgEeilXOOc9hG_FA" name="removeSingleSa">
     <lhs xmi:id="_-a36cAEgEeilXOOc9hG_FA" name="Lhs">
       <nodes xmi:id="_Ak0pgAEhEeilXOOc9hG_FA" name="sol" outgoing="_EuJPUAEhEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_BgPv8AEhEeilXOOc9hG_FA" name="sa" incoming="_EuJPUAEhEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <edges xmi:id="_EuJPUAEhEeilXOOc9hG_FA" source="_Ak0pgAEhEeilXOOc9hG_FA" target="_BgPv8AEhEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
       </edges>
     </lhs>
     <rhs xmi:id="_-a36cQEgEeilXOOc9hG_FA" name="Rhs">
       <nodes xmi:id="_Ak0pgQEhEeilXOOc9hG_FA" name="sol">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_BgPv8QEhEeilXOOc9hG_FA" name="sa">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
     </rhs>
     <mappings xmi:id="_Ak0pggEhEeilXOOc9hG_FA" origin="_Ak0pgAEhEeilXOOc9hG_FA" image="_Ak0pgQEhEeilXOOc9hG_FA"/>
@@ -238,31 +238,31 @@
     <multiRules xmi:id="_H9lm0gEhEeilXOOc9hG_FA">
       <lhs xmi:id="_H9lm0wEhEeilXOOc9hG_FA" name="Lhs">
         <nodes xmi:id="_H9lm1wEhEeilXOOc9hG_FA" name="sol" outgoing="_H9mN4AEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_H9lm2QEhEeilXOOc9hG_FA" name="sa" incoming="_H9mN4AEhEeilXOOc9hG_FA _MVOVcAEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_H9k_wAEhEeilXOOc9hG_FA" name="dep" outgoing="_MVOVcAEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_H9mN4AEhEeilXOOc9hG_FA" source="_H9lm1wEhEeilXOOc9hG_FA" target="_H9lm2QEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
         </edges>
         <edges xmi:id="_MVOVcAEhEeilXOOc9hG_FA" source="_H9k_wAEhEeilXOOc9hG_FA" target="_H9lm2QEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
         <formula xsi:type="henshin:Not" xmi:id="_LnoPoAEhEeilXOOc9hG_FA">
           <child xsi:type="henshin:NestedCondition" xmi:id="_Lno2sAEhEeilXOOc9hG_FA">
             <conclusion xmi:id="_Lno2sQEhEeilXOOc9hG_FA">
               <nodes xmi:id="_Lno2sgEhEeilXOOc9hG_FA" name="sol" outgoing="_K62CIAEhEeilXOOc9hG_FA">
-                <type href="../nextReleaseProblem.ecore#//Solution"/>
+                <type href="nextReleaseProblem.ecore#//Solution"/>
               </nodes>
               <nodes xmi:id="_Lno2tAEhEeilXOOc9hG_FA" name="dep" incoming="_K62CIAEhEeilXOOc9hG_FA">
-                <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+                <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
               </nodes>
               <edges xmi:id="_K62CIAEhEeilXOOc9hG_FA" source="_Lno2sgEhEeilXOOc9hG_FA" target="_Lno2tAEhEeilXOOc9hG_FA">
-                <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+                <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
               </edges>
             </conclusion>
             <mappings xmi:id="_Lno2swEhEeilXOOc9hG_FA" origin="_H9lm1wEhEeilXOOc9hG_FA" image="_Lno2sgEhEeilXOOc9hG_FA"/>
@@ -272,16 +272,16 @@
       </lhs>
       <rhs xmi:id="_H9lm1AEhEeilXOOc9hG_FA" name="Rhs">
         <nodes xmi:id="_H9lm1QEhEeilXOOc9hG_FA" name="sol">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_H9mN4gEhEeilXOOc9hG_FA" name="sa" incoming="_MVOVcQEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_H9lm0AEhEeilXOOc9hG_FA" name="dep" outgoing="_MVOVcQEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <edges xmi:id="_MVOVcQEhEeilXOOc9hG_FA" source="_H9lm0AEhEeilXOOc9hG_FA" target="_H9mN4gEhEeilXOOc9hG_FA">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
         </edges>
       </rhs>
       <mappings xmi:id="_H9mN4QEhEeilXOOc9hG_FA" origin="_H9lm1wEhEeilXOOc9hG_FA" image="_H9lm1QEhEeilXOOc9hG_FA"/>
@@ -303,15 +303,15 @@
     </parameters>
     <lhs xmi:id="_rHWT8AEjEeilXOOc9hG_FA" name="Lhs">
       <nodes xmi:id="_yCpSIAEjEeilXOOc9hG_FA" name="sol">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_zW_O4AEjEeilXOOc9hG_FA" name="sa" incoming="_xgt7oAHlEeigD_hJbWzwRg" outgoing="_FSM3QAEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <nodes xmi:id="_B1h8EAEkEeilXOOc9hG_FA" name="real" incoming="_FSM3QAEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+        <type href="nextReleaseProblem.ecore#//RequirementRealisation"/>
         <attributes xmi:id="_OBGhEAEkEeilXOOc9hG_FA" value="y">
-          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+          <type href="nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_I4tLMAHlEeigD_hJbWzwRg" name="key" outgoing="_WfWAAAHlEeigD_hJbWzwRg">
@@ -327,7 +327,7 @@
         </attributes>
       </nodes>
       <edges xmi:id="_FSM3QAEkEeilXOOc9hG_FA" source="_zW_O4AEjEeilXOOc9hG_FA" target="_B1h8EAEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
       </edges>
       <edges xmi:id="_WfWAAAHlEeigD_hJbWzwRg" source="_I4tLMAHlEeigD_hJbWzwRg" target="_M12WMAHlEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
@@ -338,15 +338,15 @@
     </lhs>
     <rhs xmi:id="_rHWT8QEjEeilXOOc9hG_FA" name="Rhs">
       <nodes xmi:id="_yCpSIQEjEeilXOOc9hG_FA" name="sol" outgoing="_dRJ-8AHNEeils_QRgrfFmw">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_zW_O4QEjEeilXOOc9hG_FA" name="sa" incoming="_dRJ-8AHNEeils_QRgrfFmw _xgt7oQHlEeigD_hJbWzwRg" outgoing="_FSNeUAEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <nodes xmi:id="_B1h8EQEkEeilXOOc9hG_FA" name="real" incoming="_FSNeUAEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+        <type href="nextReleaseProblem.ecore#//RequirementRealisation"/>
         <attributes xmi:id="_OBHIIAEkEeilXOOc9hG_FA" value="y">
-          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+          <type href="nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_M12WMQHlEeigD_hJbWzwRg" name="value" outgoing="_xgt7oQHlEeigD_hJbWzwRg">
@@ -356,10 +356,10 @@
         </attributes>
       </nodes>
       <edges xmi:id="_FSNeUAEkEeilXOOc9hG_FA" source="_zW_O4QEjEeilXOOc9hG_FA" target="_B1h8EQEkEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
       </edges>
       <edges xmi:id="_dRJ-8AHNEeils_QRgrfFmw" source="_yCpSIQEjEeilXOOc9hG_FA" target="_zW_O4QEjEeilXOOc9hG_FA">
-        <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
       </edges>
       <edges xmi:id="_xgt7oQHlEeigD_hJbWzwRg" source="_M12WMQHlEeigD_hJbWzwRg" target="_zW_O4QEjEeilXOOc9hG_FA">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
@@ -374,12 +374,12 @@
   <units xsi:type="henshin:Rule" xmi:id="_JCPn4AHIEeils_QRgrfFmw" name="markUnselected">
     <lhs xmi:id="_JCjJ4AHIEeils_QRgrfFmw" name="Lhs">
       <nodes xmi:id="_V9D4gAHIEeils_QRgrfFmw" name="sol">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
     </lhs>
     <rhs xmi:id="_JCjJ4QHIEeils_QRgrfFmw" name="Rhs">
       <nodes xmi:id="_V9D4gQHIEeils_QRgrfFmw" name="sol">
-        <type href="../nextReleaseProblem.ecore#//Solution"/>
+        <type href="nextReleaseProblem.ecore#//Solution"/>
       </nodes>
       <nodes xmi:id="_aWKmwAHIEeils_QRgrfFmw" name="trc">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
@@ -392,22 +392,22 @@
     <multiRules xmi:id="_lHTOEAHIEeils_QRgrfFmw">
       <lhs xmi:id="_lHTOEQHIEeils_QRgrfFmw" name="Lhs">
         <nodes xmi:id="_lHT1JAHIEeils_QRgrfFmw">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_XAfrcAHIEeils_QRgrfFmw" name="unselected">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <formula xsi:type="henshin:Not" xmi:id="_oRw-8AHIEeils_QRgrfFmw">
           <child xsi:type="henshin:NestedCondition" xmi:id="_oRw-8QHIEeils_QRgrfFmw">
             <conclusion xmi:id="_oRw-8gHIEeils_QRgrfFmw">
               <nodes xmi:id="_oRxmAAHIEeils_QRgrfFmw" outgoing="_eNYv8AHIEeils_QRgrfFmw">
-                <type href="../nextReleaseProblem.ecore#//Solution"/>
+                <type href="nextReleaseProblem.ecore#//Solution"/>
               </nodes>
               <nodes xmi:id="_oRxmAgHIEeils_QRgrfFmw" incoming="_eNYv8AHIEeils_QRgrfFmw">
-                <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+                <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
               </nodes>
               <edges xmi:id="_eNYv8AHIEeils_QRgrfFmw" source="_oRxmAAHIEeils_QRgrfFmw" target="_oRxmAgHIEeils_QRgrfFmw">
-                <type href="../nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+                <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
               </edges>
             </conclusion>
             <mappings xmi:id="_oRxmAQHIEeils_QRgrfFmw" origin="_lHT1JAHIEeils_QRgrfFmw" image="_oRxmAAHIEeils_QRgrfFmw"/>
@@ -417,10 +417,10 @@
       </lhs>
       <rhs xmi:id="_lHTOEgHIEeils_QRgrfFmw" name="Rhs">
         <nodes xmi:id="_lHTOEwHIEeils_QRgrfFmw">
-          <type href="../nextReleaseProblem.ecore#//Solution"/>
+          <type href="nextReleaseProblem.ecore#//Solution"/>
         </nodes>
         <nodes xmi:id="_XAfrcQHIEeils_QRgrfFmw" name="unselected" incoming="_jxn0kAHIEeils_QRgrfFmw">
-          <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
         </nodes>
         <nodes xmi:id="_lHUcMgHIEeils_QRgrfFmw" name="unselected" outgoing="_jxn0kAHIEeils_QRgrfFmw">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
@@ -465,12 +465,12 @@
         </attributes>
       </nodes>
       <nodes xmi:id="_r0DQkAHhEeigD_hJbWzwRg" name="sa" incoming="_20vW0AHhEeigD_hJbWzwRg" outgoing="_w4RYYAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <nodes xmi:id="_skl8sAHhEeigD_hJbWzwRg" name="real" incoming="_w4RYYAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+        <type href="nextReleaseProblem.ecore#//RequirementRealisation"/>
         <attributes xmi:id="_9PArkAHhEeigD_hJbWzwRg" value="x">
-          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+          <type href="nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_xz1owAHhEeigD_hJbWzwRg" name="trc" outgoing="_20vW0AHhEeigD_hJbWzwRg">
@@ -486,7 +486,7 @@
         </attributes>
       </nodes>
       <edges xmi:id="_w4RYYAHhEeigD_hJbWzwRg" source="_r0DQkAHhEeigD_hJbWzwRg" target="_skl8sAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
       </edges>
       <edges xmi:id="_20vW0AHhEeigD_hJbWzwRg" source="_xz1owAHhEeigD_hJbWzwRg" target="_r0DQkAHhEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
@@ -504,7 +504,7 @@
               </attributes>
             </nodes>
             <nodes xmi:id="_3RAKJgHjEeigD_hJbWzwRg" name="sa" incoming="_xHcx8AHjEeigD_hJbWzwRg">
-              <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
             </nodes>
             <edges xmi:id="_xHcx8AHjEeigD_hJbWzwRg" source="_3RAKIwHjEeigD_hJbWzwRg" target="_3RAKJgHjEeigD_hJbWzwRg">
               <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
@@ -523,12 +523,12 @@
         </attributes>
       </nodes>
       <nodes xmi:id="_r0DQkQHhEeigD_hJbWzwRg" name="sa" incoming="_33jMwAHjEeigD_hJbWzwRg" outgoing="_w4R_cAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
       </nodes>
       <nodes xmi:id="_skl8sQHhEeigD_hJbWzwRg" name="real" incoming="_w4R_cAHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//RequirementRealisation"/>
+        <type href="nextReleaseProblem.ecore#//RequirementRealisation"/>
         <attributes xmi:id="_9PBSoAHhEeigD_hJbWzwRg" value="x">
-          <type href="../nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
+          <type href="nextReleaseProblem.ecore#//RequirementRealisation/percentage"/>
         </attributes>
       </nodes>
       <nodes xmi:id="_JQeAYAHkEeigD_hJbWzwRg" name="key" outgoing="_LSY00AHkEeigD_hJbWzwRg">
@@ -544,7 +544,7 @@
         </attributes>
       </nodes>
       <edges xmi:id="_w4R_cAHhEeigD_hJbWzwRg" source="_r0DQkQHhEeigD_hJbWzwRg" target="_skl8sQHhEeigD_hJbWzwRg">
-        <type href="../nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/realisation"/>
       </edges>
       <edges xmi:id="_33jMwAHjEeigD_hJbWzwRg" source="_n6haQQHhEeigD_hJbWzwRg" target="_r0DQkQHhEeigD_hJbWzwRg">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
