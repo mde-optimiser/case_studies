@@ -14,7 +14,7 @@ class MinimiseSprintsWithInvalidEffort implements IGuidanceFunction {
 				
 				result + item.getFeature("Effort") as Integer
 				
-			] as Integer > 8
+			] as Integer > 13
 			
 		].toList
 		
