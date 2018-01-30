@@ -12,9 +12,8 @@ class MinimiseCost  implements IGuidanceFunction {
 				.getReferenceFeature("selectedArtifacts").fold(0d)[
 					result, artifact | 
 					
-					new Double(
-						result + artifact.getReferenceFeature("costs").head.getFeature("amount") as Integer
-					)
+					//This assumes money for now only
+					result + artifact.getReferenceFeature("costs").head.getFeature("amount") as Double
 				]
 		
 		println("Calculated selectedArtifacts cost: " + selectedArtifactsCost)
