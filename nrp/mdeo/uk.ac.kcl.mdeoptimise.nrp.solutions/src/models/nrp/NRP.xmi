@@ -19,19 +19,19 @@
   <availableArtifacts
       name="a"
       realisations="//@requirements.0/@realisations.0"
-      solutions="//@solutions.0">
+      >
     <costs amount="100.0"/>
   </availableArtifacts>
   <availableArtifacts
       name="b"
       realisations="//@requirements.1/@realisations.0"
-      solutions="//@solutions.0">
+      >
     <costs amount="100.0"/>
   </availableArtifacts>
   <availableArtifacts
       name="c"
       realisations="//@requirements.2/@realisations.0 //@requirements.1/@realisations.0"
-      solutions="//@solutions.0">
+      >
     <costs amount="100.0"/>
   </availableArtifacts>
   <requirements
@@ -58,6 +58,5 @@
     <realisations
         softwareartifacts="//@availableArtifacts.2"/>
   </requirements>
-  <solutions
-      selectedArtifacts="//@availableArtifacts.0 //@availableArtifacts.1 //@availableArtifacts.2"/>
+  <solutions />
 </NRP:NRP>
