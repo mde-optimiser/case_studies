@@ -1,0 +1,7 @@
+basepath <src/models/argumentation/>
+metamodel <argumentation.ecore>
+model <argumentation.xmi>
+objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation." }
+constraint MinimiseNumberOfPersuadeeFrameworksThaExceedTheNumberOfAssertedArguments java { "" } 
+mutate using <argumentation.henshin> unit "addArgument"
+optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 experiments 1

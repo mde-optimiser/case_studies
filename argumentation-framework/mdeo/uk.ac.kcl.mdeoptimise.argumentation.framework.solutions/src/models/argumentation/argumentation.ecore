@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="argumentation" nsURI="http://www.kcl.ac.uk/mdeo/argumentation/1.0"
+    nsPrefix="argumentation">
+  <eClassifiers xsi:type="ecore:EClass" name="ArgumentationFramework">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persuadeeargumentationframework"
+        lowerBound="1" upperBound="-1" eType="#//PersuadeeArgumentationFramework"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasPersuader" lowerBound="1"
+        eType="#//Persuader" eOpposite="#//Persuader/hasArgumentationFramework"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" lowerBound="1" upperBound="-1"
+        eType="#//Topic" eOpposite="#//Topic/argumentationframework"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasArgument" lowerBound="1"
+        upperBound="-1" eType="#//Argument" eOpposite="#//Argument/isIncludedInArgumentationFramework"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Persuader">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasArgumentationFramework"
+        lowerBound="1" eType="#//ArgumentationFramework" eOpposite="#//ArgumentationFramework/hasPersuader"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Topic">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasArgument" lowerBound="1"
+        eType="#//Argument" eOpposite="#//Argument/hasTopic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="argumentationframework"
+        lowerBound="1" eType="#//ArgumentationFramework" eOpposite="#//ArgumentationFramework/topic"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Argument">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasTopic" lowerBound="1"
+        eType="#//Topic" eOpposite="#//Topic/hasArgument"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attacks" lowerBound="1"
+        eType="#//Argument"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isIncludedInArgumentationFramework"
+        lowerBound="1" eType="#//ArgumentationFramework" eOpposite="#//ArgumentationFramework/hasArgument"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Persuadee">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasPersuadeeArgumentationFramework"
+        lowerBound="1" eType="#//PersuadeeArgumentationFramework" eOpposite="#//PersuadeeArgumentationFramework/hasPersuadee"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PersuadeeArgumentationFramework">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasArgument" lowerBound="1"
+        upperBound="-1" eType="#//Argument"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasPersuadee" lowerBound="1"
+        eType="#//Persuadee" eOpposite="#//Persuadee/hasPersuadeeArgumentationFramework"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>
