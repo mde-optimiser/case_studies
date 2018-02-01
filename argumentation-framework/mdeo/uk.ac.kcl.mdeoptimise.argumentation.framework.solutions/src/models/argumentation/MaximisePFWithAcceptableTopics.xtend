@@ -8,7 +8,9 @@ class MaximisePFWithAcceptableTopics implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
-		var fitness = 0
+		var acceptableTopicsCounter = new ECoreToDungHelper(model)
+		
+		var fitness = acceptableTopicsCounter.countAcceptableTopics()
 		
 		println(getName + ": " + fitness)
 		
