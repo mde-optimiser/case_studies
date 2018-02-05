@@ -10,4 +10,4 @@ mutate using <orchestration.henshin> unit "deleteOrchestrator"
 mutate using <orchestration.henshin> unit "createConcretePlan"
 mutate using <orchestration.henshin> unit "deleteConcretePlan"
 mutate using <orchestration.henshin> unit "assingNodeToOrchestrator"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 150 population 30 experiments 10
+optimisation provider moea algorithm NSGAII variation mutation evolutions 150 population 30 batches 10
