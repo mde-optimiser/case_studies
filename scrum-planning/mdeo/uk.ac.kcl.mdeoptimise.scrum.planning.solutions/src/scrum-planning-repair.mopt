@@ -14,4 +14,4 @@ mutate using <sprint-repair.henshin> unit "removeItemFromSprint"
 mutate using <sprint-repair.henshin> unit "createSprint_lb_repair"
 mutate using <sprint-repair.henshin> unit "delete_sprint_lb_repair"
 mutate using <sprint-repair.henshin> unit "move_item_between_sprints"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 experiments 1
+optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 batches 1
