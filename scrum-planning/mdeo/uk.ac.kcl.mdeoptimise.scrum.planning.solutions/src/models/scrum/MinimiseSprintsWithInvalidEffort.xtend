@@ -14,7 +14,7 @@ class MinimiseSprintsWithInvalidEffort implements IGuidanceFunction {
 				
 				result + item.getFeature("Effort") as Integer
 				
-			] as Integer > 13
+			] as Integer > 8
 			
 		].toList
 		
@@ -26,7 +26,7 @@ class MinimiseSprintsWithInvalidEffort implements IGuidanceFunction {
 		
 		println("Counted invalid sprints: " + fitness)
 		
-		return fitness * -1
+		return fitness
 	}
 	
 	override getName() {

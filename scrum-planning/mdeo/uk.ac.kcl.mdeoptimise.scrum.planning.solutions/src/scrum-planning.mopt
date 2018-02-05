@@ -11,4 +11,4 @@ mutate using <sprint.henshin> unit "createSprint"
 mutate using <sprint.henshin> unit "deleteSprint"
 mutate using <sprint.henshin> unit "addItemToSprint"
 mutate using <sprint.henshin> unit "removeItemFromSprint"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 experiments 1
+optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 batches 1

@@ -17,7 +17,7 @@ class MinimiseUnassignedWorkItems implements IGuidanceFunction {
 		
 		println("Unassigned backlog work items: " + fitness)
 		
-		return fitness * -1
+		return fitness
 	}
 	
 	override getName() {
@@ -35,7 +35,5 @@ class MinimiseUnassignedWorkItems implements IGuidanceFunction {
 		
 		o.eGet(o.eClass.getEStructuralFeature(feature))
 		
-	}	
-	
+	}
 }
-	
