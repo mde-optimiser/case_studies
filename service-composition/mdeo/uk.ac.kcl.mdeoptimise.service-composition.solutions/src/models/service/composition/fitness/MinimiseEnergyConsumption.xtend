@@ -1,16 +1,18 @@
 package models.service.composition.fitness
 
-import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
 
-class MinimiseEnergyConsumption  extends AbstractRPCGuidanceFunction {
+class MinimiseEnergyConsumption  extends AbstractRemoteGuidanceFunction {
 	
 	override computeFitness(EObject model) {
-		0
+		
+		var predictors = new PredictorsCalculator().calculatePredictors(model, null);
+		var fitness = this.evaluatePredictors(predictors)
+		
+		return fitness.get(2)
 	}
 	
 	override getName() {
-		return "Minimise Standard Deviation"
+		return "Minimise Energy Consumption"
 	}	
 }

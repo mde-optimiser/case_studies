@@ -85,16 +85,11 @@ class PredictorsCalculator {
 		
 		orchestrators.forEach[ orchestrator | 
 			
-			val concreteServices = new ArrayList<EObject>();
-			
-			//Add all the concrete services from the abstract plans orchestrated by this node
-			orchestrator.getFeatureList("abstractServices").forEach[
-				abstractService | concreteServices.addAll(abstractService.getFeatureList("concreteServices"))
-			]
+			val concreteServices = orchestrator.getFeatureList("concreteServices")
 			
 			//Count the hops between this orchestrator and the concrete services it orchestrates
 			//from the abstract plans assigned to it
-			var orchestratorHopsCount = concreteServices.fold(0)[
+			val orchestratorHopsCount = concreteServices.fold(0)[
 				planHops, concreteService | 
 				
 				planHops + lookupConnection(orchestrator.getFeatureObject("deployedOn").getFeatureInt("ID"), 
@@ -167,13 +162,8 @@ class PredictorsCalculator {
 			.fold(0)[
 				counter, orchestrator | 
 				
-					val concreteServices = new ArrayList<EObject>();
-				
-					//Add all the concrete services from the abstract plans orchestrated by this node
-					orchestrator.getFeatureList("abstractServices").forEach[
-						abstractService | concreteServices.addAll(abstractService.getFeatureList("concreteServices"))
-					]
-					
+					val concreteServices = orchestrator.getFeatureList("concreteServices")
+
 					//Count the hops between this orchestrator and the concrete services it orchestrates
 					//from the abstract plans assigned to it
 					counter + concreteServices.filter[
@@ -200,12 +190,7 @@ class PredictorsCalculator {
 			].fold(0)[
 				counter, orchestrator | 
 				
-					val concreteServices = new ArrayList<EObject>();
-				
-					//Add all the concrete services from the abstract plans orchestrated by this node
-					orchestrator.getFeatureList("abstractServices").forEach[
-						abstractService | concreteServices.addAll(abstractService.getFeatureList("concreteServices"))
-					]
+					val concreteServices = orchestrator.getFeatureList("concreteServices")
 					
 					//Count the hops between this orchestrator and the concrete services it orchestrates
 					//from the abstract plans assigned to it
@@ -238,10 +223,7 @@ class PredictorsCalculator {
 	 */
 	def List<EObject> getFeatureList(EObject o, String feature) {		
 		return this.getFeature(o, feature) as List<EObject>
-	}
-	
-	
-	/**
+	}	/**
 	 * 
 	 * Helper function getting the value of the named feature (if it exists) for the given EObject
 	 * as a single EObject

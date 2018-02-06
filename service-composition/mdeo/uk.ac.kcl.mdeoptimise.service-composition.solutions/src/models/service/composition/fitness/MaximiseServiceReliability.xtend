@@ -1,16 +1,18 @@
 package models.service.composition.fitness
 
-import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
 
-class MaximiseServiceReliability  extends AbstractRPCGuidanceFunction {
+class MaximiseServiceReliability  extends AbstractRemoteGuidanceFunction {
 	
 	override computeFitness(EObject model) {
-		0
+		
+		var predictors = new PredictorsCalculator().calculatePredictors(model, null);
+		var fitness = this.evaluatePredictors(predictors)
+		
+		return fitness.get(1)
 	}
 	
 	override getName() {
-		return "Minimise Standard Deviation"
+		return "Minimise Service Reliability"
 	}	
 }

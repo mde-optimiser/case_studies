@@ -29,7 +29,7 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 	// Chosen Surrogate Model - Available Models: LR, MARS, CART, RF
 	private String surrogateModel = "LR";
 	private int objectives = 3;
-
+	
 	/**
 	 * Evaluates the fitness function of an individual based on the values of the considered predictor variables.
 	 * 
@@ -37,6 +37,7 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 	 * @return
 	 */
 	public List<Double> evaluate(ArrayList<Integer> values) {
+		
 		loadSurrogateModel(surrogateModel);
 
 		// Populate the predictors of an example composition configuration

@@ -29,7 +29,7 @@ public class PredictorCalculatorTests {
 		
 		int hops = new PredictorsCalculator().calculateHops(orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of hops: ", 14, hops);
+		assertEquals("Expected number of hops: ", 6, hops);
 	}
 	
 	@Test
@@ -42,7 +42,7 @@ public class PredictorCalculatorTests {
 		
 		int hops = new PredictorsCalculator().countTypeNodes(1, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 1: ", 4, hops);
+		assertEquals("Expected number of nodes of type 1: ", 2, hops);
 	}
 	
 	@Test
@@ -83,7 +83,7 @@ public class PredictorCalculatorTests {
 		
 		int hops = new PredictorsCalculator().countLoadNodes(3, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 3: ", 5, hops);
+		assertEquals("Expected number of nodes of type 3: ", 3, hops);
 	}
 	
 
