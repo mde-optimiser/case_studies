@@ -4,6 +4,9 @@ import java.util.List
 import org.eclipse.emf.ecore.EObject
 import java.util.ArrayList
 import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.henshin.model.resource.HenshinResourceSet
+import org.eclipse.emf.common.util.URI
+import java.util.Collections
 
 class PredictorsCalculator {
 //	
@@ -16,32 +19,51 @@ class PredictorsCalculator {
 //      predictors.put("loadMedium", object.countLoadNodes(2));
 //      predictors.put("loadSmall", object.countLoadNodes(3));
 	
-	def List<Integer> calculatePredictors(EObject model, EObject predictorsModel) {
+	private static EObject predictors;
+	
+	new(){
+		
+		if(this.predictors === null) {
+			var henshinResourceSet = new HenshinResourceSet("/home/alxbrd/projects/alxbrd/github/case_studies/service-composition/mdeo/uk.ac.kcl.mdeoptimise.service-composition.solutions/src/models/service/composition");
+			val resource = henshinResourceSet.createResource(URI.createURI("connected-nodes.xmi"));
+					
+			resource.load(Collections.EMPTY_MAP);
+			this.predictors = resource.getAllContents().next();
+		}
+		
+
+		
+	}
+	
+	def List<Integer> calculatePredictors(EObject model) {
 		var predictors = new ArrayList<Integer>();
+		
+		//Always making the request from node 1
+		predictors.add(1)
 		
 		//Orchestrators
 		predictors.add(this.calculateOrchestrators(model));
 		
 		//Total Hops - hops
-		predictors.add(this.calculateHops(model, predictorsModel));
+		predictors.add(this.calculateHops(model, this.predictors));
 		
 		//Fast Nodes - devFast
-		predictors.add(this.countTypeNodes(1, model, predictorsModel))
+		predictors.add(this.countTypeNodes(1, model, this.predictors))
 		
 		//Medium Nodes - devMedium
-		predictors.add(this.countTypeNodes(2, model, predictorsModel))
+		predictors.add(this.countTypeNodes(2, model, this.predictors))
 		
 		//Slow Nodes - devSlow
-		predictors.add(this.countTypeNodes(3, model, predictorsModel))
+		predictors.add(this.countTypeNodes(3, model, this.predictors))
 		
 		//Highly Loaded Nodes - loadBig
-		predictors.add(this.countLoadNodes(1, model, predictorsModel))
+		predictors.add(this.countLoadNodes(1, model, this.predictors))
 		
 		//Medium Loaded Nodes - loadMedium
-		predictors.add(this.countLoadNodes(2, model, predictorsModel))
+		predictors.add(this.countLoadNodes(2, model, this.predictors))
 		
 		//Low Loaded Nodes - loadSmall
-		predictors.add(this.countLoadNodes(3, model, predictorsModel))
+		predictors.add(this.countLoadNodes(3, model, this.predictors))
 		
 		return predictors;
 	}

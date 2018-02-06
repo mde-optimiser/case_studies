@@ -37,6 +37,7 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 	 * @return
 	 */
 	public List<Double> evaluate(ArrayList<Integer> values) {
+	
 		
 		loadSurrogateModel(surrogateModel);
 
@@ -47,7 +48,7 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 
 		for (int i = 1; i <= objectives; i++) {
 			results.add(predictData(pred, i));
-			// System.out.println("Objective " + i + " : " + results.get(i - 1));
+			System.out.println("Objective " + i + " : " + results.get(i - 1));
 		}
 
 		return results;
@@ -89,10 +90,10 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 
 		try {
 			// Store the R model code into a temporary file
-			File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("src/main/resources/build" + modelName + ".R"));
+			File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("/home/alxbrd/projects/alxbrd/github/case_studies/service-composition/mdeo/uk.ac.kcl.mdeoptimise.service-composition.solutions/src/main/resources/build" + modelName + ".R"));
 			// File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("resources/build" + modelName + ".R"));
 			// Store the training dataset into a temporary file too
-			String trainingSet = FilesUtils.readFile("src/main/resources/trainingSet.csv");
+			String trainingSet = FilesUtils.readFile("/home/alxbrd/projects/alxbrd/github/case_studies/service-composition/mdeo/uk.ac.kcl.mdeoptimise.service-composition.solutions/src/main/resources/trainingSet.csv");
 			File tempFileSet = FilesUtils.createTempFile(trainingSet);
 			// Store to a variable on R the path name of the training set
 			re.eval(String.format("path <- '%s'", tempFileSet.getAbsolutePath().toString())).asString();

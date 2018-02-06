@@ -5,11 +5,14 @@ import org.eclipse.emf.ecore.EObject
 class MaximiseServiceReliability  extends AbstractRemoteGuidanceFunction {
 	
 	override computeFitness(EObject model) {
-		
-		var predictors = new PredictorsCalculator().calculatePredictors(model, null);
+		var predictors = new PredictorsCalculator().calculatePredictors(model);
 		var fitness = this.evaluatePredictors(predictors)
 		
-		return fitness.get(1)
+		println(this.getName + ": " + fitness)
+
+		
+
+		return fitness.get(1) * -1
 	}
 	
 	override getName() {

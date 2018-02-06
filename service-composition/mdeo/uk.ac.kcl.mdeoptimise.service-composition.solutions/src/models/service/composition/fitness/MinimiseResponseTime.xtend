@@ -6,10 +6,10 @@ class MinimiseResponseTime  extends AbstractRemoteGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
-		var predictors = new PredictorsCalculator().calculatePredictors(model, null);
+		var predictors = new PredictorsCalculator().calculatePredictors(model);
 		var fitness = this.evaluatePredictors(predictors)
 		
-		return fitness.get(0)
+		return fitness.get(0) * -1
 	}
 	
 	override getName() {

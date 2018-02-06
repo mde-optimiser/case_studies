@@ -6,7 +6,8 @@ class MinimiseEnergyConsumption  extends AbstractRemoteGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
-		var predictors = new PredictorsCalculator().calculatePredictors(model, null);
+		var predictors = new PredictorsCalculator().calculatePredictors(model);
+	
 		var fitness = this.evaluatePredictors(predictors)
 		
 		return fitness.get(2)

@@ -112,4 +112,11 @@ public class PredictorCalculatorTests {
 		
 		assertEquals("Expected number of nodes of type 1: ", 0, hops);
 	}
+	
+	@Test
+	public void assertThatPredictorsResourceIsLoaded() {
+		PredictorsCalculator pc = new PredictorsCalculator();
+		
+		assertEquals(1, 1);
+	}
 }
