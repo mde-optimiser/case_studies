@@ -1,20 +1,32 @@
-# Eclipse
-.classpath
-.project
-.settings/
- 
-# Intellij
-.idea/
+# Ignore Intellij project files
 *.iml
-*.iws
- 
-# Mac
+.idea/
+
+# XTend Ignore Files
+bin
 .DS_Store
- 
-# Maven
-log/
-target/
-
+target
+*.xtendbin
+*.java._trace
+*.java_trace
 xtend-gen/
-bin/
 
+# Ignore specific eclipse project files
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Eclipse core
+# .project
+# .classpath
+
+mdeo-results/
+xtend-gen/
