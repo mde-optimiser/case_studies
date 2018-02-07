@@ -1,8 +1,6 @@
 package models.service.composition.surrogates.rpc;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import com.esotericsoftware.kryo.Kryo;
 
 import models.service.composition.surrogates.IPredictorsMessage;

@@ -4,16 +4,12 @@ import java.util.Collections;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
 
 public class TestModelLoader {
 
-	
 	private HenshinResourceSet henshinResourceSet;
-	private EPackage metamodel;
-	
 	
 	public HenshinResourceSet getResourceSet() {
 		

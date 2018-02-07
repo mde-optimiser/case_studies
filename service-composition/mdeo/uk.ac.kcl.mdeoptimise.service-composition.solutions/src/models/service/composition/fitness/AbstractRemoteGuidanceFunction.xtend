@@ -48,7 +48,7 @@ abstract class AbstractRemoteGuidanceFunction implements IGuidanceFunction {
 	}
 	
 	def boolean cacheExists(int predictorsHash) {
-		return this.fitnessCache.containsKey(predictorsHash)
+		return AbstractRemoteGuidanceFunction.fitnessCache.containsKey(predictorsHash)
 	}
 	
 	def void cacheStore(int hash, List<Double> fitness){

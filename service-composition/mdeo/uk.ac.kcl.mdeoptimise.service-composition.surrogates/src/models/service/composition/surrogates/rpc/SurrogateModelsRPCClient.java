@@ -2,17 +2,11 @@ package models.service.composition.surrogates.rpc;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
-import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryonet.Client;
-import com.esotericsoftware.kryonet.Connection;
-import com.esotericsoftware.kryonet.Listener;
 import com.esotericsoftware.kryonet.rmi.ObjectSpace;
 
 import models.service.composition.surrogates.IPredictorsMessage;
-import models.service.composition.surrogates.PredictorsMessage;
-import models.service.composition.surrogates.SurrogateModelsWrapper;
 
 
 public class SurrogateModelsRPCClient {

@@ -11,7 +11,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/uk.ac.kcl.mdeoptimise.cra.solutions"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.henshin.model_1.5.0.201801310538.jar"/>
 	<classpathentry kind="lib" path="lib/uk.ac.kcl.mdeoptimise.service-composition.surrogates-0.0.1-SNAPSHOT-jar-with-dependencies.jar"/>
 	<classpathentry kind="output" path="bin"/>
