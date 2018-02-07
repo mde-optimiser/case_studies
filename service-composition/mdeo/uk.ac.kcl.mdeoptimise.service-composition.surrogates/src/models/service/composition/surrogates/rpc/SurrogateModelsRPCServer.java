@@ -24,6 +24,9 @@ public class SurrogateModelsRPCServer {
 	    
 	    server.start();
 	    
+	    System.out.println(String.format("Server started on host %s listening on port %s", 
+	    		RPCConnectionInformation.HOSTNAME, RPCConnectionInformation.PORT));
+	    
 	    try {
 			
 	    	server.bind(RPCConnectionInformation.PORT);
@@ -39,21 +42,17 @@ public class SurrogateModelsRPCServer {
 	    
 	    ObjectSpace.registerClasses(server.getKryo());
 	    final ObjectSpace objectSpace = new ObjectSpace();
-	    
-	    PredictorsMessage messageObject = new PredictorsMessage();
-	    
+  
+	    PredictorsMessage messageObject = new PredictorsMessage();	    
 	    objectSpace.register(50, messageObject);
-	    
-	    
+	  
 		server.addListener(new Listener() {
 			public void connected (final Connection connection) {
 				// Allow the connection to access objects in the ObjectSpace.
 				objectSpace.addConnection(connection);
-			}
-
-			public void received (Connection connection, Object object) {
-				// The test is complete when the client sends the OtherObject instance.
-				System.out.println("Received" + object);
+				
+				System.out.println(String.format("Connection received from: %s", connection.getRemoteAddressTCP()));
+				
 			}
 		});
 	}

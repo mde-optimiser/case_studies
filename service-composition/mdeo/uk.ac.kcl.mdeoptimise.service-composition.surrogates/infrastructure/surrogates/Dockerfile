@@ -9,7 +9,7 @@ RUN wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-mave
 RUN yum install -y apache-maven
 
 # Install the R dependencies
-#RUN Rscript /var/app/current/scripts/dependencies.R
+RUN Rscript /var/app/current/scripts/dependencies.R
 
 # Networking
 EXPOSE 9090
