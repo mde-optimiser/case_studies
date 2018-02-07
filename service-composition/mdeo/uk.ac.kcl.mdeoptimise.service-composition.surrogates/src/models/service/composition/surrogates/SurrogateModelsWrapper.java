@@ -20,7 +20,7 @@ import org.rosuda.JRI.Rengine;
 import models.service.composition.surrogates.utils.FilesUtils;
 import models.service.composition.surrogates.utils.PredictorsTuple;
 
-public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
+public class SurrogateModelsWrapper {
 	
 	// The R engine which creates an interface between R and Java.
 	private Rengine re;
@@ -36,7 +36,7 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 	 * @param values
 	 * @return
 	 */
-	public List<Double> evaluate(ArrayList<Integer> values) {
+	public ArrayList<Double> evaluate(ArrayList<Integer> values) {
 	
 		
 		loadSurrogateModel(surrogateModel);
@@ -44,7 +44,7 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 		// Populate the predictors of an example composition configuration
 		PredictorsTuple pred = new PredictorsTuple(predictors, values);
 
-		List<Double> results = new ArrayList<Double>();
+		ArrayList<Double> results = new ArrayList<Double>();
 
 		for (int i = 1; i <= objectives; i++) {
 			results.add(predictData(pred, i));
@@ -52,6 +52,10 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 		}
 
 		return results;
+	}
+	
+	public PredictorsTuple getPredictorsTuple(ArrayList<Integer> predictorsArray) {
+		return new PredictorsTuple(this.predictors, predictorsArray);
 	}
 
 	/**
@@ -90,10 +94,10 @@ public class SurrogateModelsWrapper implements ISurrogateModelsWrapper {
 
 		try {
 			// Store the R model code into a temporary file
-			File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("/home/alxbrd/projects/alxbrd/github/case_studies/service-composition/mdeo/uk.ac.kcl.mdeoptimise.service-composition.solutions/src/main/resources/build" + modelName + ".R"));
+			File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("src/models/service/composition/resources/build" + modelName + ".R"));
 			// File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("resources/build" + modelName + ".R"));
 			// Store the training dataset into a temporary file too
-			String trainingSet = FilesUtils.readFile("/home/alxbrd/projects/alxbrd/github/case_studies/service-composition/mdeo/uk.ac.kcl.mdeoptimise.service-composition.solutions/src/main/resources/trainingSet.csv");
+			String trainingSet = FilesUtils.readFile("src/models/service/composition/resources/trainingSet.csv");
 			File tempFileSet = FilesUtils.createTempFile(trainingSet);
 			// Store to a variable on R the path name of the training set
 			re.eval(String.format("path <- '%s'", tempFileSet.getAbsolutePath().toString())).asString();

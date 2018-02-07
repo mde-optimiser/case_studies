@@ -19,20 +19,20 @@ class PredictorsCalculator {
 //      predictors.put("loadMedium", object.countLoadNodes(2));
 //      predictors.put("loadSmall", object.countLoadNodes(3));
 	
+	//Cached predictors object
 	private static EObject predictors;
 	
-	new(){
+	def EObject getPredictors(){
 		
-		if(this.predictors === null) {
+		if(PredictorsCalculator.predictors === null) {
 			var henshinResourceSet = new HenshinResourceSet("/home/alxbrd/projects/alxbrd/github/case_studies/service-composition/mdeo/uk.ac.kcl.mdeoptimise.service-composition.solutions/src/models/service/composition");
 			val resource = henshinResourceSet.createResource(URI.createURI("connected-nodes.xmi"));
 					
 			resource.load(Collections.EMPTY_MAP);
-			this.predictors = resource.getAllContents().next();
+			PredictorsCalculator.predictors = resource.getAllContents().next();
 		}
 		
-
-		
+		return PredictorsCalculator.predictors;
 	}
 	
 	def List<Integer> calculatePredictors(EObject model) {
@@ -45,25 +45,25 @@ class PredictorsCalculator {
 		predictors.add(this.calculateOrchestrators(model));
 		
 		//Total Hops - hops
-		predictors.add(this.calculateHops(model, this.predictors));
+		predictors.add(this.calculateHops(model, this.getPredictors));
 		
 		//Fast Nodes - devFast
-		predictors.add(this.countTypeNodes(1, model, this.predictors))
+		predictors.add(this.countTypeNodes(1, model, this.getPredictors))
 		
 		//Medium Nodes - devMedium
-		predictors.add(this.countTypeNodes(2, model, this.predictors))
+		predictors.add(this.countTypeNodes(2, model, this.getPredictors))
 		
 		//Slow Nodes - devSlow
-		predictors.add(this.countTypeNodes(3, model, this.predictors))
+		predictors.add(this.countTypeNodes(3, model, this.getPredictors))
 		
 		//Highly Loaded Nodes - loadBig
-		predictors.add(this.countLoadNodes(1, model, this.predictors))
+		predictors.add(this.countLoadNodes(1, model, this.getPredictors))
 		
 		//Medium Loaded Nodes - loadMedium
-		predictors.add(this.countLoadNodes(2, model, this.predictors))
+		predictors.add(this.countLoadNodes(2, model, this.getPredictors))
 		
 		//Low Loaded Nodes - loadSmall
-		predictors.add(this.countLoadNodes(3, model, this.predictors))
+		predictors.add(this.countLoadNodes(3, model, this.getPredictors))
 		
 		return predictors;
 	}

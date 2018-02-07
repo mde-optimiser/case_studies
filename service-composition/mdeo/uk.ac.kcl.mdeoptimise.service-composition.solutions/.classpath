@@ -5,7 +5,6 @@
 	<classpathentry kind="src" path="xtend-gen"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="uk.ac.kcl.mdeoptimise.MDEO_CONTAINER/dsl"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/uk.ac.kcl.mdeoptimise.service-composition.surrogates"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
@@ -13,7 +12,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/uk.ac.kcl.mdeoptimise.cra.solutions"/>
-	<classpathentry kind="lib" path="lib/uk.ac.kcl.mdeoptimise.service-composition.surrogates-0.0.1-SNAPSHOT-jar-with-dependencies.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.emf.henshin.model_1.5.0.201801310538.jar"/>
+	<classpathentry kind="lib" path="lib/uk.ac.kcl.mdeoptimise.service-composition.surrogates-0.0.1-SNAPSHOT-jar-with-dependencies.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

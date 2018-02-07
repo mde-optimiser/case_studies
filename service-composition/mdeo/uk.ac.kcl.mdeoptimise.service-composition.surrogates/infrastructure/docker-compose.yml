@@ -6,7 +6,13 @@ services:
       dockerfile: Dockerfile
     ports:
       - "9090:9090"
-    command: /bin/bash -c "while :; do echo 'Hit CTRL+C'; sleep 1; done"
+    command: 
+      - /bin/bash
+      - -c 
+      - |
+        cd /var/app/current
+        mvn clean compile package
+        java -jar target/uk.ac.kcl.mdeoptimise.service-composition.surrogates-0.0.1-SNAPSHOT-jar-with-dependencies.jar
     volumes:
-        - ../target/:/var/app/current
+        - ../:/var/app/current
         

@@ -4,7 +4,6 @@ model <test-configuration.xmi>
 objective ResponseTime minimise java { "models.service.composition.fitness.MinimiseResponseTime" }
 objective ServiceReliability maximise java { "models.service.composition.fitness.MaximiseServiceReliability" }
 objective EnergyConsumption minimise java { "models.service.composition.fitness.MinimiseEnergyConsumption" }
-constraint MinimiseUnorchestratedConcreteServices java { "models.service.composition.fitness.MinimiseUnorchestratedConcreteServices" }
 mutate using <orchestration.henshin> unit "createOrchestrator"
 mutate using <orchestration.henshin> unit "deleteOrchestrator"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 30 population 96 batches 1
+optimisation provider moea algorithm NSGAII variation mutation evolutions 100 population 100 batches 1

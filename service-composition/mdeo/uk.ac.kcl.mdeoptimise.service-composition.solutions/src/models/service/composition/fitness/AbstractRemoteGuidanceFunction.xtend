@@ -1,14 +1,12 @@
 package models.service.composition.fitness
 
-import uk.ac.kcl.interpreter.IGuidanceFunction
-import com.lubin.rpc.client.RPCClient
-import models.service.composition.surrogates.ISurrogateModelsWrapper
-import java.util.List
-import java.util.Map
 import java.io.InvalidObjectException
 import java.util.ArrayList
 import java.util.HashMap
-import models.service.composition.surrogates.SurrogateModelsWrapper
+import java.util.List
+import java.util.Map
+import models.service.composition.surrogates.rpc.SurrogateModelsRPCClient
+import uk.ac.kcl.interpreter.IGuidanceFunction
 
 /**
  * This is not thread safe
@@ -16,16 +14,9 @@ import models.service.composition.surrogates.SurrogateModelsWrapper
 abstract class AbstractRemoteGuidanceFunction implements IGuidanceFunction {
 
 
-	private static ISurrogateModelsWrapper rpcClient;
 	private static Map<Integer, List<Double>> fitnessCache;
 
-	new(){
-		//if(AbstractRemoteGuidanceFunction.rpcClient === null){
-		//	AbstractRemoteGuidanceFunction.rpcClient = RPCClient.proxyBuilder(ISurrogateModelsWrapper)
-	    //        .withServerNode("localhost", 9090)
-	    //        .build();
-		//}
-		
+	new(){		
 		if(AbstractRemoteGuidanceFunction.fitnessCache === null){
 			AbstractRemoteGuidanceFunction.fitnessCache = new HashMap<Integer, List<Double>>();
 		}
@@ -48,7 +39,7 @@ abstract class AbstractRemoteGuidanceFunction implements IGuidanceFunction {
 		//WTF casting
 		//var fitnessValues = this.loadRpcClient.evaluate(casted)
 		
-		var fitnessValues = new SurrogateModelsWrapper().evaluate(casted)
+		var fitnessValues = SurrogateModelsRPCClient.sendRequest(casted)
 		
 		this.cacheStore(cacheHash, fitnessValues);
 		
@@ -78,9 +69,5 @@ abstract class AbstractRemoteGuidanceFunction implements IGuidanceFunction {
 		} else {
 			throw new InvalidObjectException("Could not find cached value")
 		}
-	}
-	
-	def ISurrogateModelsWrapper loadRpcClient(){
-		return AbstractRemoteGuidanceFunction.rpcClient;
 	}
 }

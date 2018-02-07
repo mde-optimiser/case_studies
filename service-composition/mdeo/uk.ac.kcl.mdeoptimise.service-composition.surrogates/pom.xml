@@ -7,26 +7,42 @@
 
 	<repositories>
 		<repository>
+			<id>clojars</id>
+			<url>http://clojars.org/repo/</url>
+		</repository>
+
+		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
+		<repository>
+			<id>sonatype-snapshots</id>
+			<name>sonatype snapshots repo</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</repository>
+
 	</repositories>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.github.alxbrd</groupId>
-			<artifactId>NettyRPC</artifactId>
-			<version>1.0.0</version>
+			<groupId>kryonet</groupId>
+			<artifactId>kryonet</artifactId>
+			<version>2.21</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.lucarosellini.rJava/JRIEngine -->
 		<dependency>
 			<groupId>com.github.lucarosellini.rJava</groupId>
 			<artifactId>JRIEngine</artifactId>
 			<version>0.9-7</version>
 		</dependency>
+		<dependency>
+			<groupId>com.esotericsoftware</groupId>
+			<artifactId>kryo</artifactId>
+			<version>4.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
+		<sourceDirectory>src/</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -39,10 +55,9 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!-- ... -->
 					<archive>
 						<manifest>
-							<mainClass>models.service.composition.surrogates.SurrogateModelsRPCServer</mainClass>
+							<mainClass>models.service.composition.surrogates.rpc.SurrogateModelsRPCServer</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -52,6 +67,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>
