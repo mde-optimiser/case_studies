@@ -20,16 +20,11 @@ public class ScrumPlanningModelGenerator {
 
         ResourceSetWrapper rset = rset().register("src/main/resources/planning.ecore");
 
-        EPackageWrapper mm = rset.ePackage("http://www.kcl.ac.uk/mdeoptimiser/sprint-planning");
+        EPackageWrapper metamodel = rset.ePackage("http://www.kcl.ac.uk/mdeoptimiser/sprint-planning");
 
-        EObjectWrapper<EObject> a = mm.create("Plan");
+        EObjectWrapper<EObject> model = metamodel.create("Plan");
 
-        generateRandomStakeholders(50, a, mm);
-
-        rset.create("gen/sprint-planning-model.xmi").add(a).save();
-    }
-
-    public static void generateRandomStakeholders(int maximumStakeholders, EObjectWrapper<EObject> model, EPackageWrapper metamodel){
+        int maximumStakeholders = 100;
 
         int stakeholders = new Random().nextInt(maximumStakeholders) + 1;
 
@@ -45,6 +40,8 @@ public class ScrumPlanningModelGenerator {
 
             model.add("stakeholders", stakeholder);
         }
+
+        rset.create(String.format("gen/sprint-planning-model-%s-stakeholders.xmi", stakeholders)).add(model).save();
     }
 
     public static void generateRandomWorkItems(int maxWorkItems, EObjectWrapper<EObject> backlog, EObjectWrapper stakeholder, EPackageWrapper metamodel) {
