@@ -24,7 +24,7 @@ public class ScrumPlanningModelGenerator {
 
         EObjectWrapper<EObject> model = metamodel.create("Plan");
 
-        int maximumStakeholders = 100;
+        int maximumStakeholders = 10;
 
         int stakeholders = new Random().nextInt(maximumStakeholders) + 1;
 
@@ -36,7 +36,7 @@ public class ScrumPlanningModelGenerator {
 
             EObjectWrapper stakeholder = metamodel.create("Stakeholder");
 
-            generateRandomWorkItems(50, backlog, stakeholder, metamodel);
+            generateRandomWorkItems(10, backlog, stakeholder, metamodel);
 
             model.add("stakeholders", stakeholder);
         }
