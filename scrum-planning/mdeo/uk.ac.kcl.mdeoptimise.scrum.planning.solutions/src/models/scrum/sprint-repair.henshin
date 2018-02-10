@@ -69,37 +69,50 @@
     <mappings xmi:id="_7ydGEgF1EeiuyJvX_087sA" origin="_7ydGEAF1EeiuyJvX_087sA" image="_7ydGEQF1EeiuyJvX_087sA"/>
     <mappings xmi:id="_LAmKkQF-EeiuyJvX_087sA" origin="_LAljgAF-EeiuyJvX_087sA" image="_LAmKkAF-EeiuyJvX_087sA"/>
   </units>
-  <units xsi:type="henshin:Rule" xmi:id="_BT9m0AF2EeiuyJvX_087sA" name="deleteSprint">
+  <units xsi:type="henshin:Rule" xmi:id="_BT9m0AF2EeiuyJvX_087sA" name="deleteEmptySprint">
     <lhs xmi:id="_BUGwwAF2EeiuyJvX_087sA" name="Lhs">
       <nodes xmi:id="_ECZjAAF2EeiuyJvX_087sA" outgoing="_F3ljAAF2EeiuyJvX_087sA">
         <type href="planning.ecore#//Plan"/>
       </nodes>
-      <nodes xmi:id="_FMVmkAF2EeiuyJvX_087sA" incoming="_F3ljAAF2EeiuyJvX_087sA _M1XsgAHOEeiuyJvX_087sA" outgoing="_MjR28AHOEeiuyJvX_087sA">
+      <nodes xmi:id="_FMVmkAF2EeiuyJvX_087sA" incoming="_F3ljAAF2EeiuyJvX_087sA">
         <type href="planning.ecore#//Sprint"/>
-      </nodes>
-      <nodes xmi:id="_L1dHoAHOEeiuyJvX_087sA" incoming="_MjR28AHOEeiuyJvX_087sA" outgoing="_M1XsgAHOEeiuyJvX_087sA">
-        <type href="planning.ecore#//WorkItem"/>
       </nodes>
       <edges xmi:id="_F3ljAAF2EeiuyJvX_087sA" source="_ECZjAAF2EeiuyJvX_087sA" target="_FMVmkAF2EeiuyJvX_087sA">
         <type href="planning.ecore#//Plan/sprints"/>
       </edges>
-      <edges xmi:id="_MjR28AHOEeiuyJvX_087sA" source="_FMVmkAF2EeiuyJvX_087sA" target="_L1dHoAHOEeiuyJvX_087sA">
-        <type href="planning.ecore#//Sprint/committedItem"/>
-      </edges>
-      <edges xmi:id="_M1XsgAHOEeiuyJvX_087sA" source="_L1dHoAHOEeiuyJvX_087sA" target="_FMVmkAF2EeiuyJvX_087sA">
-        <type href="planning.ecore#//WorkItem/isPlannedFor"/>
-      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_Kt4pMA0fEei92v3sSUts3Q">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_Kt4pMQ0fEei92v3sSUts3Q">
+          <conclusion xmi:id="_Kt4pMg0fEei92v3sSUts3Q">
+            <nodes xmi:id="_Kt5QQA0fEei92v3sSUts3Q" outgoing="_Kt53Uw0fEei92v3sSUts3Q">
+              <type href="planning.ecore#//Plan"/>
+            </nodes>
+            <nodes xmi:id="_Kt53UQ0fEei92v3sSUts3Q" incoming="_Kt53Uw0fEei92v3sSUts3Q _1t-rUA0fEei92v3sSUts3Q" outgoing="_bspQYA0fEei92v3sSUts3Q">
+              <type href="planning.ecore#//Sprint"/>
+            </nodes>
+            <nodes xmi:id="_Kt20AA0fEei92v3sSUts3Q" incoming="_bspQYA0fEei92v3sSUts3Q" outgoing="_1t-rUA0fEei92v3sSUts3Q">
+              <type href="planning.ecore#//WorkItem"/>
+            </nodes>
+            <edges xmi:id="_Kt53Uw0fEei92v3sSUts3Q" source="_Kt5QQA0fEei92v3sSUts3Q" target="_Kt53UQ0fEei92v3sSUts3Q">
+              <type href="planning.ecore#//Plan/sprints"/>
+            </edges>
+            <edges xmi:id="_bspQYA0fEei92v3sSUts3Q" source="_Kt53UQ0fEei92v3sSUts3Q" target="_Kt20AA0fEei92v3sSUts3Q">
+              <type href="planning.ecore#//Sprint/committedItem"/>
+            </edges>
+            <edges xmi:id="_1t-rUA0fEei92v3sSUts3Q" source="_Kt20AA0fEei92v3sSUts3Q" target="_Kt53UQ0fEei92v3sSUts3Q">
+              <type href="planning.ecore#//WorkItem/isPlannedFor"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_Kt53UA0fEei92v3sSUts3Q" origin="_ECZjAAF2EeiuyJvX_087sA" image="_Kt5QQA0fEei92v3sSUts3Q"/>
+          <mappings xmi:id="_Kt53Ug0fEei92v3sSUts3Q" origin="_FMVmkAF2EeiuyJvX_087sA" image="_Kt53UQ0fEei92v3sSUts3Q"/>
+        </child>
+      </formula>
     </lhs>
     <rhs xmi:id="_BUIl8AF2EeiuyJvX_087sA" name="Rhs">
       <nodes xmi:id="_ECbYMAF2EeiuyJvX_087sA">
         <type href="planning.ecore#//Plan"/>
       </nodes>
-      <nodes xmi:id="_L1eVwAHOEeiuyJvX_087sA">
-        <type href="planning.ecore#//WorkItem"/>
-      </nodes>
     </rhs>
     <mappings xmi:id="_ECb_QAF2EeiuyJvX_087sA" origin="_ECZjAAF2EeiuyJvX_087sA" image="_ECbYMAF2EeiuyJvX_087sA"/>
-    <mappings xmi:id="_L1eVwQHOEeiuyJvX_087sA" origin="_L1dHoAHOEeiuyJvX_087sA" image="_L1eVwAHOEeiuyJvX_087sA"/>
   </units>
   <units xsi:type="henshin:Rule" xmi:id="_JvzKsAF2EeiuyJvX_087sA" name="addItemToSprint">
     <lhs xmi:id="_JwGFoAF2EeiuyJvX_087sA" name="Lhs">
@@ -245,13 +258,13 @@
   </units>
   <units xsi:type="henshin:Rule" xmi:id="_no4sEAKvEeiUpJsgjfIWkQ" name="createSprint_lb_repair">
     <lhs xmi:id="_no4sEQKvEeiUpJsgjfIWkQ" name="Lhs">
-      <nodes xmi:id="_no4sEgKvEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_no4sEgKvEeiUpJsgjfIWkQ" outgoing="_jnDgQAxxEeiaL_VQseu4-w">
         <type href="planning.ecore#//Plan"/>
       </nodes>
       <nodes xmi:id="_no4sEwKvEeiUpJsgjfIWkQ" incoming="_uH6lAAKvEeiUpJsgjfIWkQ" outgoing="_vcqKYAKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem"/>
       </nodes>
-      <nodes xmi:id="_synmAAKvEeiUpJsgjfIWkQ" incoming="_vcqKYAKvEeiUpJsgjfIWkQ" outgoing="_uH6lAAKvEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_synmAAKvEeiUpJsgjfIWkQ" incoming="_vcqKYAKvEeiUpJsgjfIWkQ _jnDgQAxxEeiaL_VQseu4-w" outgoing="_uH6lAAKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//Sprint"/>
       </nodes>
       <edges xmi:id="_uH6lAAKvEeiUpJsgjfIWkQ" source="_synmAAKvEeiUpJsgjfIWkQ" target="_no4sEwKvEeiUpJsgjfIWkQ">
@@ -259,6 +272,9 @@
       </edges>
       <edges xmi:id="_vcqKYAKvEeiUpJsgjfIWkQ" source="_no4sEwKvEeiUpJsgjfIWkQ" target="_synmAAKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem/isPlannedFor"/>
+      </edges>
+      <edges xmi:id="_jnDgQAxxEeiaL_VQseu4-w" source="_no4sEgKvEeiUpJsgjfIWkQ" target="_synmAAKvEeiUpJsgjfIWkQ">
+        <type href="planning.ecore#//Plan/sprints"/>
       </edges>
       <formula xsi:type="henshin:NestedCondition" xmi:id="_y6RgwAKvEeiUpJsgjfIWkQ">
         <conclusion xmi:id="_y6RgwQKvEeiUpJsgjfIWkQ">
@@ -293,7 +309,7 @@
       </formula>
     </lhs>
     <rhs xmi:id="_no4sIAKvEeiUpJsgjfIWkQ" name="Rhs">
-      <nodes xmi:id="_no4sIQKvEeiUpJsgjfIWkQ" outgoing="_no4sJQKvEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_no4sIQKvEeiUpJsgjfIWkQ" outgoing="_no4sJQKvEeiUpJsgjfIWkQ _jnEHUAxxEeiaL_VQseu4-w">
         <type href="planning.ecore#//Plan"/>
       </nodes>
       <nodes xmi:id="_no4sIgKvEeiUpJsgjfIWkQ" incoming="_no4sJQKvEeiUpJsgjfIWkQ _vCcTkAKvEeiUpJsgjfIWkQ" outgoing="_no4sJwKvEeiUpJsgjfIWkQ">
@@ -302,7 +318,7 @@
       <nodes xmi:id="_no4sIwKvEeiUpJsgjfIWkQ" incoming="_no4sJwKvEeiUpJsgjfIWkQ" outgoing="_vCcTkAKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem"/>
       </nodes>
-      <nodes xmi:id="_synmAQKvEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_synmAQKvEeiUpJsgjfIWkQ" incoming="_jnEHUAxxEeiaL_VQseu4-w">
         <type href="planning.ecore#//Sprint"/>
       </nodes>
       <edges xmi:id="_no4sJQKvEeiUpJsgjfIWkQ" source="_no4sIQKvEeiUpJsgjfIWkQ" target="_no4sIgKvEeiUpJsgjfIWkQ">
@@ -314,6 +330,9 @@
       <edges xmi:id="_vCcTkAKvEeiUpJsgjfIWkQ" source="_no4sIwKvEeiUpJsgjfIWkQ" target="_no4sIgKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem/isPlannedFor"/>
       </edges>
+      <edges xmi:id="_jnEHUAxxEeiaL_VQseu4-w" source="_no4sIQKvEeiUpJsgjfIWkQ" target="_synmAQKvEeiUpJsgjfIWkQ">
+        <type href="planning.ecore#//Plan/sprints"/>
+      </edges>
     </rhs>
     <mappings xmi:id="_no4sKQKvEeiUpJsgjfIWkQ" origin="_no4sEgKvEeiUpJsgjfIWkQ" image="_no4sIQKvEeiUpJsgjfIWkQ"/>
     <mappings xmi:id="_no4sKgKvEeiUpJsgjfIWkQ" origin="_no4sEwKvEeiUpJsgjfIWkQ" image="_no4sIwKvEeiUpJsgjfIWkQ"/>
@@ -321,7 +340,7 @@
   </units>
   <units xsi:type="henshin:Rule" xmi:id="_4vJCYAKvEeiUpJsgjfIWkQ" name="delete_sprint_lb_repair">
     <lhs xmi:id="_4vJCYQKvEeiUpJsgjfIWkQ" name="Lhs">
-      <nodes xmi:id="_4vJCYgKvEeiUpJsgjfIWkQ" outgoing="_4vJCZQKvEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_4vJCYgKvEeiUpJsgjfIWkQ" outgoing="_4vJCZQKvEeiUpJsgjfIWkQ _iNwyEAxxEeiaL_VQseu4-w">
         <type href="planning.ecore#//Plan"/>
       </nodes>
       <nodes xmi:id="_4vJCYwKvEeiUpJsgjfIWkQ" incoming="_4vJCZQKvEeiUpJsgjfIWkQ _4vJCZwKvEeiUpJsgjfIWkQ" outgoing="_4vJCZgKvEeiUpJsgjfIWkQ">
@@ -330,7 +349,7 @@
       <nodes xmi:id="_4vJCZAKvEeiUpJsgjfIWkQ" incoming="_4vJCZgKvEeiUpJsgjfIWkQ" outgoing="_4vJCZwKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem"/>
       </nodes>
-      <nodes xmi:id="_GkaJEAKwEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_GkaJEAKwEeiUpJsgjfIWkQ" incoming="_iNwyEAxxEeiaL_VQseu4-w">
         <type href="planning.ecore#//Sprint"/>
       </nodes>
       <edges xmi:id="_4vJCZQKvEeiUpJsgjfIWkQ" source="_4vJCYgKvEeiUpJsgjfIWkQ" target="_4vJCYwKvEeiUpJsgjfIWkQ">
@@ -342,15 +361,18 @@
       <edges xmi:id="_4vJCZwKvEeiUpJsgjfIWkQ" source="_4vJCZAKvEeiUpJsgjfIWkQ" target="_4vJCYwKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem/isPlannedFor"/>
       </edges>
+      <edges xmi:id="_iNwyEAxxEeiaL_VQseu4-w" source="_4vJCYgKvEeiUpJsgjfIWkQ" target="_GkaJEAKwEeiUpJsgjfIWkQ">
+        <type href="planning.ecore#//Plan/sprints"/>
+      </edges>
     </lhs>
     <rhs xmi:id="_4vJCaAKvEeiUpJsgjfIWkQ" name="Rhs">
-      <nodes xmi:id="_4vJCaQKvEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_4vJCaQKvEeiUpJsgjfIWkQ" outgoing="_iNwyEQxxEeiaL_VQseu4-w">
         <type href="planning.ecore#//Plan"/>
       </nodes>
       <nodes xmi:id="_4vJCagKvEeiUpJsgjfIWkQ" incoming="_HRyzgAKwEeiUpJsgjfIWkQ" outgoing="_HAg2QAKwEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem"/>
       </nodes>
-      <nodes xmi:id="_GkawIAKwEeiUpJsgjfIWkQ" incoming="_HAg2QAKwEeiUpJsgjfIWkQ" outgoing="_HRyzgAKwEeiUpJsgjfIWkQ">
+      <nodes xmi:id="_GkawIAKwEeiUpJsgjfIWkQ" incoming="_HAg2QAKwEeiUpJsgjfIWkQ _iNwyEQxxEeiaL_VQseu4-w" outgoing="_HRyzgAKwEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//Sprint"/>
       </nodes>
       <edges xmi:id="_HAg2QAKwEeiUpJsgjfIWkQ" source="_4vJCagKvEeiUpJsgjfIWkQ" target="_GkawIAKwEeiUpJsgjfIWkQ">
@@ -358,6 +380,9 @@
       </edges>
       <edges xmi:id="_HRyzgAKwEeiUpJsgjfIWkQ" source="_GkawIAKwEeiUpJsgjfIWkQ" target="_4vJCagKvEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//Sprint/committedItem"/>
+      </edges>
+      <edges xmi:id="_iNwyEQxxEeiaL_VQseu4-w" source="_4vJCaQKvEeiUpJsgjfIWkQ" target="_GkawIAKwEeiUpJsgjfIWkQ">
+        <type href="planning.ecore#//Plan/sprints"/>
       </edges>
     </rhs>
     <mappings xmi:id="_4vJCawKvEeiUpJsgjfIWkQ" origin="_4vJCYgKvEeiUpJsgjfIWkQ" image="_4vJCaQKvEeiUpJsgjfIWkQ"/>
@@ -390,6 +415,44 @@
       <edges xmi:id="_X7ABcAKwEeiUpJsgjfIWkQ" source="_QLR8tAKwEeiUpJsgjfIWkQ" target="_W2FAwAKwEeiUpJsgjfIWkQ">
         <type href="planning.ecore#//WorkItem/isPlannedFor"/>
       </edges>
+      <formula xsi:type="henshin:NestedCondition" xmi:id="_024fQA2jEeiHS7je30PaSw">
+        <conclusion xmi:id="_024fQQ2jEeiHS7je30PaSw">
+          <nodes xmi:id="_025GUA2jEeiHS7je30PaSw" incoming="_025GVA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//Sprint"/>
+          </nodes>
+          <nodes xmi:id="_025GUg2jEeiHS7je30PaSw" outgoing="_025GVA2jEeiHS7je30PaSw _025tYg2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//Plan"/>
+          </nodes>
+          <nodes xmi:id="_025tYA2jEeiHS7je30PaSw" incoming="_025tYg2jEeiHS7je30PaSw _0267gA2jEeiHS7je30PaSw" outgoing="_026UcQ2jEeiHS7je30PaSw _zN8ykA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//Sprint"/>
+          </nodes>
+          <nodes xmi:id="_025tYw2jEeiHS7je30PaSw" incoming="_026UcQ2jEeiHS7je30PaSw" outgoing="_0267gA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//WorkItem"/>
+          </nodes>
+          <nodes xmi:id="_yczCcA2jEeiHS7je30PaSw" incoming="_zN8ykA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//WorkItem"/>
+          </nodes>
+          <edges xmi:id="_025GVA2jEeiHS7je30PaSw" source="_025GUg2jEeiHS7je30PaSw" target="_025GUA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//Plan/sprints"/>
+          </edges>
+          <edges xmi:id="_025tYg2jEeiHS7je30PaSw" source="_025GUg2jEeiHS7je30PaSw" target="_025tYA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//Plan/sprints"/>
+          </edges>
+          <edges xmi:id="_026UcQ2jEeiHS7je30PaSw" source="_025tYA2jEeiHS7je30PaSw" target="_025tYw2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//Sprint/committedItem"/>
+          </edges>
+          <edges xmi:id="_0267gA2jEeiHS7je30PaSw" source="_025tYw2jEeiHS7je30PaSw" target="_025tYA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//WorkItem/isPlannedFor"/>
+          </edges>
+          <edges xmi:id="_zN8ykA2jEeiHS7je30PaSw" source="_025tYA2jEeiHS7je30PaSw" target="_yczCcA2jEeiHS7je30PaSw">
+            <type href="planning.ecore#//Sprint/committedItem"/>
+          </edges>
+        </conclusion>
+        <mappings xmi:id="_025GUQ2jEeiHS7je30PaSw" origin="_QLR8sgKwEeiUpJsgjfIWkQ" image="_025GUA2jEeiHS7je30PaSw"/>
+        <mappings xmi:id="_025GUw2jEeiHS7je30PaSw" origin="_QLR8swKwEeiUpJsgjfIWkQ" image="_025GUg2jEeiHS7je30PaSw"/>
+        <mappings xmi:id="_025tYQ2jEeiHS7je30PaSw" origin="_W2FAwAKwEeiUpJsgjfIWkQ" image="_025tYA2jEeiHS7je30PaSw"/>
+        <mappings xmi:id="_026UcA2jEeiHS7je30PaSw" origin="_QLR8tAKwEeiUpJsgjfIWkQ" image="_025tYw2jEeiHS7je30PaSw"/>
+      </formula>
     </lhs>
     <rhs xmi:id="_QLR8wwKwEeiUpJsgjfIWkQ" name="Rhs">
       <nodes xmi:id="_QLR8xAKwEeiUpJsgjfIWkQ" incoming="_QLR8xwKwEeiUpJsgjfIWkQ _QLR8yQKwEeiUpJsgjfIWkQ" outgoing="_QLR8yAKwEeiUpJsgjfIWkQ">

@@ -24,27 +24,29 @@ public class ScrumPlanningModelGenerator {
 
         EObjectWrapper<EObject> model = metamodel.create("Plan");
 
-        int maximumStakeholders = 10;
+        int maximumStakeholders = 25;
 
-        int stakeholders = new Random().nextInt(maximumStakeholders) + 1;
+        int stakeholders = 5;//new Random().nextInt(maximumStakeholders) + 1;
 
         EObjectWrapper<EObject> backlog = metamodel.create("Backlog");
 
         model.set("backlog", backlog);
 
+        int items = 0;
+
         for(int i =0; i < stakeholders; i++) {
 
             EObjectWrapper stakeholder = metamodel.create("Stakeholder");
 
-            generateRandomWorkItems(10, backlog, stakeholder, metamodel);
+            items += generateRandomWorkItems(50, backlog, stakeholder, metamodel);
 
             model.add("stakeholders", stakeholder);
         }
 
-        rset.create(String.format("gen/sprint-planning-model-%s-stakeholders.xmi", stakeholders)).add(model).save();
+        rset.create(String.format("gen/sprint-planning-model-%s-stakeholders-%s-items.xmi", stakeholders, items)).add(model).save();
     }
 
-    public static void generateRandomWorkItems(int maxWorkItems, EObjectWrapper<EObject> backlog, EObjectWrapper stakeholder, EPackageWrapper metamodel) {
+    public static int generateRandomWorkItems(int maxWorkItems, EObjectWrapper<EObject> backlog, EObjectWrapper stakeholder, EPackageWrapper metamodel) {
         int stakeholderWorkItems = new Random().nextInt(maxWorkItems) + 1;
 
         List<Integer> complexities = new ArrayList<Integer>();
@@ -75,6 +77,7 @@ public class ScrumPlanningModelGenerator {
             backlog.add("workitems", workItem);
         }
 
+        return stakeholderWorkItems;
     }
 
 }

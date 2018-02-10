@@ -46,15 +46,12 @@ public class SolutionsQualityEvaluator {
     private void evaluateSolutionSprints(EObjectWrapper solution, PrintWriter out) {
 
         EList<EObject> sprints = getFeatureList((EObject) solution.result(), "sprints");
+
         out.println();
         out.println(String.format("Found %s sprints", sprints.size()));
 
         evaluateBacklogSize(solution, out);
-
-        //stakeholders
-            // items
-            // effort
-            //importance
+        evaluateStakeholders(solution, out);
 
         for(int i = 0; i < sprints.size(); i++){
             evaluateSprint(sprints.get(i), i, out);
@@ -65,19 +62,51 @@ public class SolutionsQualityEvaluator {
 
     }
 
+    private void evaluateStakeholders(EObjectWrapper solution, PrintWriter out) {
+
+        EList<EObject> stakeholders = getFeatureList((EObject) solution.result(), "stakeholders");
+
+        out.println(String.format("Found %s stakeholders", stakeholders.size()));
+        out.println();
+        for(int i = 0; i < stakeholders.size(); i++){
+
+            EList<EObject> stakeholderItems = getFeatureList(stakeholders.get(i), "workitem");
+
+            int effort = 0;
+            int importance = 0;
+            for(EObject item : stakeholderItems){
+                effort += getFeatureInt(item, "Effort");
+                importance += getFeatureInt(item, "Importance");
+            }
+
+            out.println(String.format("\tStakeholder-%s stats:", i));
+            out.println(String.format("\t\tItems: %s", stakeholderItems.size()));
+            out.println(String.format("\t\tTotal Effort: %s", effort));
+            out.println(String.format("\t\tTotal Importance: %s", importance));
+            out.println();
+        }
+
+    }
+
     private void evaluateBacklogSize(EObjectWrapper solution, PrintWriter out) {
 
         EObject backlog = getFeatureObject((EObject) solution.result(), "backlog");
         EList<EObject> workItems = getFeatureList(backlog, "workitems");
 
-        int backlogEfort = 0;
+        EList<EObject> sprints = getFeatureList((EObject) solution.result(), "sprints");
+
+        int backlogEffort = 0;
 
         for(EObject workItem : workItems){
-            backlogEfort += getFeatureInt(workItem, "Effort");
+            backlogEffort += getFeatureInt(workItem, "Effort");
         }
 
         out.println(String.format("Backlog items: %s", workItems.size()));
-        out.println(String.format("Backlog effort points size: %s", backlogEfort));
+        out.println(String.format("Backlog effort points size: %s", backlogEffort));
+
+        if(sprints.size() > 0) {
+            out.println(String.format("Proposed team velocity: %d points per sprint", backlogEffort / sprints.size()));
+        }
 
         out.println();
         out.println();
