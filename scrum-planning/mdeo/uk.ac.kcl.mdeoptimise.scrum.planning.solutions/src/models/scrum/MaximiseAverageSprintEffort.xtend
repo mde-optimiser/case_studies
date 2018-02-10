@@ -8,9 +8,7 @@ import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation
 class MaximiseAverageSprintEffort implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
-		
-		
-		
+				
 		var fitness = (model.getFeature("sprints") as EList<EObject>).map[ sprint | 
 			
 			new Double((sprint.getFeature("committedItem") as EList<EObject>).fold(0d)[ result, item |

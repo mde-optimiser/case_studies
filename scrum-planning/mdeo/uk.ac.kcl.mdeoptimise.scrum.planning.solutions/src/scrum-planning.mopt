@@ -1,12 +1,12 @@
 basepath <src/models/scrum/>
 metamodel <planning.ecore>
-model <product_debt.xmi>
-objective MinimiseSprints minimise java { "models.scrum.MinimiseSprints" }
-objective MaximiseAverageSprintEffort maximise java { "models.scrum.MaximiseAverageSprintEffort" }
+model <sprint-planning-model-5-stakeholders.xmi>
+objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MaximiseAverageSprintEffort" }
 objective MaximiseAverageStakeholderImportance maximise java { "models.scrum.MaximiseAverageStakeholderImportance" }
 constraint MinimiseUnassignedWorkItems java { "models.scrum.MinimiseUnassignedWorkItems" }
-constraint MinimiseSprintsWithInvalidEffort java { "models.scrum.MinimiseSprintsWithInvalidEffort" }
-constraint MinimiseEmptySprints java { "models.scrum.MinimiseEmptySprints" }
+constraint MinimiseSprintsWithoutAverageVelocity java { "models.scrum.MinimiseSprintsWithoutAverageVelocity" }
+constraint MinimiseSprintsWithInvalidUBEffort java { "models.scrum.MinimiseSprintsWithInvalidEffort" }
+constraint MinimiseSprintsWithInvalidLBEffort java { "models.scrum.MinimiseSprintsWithInvalidLBEffort" }
 mutate using <sprint.henshin> unit "createSprint"
 mutate using <sprint.henshin> unit "deleteSprint"
 mutate using <sprint.henshin> unit "addItemToSprint"
