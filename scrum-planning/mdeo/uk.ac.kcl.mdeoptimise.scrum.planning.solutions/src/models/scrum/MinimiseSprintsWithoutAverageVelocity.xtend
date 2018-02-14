@@ -14,7 +14,20 @@ class MinimiseSprintsWithoutAverageVelocity implements IGuidanceFunction {
 		
 		var totalEffort = workitems.fold(0)[result, item | result + (item.getFeature("Effort") as Integer)];
 		
-		var desiredSprints = totalEffort / 30;
+		var desiredSprints = 1d;
+		
+		if(totalEffort > 30){
+		
+			desiredSprints = Double.parseDouble(totalEffort.toString) / 30;
+		
+			if(desiredSprints -  desiredSprints.intValue > 0.5d){
+				desiredSprints = Math.ceil(desiredSprints)
+			} else {
+				desiredSprints = Math.floor(desiredSprints)
+			}
+		
+		}
+		
 		
 		var sprints = (model.getFeature("sprints") as EList<EObject>).filter[ 
 			sprint | (sprint.getFeature("committedItem") as EList<EObject>).length > 0].toList
@@ -47,6 +60,4 @@ class MinimiseSprintsWithoutAverageVelocity implements IGuidanceFunction {
 		o.eGet(o.eClass.getEStructuralFeature(feature))
 		
 	}	
-	
 }
-	
