@@ -38,7 +38,7 @@ class MaximiseAverageStakeholderImportance implements IGuidanceFunction {
 	}
 	
 	override getName() {
-		return "Minimise Next Release Cost"
+		return "Minimise average stakeholder importance"
 	}
 
 	/**
