@@ -10,16 +10,18 @@ class MinimiseSprints implements IGuidanceFunction {
 		
 		var sprints = model.getFeature("sprints")
 		
-		var fitness = 0
-		
-		if(sprints !== null) {
-			fitness = (sprints as EList<EObject>).length	
+		//No sprints
+		if(sprints === null) {
+			return 0
 		}
 		
-		println("Counted sprints: " + fitness)
+		var sprintsList = (sprints as EList<EObject>)
 		
 		
-		var sprinta = (model.getFeature("sprints") as EList<EObject>).map[ sprint | 
+		println("Counted sprints: " + sprintsList.length)
+		
+		//Added this for debugging
+		var sprintsEffortDistribution = sprintsList.map[ sprint | 
 			
 			new Double((sprint.getFeature("committedItem") as EList<EObject>).fold(0d)[ result, item |
 				
@@ -29,14 +31,13 @@ class MinimiseSprints implements IGuidanceFunction {
 			
 		].toList
 		
+		println("Sprint effort distribution: " + sprintsEffortDistribution)
 		
-		println("Sprint effort distribution: " + sprinta)
-		
-		return fitness
+		return sprintsList.length
 	}
 	
 	override getName() {
-		return "Minimise Number of Sprints"
+		return "Minimise number of sprints"
 	}
 
 	/**

@@ -38,7 +38,7 @@ public class ScrumPlanningModelGenerator {
 
             EObjectWrapper stakeholder = metamodel.create("Stakeholder");
 
-            items += generateRandomWorkItems(50, backlog, stakeholder, metamodel);
+            items += generateRandomWorkItems(4, backlog, stakeholder, metamodel);
 
             model.add("stakeholders", stakeholder);
         }

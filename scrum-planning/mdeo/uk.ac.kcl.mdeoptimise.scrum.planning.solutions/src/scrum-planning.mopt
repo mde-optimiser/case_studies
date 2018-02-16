@@ -1,14 +1,11 @@
 basepath <src/models/scrum/>
 metamodel <planning.ecore>
-model <sprint-planning-model-5-stakeholders.xmi>
+model <sprint-planning-model-5-stakeholders-119-items.xmi>
+objective MinimiseSprints minimise java { "models.scrum.MinimiseSprints" }
 objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MaximiseAverageSprintEffort" }
 objective MaximiseAverageStakeholderImportance maximise java { "models.scrum.MaximiseAverageStakeholderImportance" }
 constraint MinimiseUnassignedWorkItems java { "models.scrum.MinimiseUnassignedWorkItems" }
-constraint MinimiseSprintsWithoutAverageVelocity java { "models.scrum.MinimiseSprintsWithoutAverageVelocity" }
-constraint MinimiseSprintsWithInvalidUBEffort java { "models.scrum.MinimiseSprintsWithInvalidEffort" }
-constraint MinimiseSprintsWithInvalidLBEffort java { "models.scrum.MinimiseSprintsWithInvalidLBEffort" }
+constraint HasTheAllowedMinimalNumberOfSprints java { "models.scrum.HasTheAllowedMinimalNumberOfSprints" }
 mutate using <sprint.henshin> unit "createSprint"
-mutate using <sprint.henshin> unit "deleteSprint"
 mutate using <sprint.henshin> unit "addItemToSprint"
-mutate using <sprint.henshin> unit "removeItemFromSprint"
 optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 batches 1

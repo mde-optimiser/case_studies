@@ -338,7 +338,7 @@
     <mappings xmi:id="_no4sKgKvEeiUpJsgjfIWkQ" origin="_no4sEwKvEeiUpJsgjfIWkQ" image="_no4sIwKvEeiUpJsgjfIWkQ"/>
     <mappings xmi:id="_synmAgKvEeiUpJsgjfIWkQ" origin="_synmAAKvEeiUpJsgjfIWkQ" image="_synmAQKvEeiUpJsgjfIWkQ"/>
   </units>
-  <units xsi:type="henshin:Rule" xmi:id="_4vJCYAKvEeiUpJsgjfIWkQ" name="delete_sprint_lb_repair">
+  <units xsi:type="henshin:Rule" xmi:id="_4vJCYAKvEeiUpJsgjfIWkQ" name="deleteSprint_lb_repair">
     <lhs xmi:id="_4vJCYQKvEeiUpJsgjfIWkQ" name="Lhs">
       <nodes xmi:id="_4vJCYgKvEeiUpJsgjfIWkQ" outgoing="_4vJCZQKvEeiUpJsgjfIWkQ _iNwyEAxxEeiaL_VQseu4-w">
         <type href="planning.ecore#//Plan"/>
