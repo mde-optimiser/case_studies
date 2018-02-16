@@ -4,7 +4,7 @@ import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
 import uk.ac.kcl.interpreter.IGuidanceFunction
 
-class MinimiseUnassignedWorkItems implements IGuidanceFunction {
+class HasNoUnassignedWorkItems implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
