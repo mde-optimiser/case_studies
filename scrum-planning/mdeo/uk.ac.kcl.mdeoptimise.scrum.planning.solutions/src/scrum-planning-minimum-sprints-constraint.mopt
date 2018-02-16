@@ -3,7 +3,7 @@ metamodel <planning.ecore>
 model <sprint-planning-model-5-stakeholders-119-items.xmi>
 objective MaximiseAverageStakeholderImportance maximise java { "models.scrum.MaximiseAverageStakeholderImportance" }
 objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MaximiseAverageSprintEffort" }
-objective MinimiseSprints minimise java { "models.scrum.MinimiseSprints" }
+constraint HasNoUnassignedWorkItems java { "models.scrum.HasNoUnassignedWorkItems" }
 constraint MinimiseUnassignedWorkItems java { "models.scrum.MinimiseUnassignedWorkItems" }
 constraint HasTheAllowedMinimalNumberOfSprints java { "models.scrum.HasTheAllowedMinimalNumberOfSprints" }
 mutate using <sprint-repair.henshin> unit "createSprint"

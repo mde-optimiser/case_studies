@@ -4,7 +4,7 @@ model <sprint-planning-model-5-stakeholders-119-items.xmi>
 objective MinimiseSprints minimise java { "models.scrum.MinimiseSprints" }
 objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MaximiseAverageSprintEffort" }
 objective MaximiseAverageStakeholderImportance maximise java { "models.scrum.MaximiseAverageStakeholderImportance" }
-constraint MinimiseUnassignedWorkItems java { "models.scrum.MinimiseUnassignedWorkItems" }
+constraint HasNoUnassignedWorkItems java { "models.scrum.HasNoUnassignedWorkItems" }
 constraint HasTheAllowedMinimalNumberOfSprints java { "models.scrum.HasTheAllowedMinimalNumberOfSprints" }
 mutate using <sprint.henshin> unit "createSprint"
 mutate using <sprint.henshin> unit "addItemToSprint"
