@@ -5,10 +5,15 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import java.io.*;
+import java.util.HashMap;
 
 import static org.dynemf.ResourceSetWrapper.rset;
 
 public class SolutionsQualityEvaluator {
+
+
+    private HashMap<Integer, Integer> hashIndex;
+    private HashMap<Integer, Integer> stakeholdersIndex;
 
     public static void main(String[] args) throws IOException {
 
@@ -67,6 +72,13 @@ public class SolutionsQualityEvaluator {
         EList<EObject> stakeholders = getFeatureList((EObject) solution.result(), "stakeholders");
 
         out.println(String.format("Found %s stakeholders", stakeholders.size()));
+
+        this.stakeholdersIndex = new HashMap<Integer, Integer>();
+
+        for(int i = 1; i <= stakeholders.size(); i++ ){
+            stakeholdersIndex.put(stakeholders.get(i-1).hashCode(), i);
+        }
+
         out.println();
         for(int i = 0; i < stakeholders.size(); i++){
 
@@ -94,6 +106,15 @@ public class SolutionsQualityEvaluator {
         EList<EObject> workItems = getFeatureList(backlog, "workitems");
 
         EList<EObject> sprints = getFeatureList((EObject) solution.result(), "sprints");
+
+
+
+        this.hashIndex = new HashMap<Integer, Integer>();
+
+        for(int i = 1; i <= workItems.size(); i++ ){
+            hashIndex.put(workItems.get(i-1).hashCode(), i);
+        }
+
 
         int backlogEffort = 0;
 
@@ -136,7 +157,9 @@ public class SolutionsQualityEvaluator {
         for(int i = 0; i < workItems.size(); i++) {
             int effort = getFeatureInt(workItems.get(i), "Effort");
             int importance = getFeatureInt(workItems.get(i), "Importance");
-            out.println(String.format("Committed Work Item %s, Effort %s, Importance %s", i, effort, importance));
+            String outputFormat = "Committed Work Item %s, Effort %s, Importance %s, Stakeholder %s";
+            out.println(String.format(outputFormat, hashIndex.get(workItems.get(i).hashCode()),
+                    effort, importance, stakeholdersIndex.get(getFeatureObject(workItems.get(i), "stakeholder").hashCode())));
         }
 
     }
