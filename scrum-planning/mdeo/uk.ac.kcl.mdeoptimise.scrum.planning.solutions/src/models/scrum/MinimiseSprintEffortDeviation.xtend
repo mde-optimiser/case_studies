@@ -5,7 +5,7 @@ import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.common.util.EList
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation
 
-class MaximiseAverageSprintEffort implements IGuidanceFunction {
+class MinimiseSprintEffortDeviation implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 				
