@@ -1,8 +1,8 @@
 basepath <src/models/scrum/>
 metamodel <planning.ecore>
 model <sprint-planning-model-5-stakeholders-119-items.xmi>
-objective MaximiseAverageStakeholderImportance maximise java { "models.scrum.MaximiseAverageStakeholderImportance" }
-objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MaximiseAverageSprintEffort" }
+objective MinimiseCustomerSatisfactionIndex minimise java { "models.scrum.MinimiseCustomerSatisfactionIndex" }
+objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MinimiseSprintEffortDeviation" }
 constraint HasNoUnassignedWorkItems java { "models.scrum.HasNoUnassignedWorkItems" }
 constraint MinimiseUnassignedWorkItems java { "models.scrum.MinimiseUnassignedWorkItems" }
 constraint HasTheAllowedMinimalNumberOfSprints java { "models.scrum.HasTheAllowedMinimalNumberOfSprints" }
