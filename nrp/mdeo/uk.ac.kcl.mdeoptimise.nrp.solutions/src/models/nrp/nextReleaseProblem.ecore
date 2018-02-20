@@ -16,9 +16,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Customer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="desires" lowerBound="1"
-        upperBound="-1" eType="#//ValuedRequirement" eOpposite="#//ValuedRequirement/desiredBy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="importance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assigns" lowerBound="1"
+        upperBound="-1" eType="#//Valuation" eOpposite="#//Valuation/assignedBy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cost">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CostType"/>
@@ -30,27 +30,27 @@
         eType="#//SoftwareArtifact"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="costs" lowerBound="1" upperBound="-1"
         eType="#//Cost" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="realisations" lowerBound="1"
-        upperBound="-1" eType="#//RequirementRealisation" eOpposite="#//RequirementRealisation/softwareartifacts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contributesTo" lowerBound="1"
+        upperBound="-1" eType="#//RequirementRealisation" eOpposite="#//RequirementRealisation/dependsOn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="solutions" upperBound="-1"
         eType="#//Solution" eOpposite="#//Solution/selectedArtifacts"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Requirement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="valuations" lowerBound="1"
-        upperBound="-1" eType="#//ValuedRequirement" containment="true" eOpposite="#//ValuedRequirement/requirement"/>
+        upperBound="-1" eType="#//Valuation" containment="true" eOpposite="#//Valuation/requirement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="realisations" upperBound="-1"
         eType="#//RequirementRealisation" containment="true" eOpposite="#//RequirementRealisation/requirement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dependsOn" upperBound="-1"
-        eType="#//Requirement"/>
+        eType="#//Valuation" eOpposite="#//Valuation/contributesTo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequirementRealisation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" lowerBound="1"
         eType="#//Requirement" eOpposite="#//Requirement/realisations"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="1.0"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="softwareartifacts" lowerBound="1"
-        upperBound="-1" eType="#//SoftwareArtifact" eOpposite="#//SoftwareArtifact/realisations"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependsOn" lowerBound="1"
+        upperBound="-1" eType="#//SoftwareArtifact" eOpposite="#//SoftwareArtifact/contributesTo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Solution">
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedArtifacts" upperBound="-1"
@@ -62,11 +62,13 @@
     <eLiterals name="MANPOWER" value="2"/>
     <eLiterals name="RESOURCES" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ValuedRequirement">
+  <eClassifiers xsi:type="ecore:EClass" name="Valuation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" lowerBound="1"
         eType="#//Requirement" eOpposite="#//Requirement/valuations"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="desiredBy" lowerBound="1"
-        upperBound="-1" eType="#//Customer" eOpposite="#//Customer/desires"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignedBy" lowerBound="1"
+        upperBound="-1" eType="#//Customer" eOpposite="#//Customer/assigns"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contributesTo" upperBound="-1"
+        eType="#//Requirement" eOpposite="#//Requirement/dependsOn"/>
   </eClassifiers>
 </ecore:EPackage>
