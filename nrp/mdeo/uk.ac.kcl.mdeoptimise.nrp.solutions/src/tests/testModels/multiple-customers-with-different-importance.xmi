@@ -6,8 +6,12 @@
     xsi:schemaLocation="http://model.nrp ../../models/nrp/nextReleaseProblem.ecore">
   <customers
       name="C1"
+      importance="4.0"
+      assigns="//@requirements.0/@valuations.0"/>
+  <customers
+      name="C2"
       importance="1.0"
-      assigns="//@requirements.0/@valuations.0 //@requirements.0/@valuations.1"/>
+      assigns="//@requirements.0/@valuations.0"/>
   <availableArtifacts
       name="SA1"
       contributesTo="//@requirements.0/@realisations.0"
@@ -17,11 +21,8 @@
   <requirements
       name="R1">
     <valuations
-        value="4.0"
-        assignedBy="//@customers.0"/>
-    <valuations
         value="1.0"
-        assignedBy="//@customers.0"/>
+        assignedBy="//@customers.0 //@customers.1"/>
     <realisations
         dependsOn="//@availableArtifacts.0"/>
   </requirements>

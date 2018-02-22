@@ -18,19 +18,19 @@
       assigns="//@requirements.2/@valuations.0"/>
   <availableArtifacts
       name="a"
-      contributes="//@requirements.0/@realisations.0"
+      contributesTo="//@requirements.0/@realisations.0"
       >
     <costs amount="100.0"/>
   </availableArtifacts>
   <availableArtifacts
       name="b"
-      contributes="//@requirements.1/@realisations.0"
+      contributesTo="//@requirements.1/@realisations.0"
       >
     <costs amount="100.0"/>
   </availableArtifacts>
   <availableArtifacts
       name="c"
-      contributes="//@requirements.2/@realisations.0 //@requirements.1/@realisations.0"
+      contributesTo="//@requirements.2/@realisations.0 //@requirements.1/@realisations.0"
       >
     <costs amount="100.0"/>
   </availableArtifacts>

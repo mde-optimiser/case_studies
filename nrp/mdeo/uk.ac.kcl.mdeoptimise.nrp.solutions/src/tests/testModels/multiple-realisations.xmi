@@ -26,7 +26,7 @@
         value="1.0"
         assignedBy="//@customers.0"/>
     <realisations
-        percentage="0.9"
+        percentage="0.8"
         dependsOn="//@availableArtifacts.0"/>
     <realisations
         percentage="0.4"

@@ -41,7 +41,7 @@
         upperBound="-1" eType="#//Valuation" containment="true" eOpposite="#//Valuation/requirement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="realisations" upperBound="-1"
         eType="#//RequirementRealisation" containment="true" eOpposite="#//RequirementRealisation/requirement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dependsOn" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="combines" upperBound="-1"
         eType="#//Valuation" eOpposite="#//Valuation/contributesTo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequirementRealisation">
@@ -69,6 +69,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="assignedBy" lowerBound="1"
         upperBound="-1" eType="#//Customer" eOpposite="#//Customer/assigns"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contributesTo" upperBound="-1"
-        eType="#//Requirement" eOpposite="#//Requirement/dependsOn"/>
+        eType="#//Requirement" eOpposite="#//Requirement/combines"/>
   </eClassifiers>
 </ecore:EPackage>

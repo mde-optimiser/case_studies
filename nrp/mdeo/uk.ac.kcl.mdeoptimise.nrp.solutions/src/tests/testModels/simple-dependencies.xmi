@@ -7,14 +7,16 @@
   <customers
       name="C1"
       importance="1.0"
-      assigns="//@requirements.1/@valuations.0 //@requirements.1/@valuations.1 //@requirements.0/@valuations.0"/>
+      assigns="//@requirements.0/@valuations.0 //@requirements.1/@valuations.0 //@requirements.2/@valuations.0"/>
   <availableArtifacts
       name="SA1"
-      contributesTo="//@requirements.1/@realisations.0"
-      solutions="//@solutions.0"/>
+      contributesTo="//@requirements.1/@realisations.0 //@requirements.2/@realisations.0"
+      solutions="//@solutions.0">
+    <costs/>
+  </availableArtifacts>
   <requirements
       name="R1 parent"
-      dependsOn="//@requirements.1/@valuations.0 //@requirements.1/@valuations.1">
+      combines="//@requirements.1/@valuations.0 //@requirements.2/@valuations.0">
     <valuations
         value="1.0"
         assignedBy="//@customers.0"/>
@@ -25,11 +27,17 @@
         value="4.0"
         assignedBy="//@customers.0"
         contributesTo="//@requirements.0"/>
+    <realisations
+        dependsOn="//@availableArtifacts.0"/>
+  </requirements>
+  <requirements
+      name="R3 child">
     <valuations
         value="1.0"
         assignedBy="//@customers.0"
         contributesTo="//@requirements.0"/>
     <realisations
+        percentage="0.5"
         dependsOn="//@availableArtifacts.0"/>
   </requirements>
   <solutions
