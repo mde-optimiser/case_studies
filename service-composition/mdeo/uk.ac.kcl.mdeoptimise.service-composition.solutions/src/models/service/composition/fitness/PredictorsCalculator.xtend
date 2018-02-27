@@ -188,7 +188,8 @@ class PredictorsCalculator {
 
 					//Count the hops between this orchestrator and the concrete services it orchestrates
 					//from the abstract plans assigned to it
-					counter + concreteServices.filter[
+					//Added 1 to also count the orchestrator node which is of the same type
+					counter + 1 + concreteServices.filter[
 						concreteService | 
 							lookupNode(concreteService.getFeatureObject("providedBy").getFeatureInt("ID"), predictors)
 								.getFeatureInt("type") === nodeType
@@ -216,7 +217,8 @@ class PredictorsCalculator {
 					
 					//Count the hops between this orchestrator and the concrete services it orchestrates
 					//from the abstract plans assigned to it
-					counter + concreteServices.filter[
+					//Added 1 to also count the orchestrator node which is of the same type
+					counter + 1 + concreteServices.filter[
 						concreteService | 
 							lookupNode(concreteService.getFeatureObject("providedBy").getFeatureInt("ID"), predictors)
 								.getFeatureInt("load") === load

@@ -12,10 +12,10 @@ public class PredictorCalculatorTests {
 	@Test
 	public void assertThatOrchestratorCounterReturnsAsExpected() {
 		
-		EObject orchestrationObject = new TestModelLoader().loadModel("test-configuration.xmi");
+		EObject orchestrationObject = new TestModelLoader().loadModel("test-configuration-crepe.xmi");
 		int orchestrators = new PredictorsCalculator().calculateOrchestrators(orchestrationObject);	
 		
-		assertEquals("Expected number of orchestrators: ", 1, orchestrators);
+		assertEquals("Expected number of orchestrators: ", 5, orchestrators);
 	}
 	
 	@Test
@@ -25,91 +25,91 @@ public class PredictorCalculatorTests {
 		
 		EObject predictorsObject = modelLoader.loadModel("connected-nodes.xmi");
 		
-		EObject orchestrationObject = modelLoader.loadModel("test-configuration.xmi");
+		EObject orchestrationObject = modelLoader.loadModel("test-configuration-crepe.xmi");
 		
 		int hops = new PredictorsCalculator().calculateHops(orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of hops: ", 6, hops);
+		assertEquals("Expected number of hops: ", 11, hops);
 	}
 	
 	@Test
-	public void assertThatCountNodeTypesForType1ReturnsAsExpected() {
+	public void assertThatCountNodeTypesForType1FastReturnsAsExpected() {
 		TestModelLoader modelLoader = new TestModelLoader();
 		
 		EObject predictorsObject = modelLoader.loadModel("connected-nodes.xmi");
 		
-		EObject orchestrationObject = modelLoader.loadModel("test-configuration.xmi");
+		EObject orchestrationObject = modelLoader.loadModel("test-configuration-crepe.xmi");
 		
 		int hops = new PredictorsCalculator().countTypeNodes(1, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 1: ", 2, hops);
+		assertEquals("Expected number of nodes of type 1 devFast: ", 3, hops);
 	}
 	
 	@Test
-	public void assertThatCountNodeTypesForType2ReturnsAsExpected() {
+	public void assertThatCountNodeTypesForType2MediumReturnsAsExpected() {
 		TestModelLoader modelLoader = new TestModelLoader();
 		
 		EObject predictorsObject = modelLoader.loadModel("connected-nodes.xmi");
 		
-		EObject orchestrationObject = modelLoader.loadModel("test-configuration.xmi");
+		EObject orchestrationObject = modelLoader.loadModel("test-configuration-crepe.xmi");
 		
 		int hops = new PredictorsCalculator().countTypeNodes(2, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 2: ", 0, hops);
+		assertEquals("Expected number of nodes of type 2 devMedium: ", 0, hops);
 	}
 	
 	
 	@Test
-	public void assertThatCountNodeTypesForType3ReturnsAsExpected() {
+	public void assertThatCountNodeTypesForType3SlowReturnsAsExpected() {
 		TestModelLoader modelLoader = new TestModelLoader();
 		
 		EObject predictorsObject = modelLoader.loadModel("connected-nodes.xmi");
 		
-		EObject orchestrationObject = modelLoader.loadModel("test-configuration.xmi");
+		EObject orchestrationObject = modelLoader.loadModel("test-configuration-crepe.xmi");
 		
 		int hops = new PredictorsCalculator().countTypeNodes(3, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 3: ", 0, hops);
+		assertEquals("Expected number of nodes of type 3 devSlow: ", 6, hops);
 	}
 	
 
 	@Test
-	public void assertThatCountLoadNodesForLoad3ReturnsAsExpected() {
+	public void assertThatCountLoadNodesForLoad3SmallReturnsAsExpected() {
 		TestModelLoader modelLoader = new TestModelLoader();
 		
 		EObject predictorsObject = modelLoader.loadModel("connected-nodes.xmi");
 		
-		EObject orchestrationObject = modelLoader.loadModel("test-configuration.xmi");
+		EObject orchestrationObject = modelLoader.loadModel("test-configuration-crepe.xmi");
 		
 		int hops = new PredictorsCalculator().countLoadNodes(3, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 3: ", 3, hops);
+		assertEquals("Expected number of nodes of type 3 loadSmall: ", 5, hops);
 	}
 	
 
 	@Test
-	public void assertThatCountLoadNodesForLoad2ReturnsAsExpected() {
+	public void assertThatCountLoadNodesForLoad2MediumReturnsAsExpected() {
 		TestModelLoader modelLoader = new TestModelLoader();
 		
 		EObject predictorsObject = modelLoader.loadModel("connected-nodes.xmi");
 		
-		EObject orchestrationObject = modelLoader.loadModel("test-configuration.xmi");
+		EObject orchestrationObject = modelLoader.loadModel("test-configuration-crepe.xmi");
 		
 		int hops = new PredictorsCalculator().countLoadNodes(2, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 2: ", 0, hops);
+		assertEquals("Expected number of nodes of type 2 loadMedium: ", 4, hops);
 	}
 	
 	@Test
-	public void assertThatCountLoadNodesForLoad1ReturnsAsExpected() {
+	public void assertThatCountLoadNodesForLoad1BigReturnsAsExpected() {
 		TestModelLoader modelLoader = new TestModelLoader();
 		
 		EObject predictorsObject = modelLoader.loadModel("connected-nodes.xmi");
 		
-		EObject orchestrationObject = modelLoader.loadModel("test-configuration.xmi");
+		EObject orchestrationObject = modelLoader.loadModel("test-configuration-crepe.xmi");
 		
 		int hops = new PredictorsCalculator().countLoadNodes(1, orchestrationObject, predictorsObject);	
 		
-		assertEquals("Expected number of nodes of type 1: ", 0, hops);
+		assertEquals("Expected number of nodes of type 1 loadBig: ", 0, hops);
 	}
 }
