@@ -11,11 +11,15 @@ package models.service.composition.surrogates;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.rosuda.JRI.REXP;
 import org.rosuda.JRI.Rengine;
+
+import com.google.common.base.Charsets;
+import com.google.common.io.Resources;
 
 import models.service.composition.surrogates.utils.FilesUtils;
 import models.service.composition.surrogates.utils.PredictorsTuple;
@@ -93,12 +97,16 @@ public class SurrogateModelsWrapper {
 		}
 
 		try {
+			
+			URL modelFile = Resources.getResource("surrogates/build" + modelName + ".R");
+			URL trainingSet = Resources.getResource("surrogates/trainingSet.csv");
+			
+			
 			// Store the R model code into a temporary file
-			File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("src/models/service/composition/resources/build" + modelName + ".R"));
+			File tempFileR = FilesUtils.createTempFile(Resources.toString(modelFile, Charsets.UTF_8));
 			// File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("resources/build" + modelName + ".R"));
 			// Store the training dataset into a temporary file too
-			String trainingSet = FilesUtils.readFile("src/models/service/composition/resources/trainingSet.csv");
-			File tempFileSet = FilesUtils.createTempFile(trainingSet);
+			File tempFileSet = FilesUtils.createTempFile(Resources.toString(trainingSet, Charsets.UTF_8));
 			// Store to a variable on R the path name of the training set
 			re.eval(String.format("path <- '%s'", tempFileSet.getAbsolutePath().toString())).asString();
 
