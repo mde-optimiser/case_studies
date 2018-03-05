@@ -79,7 +79,7 @@ class PredictorsCalculator {
 			orchestratorsCount + 
 			
 			((concretePlan.getFeature("orchestrators") as List<EObject>).filter[
-				orchestrator | orchestrator.getFeature("abstractServices") !== null || orchestrator.getFeature("concreteServices") !== null
+				orchestrator | orchestrator.getFeature("concreteServices") !== null
 			]).toList.size
 		]
 	}

@@ -1,9 +1,9 @@
 basepath <src/models/service/composition/>
 metamodel <OrchestrationMM.ecore>
-model <test-configuration.xmi>
+model <original-input.xmi>
 objective ResponseTime minimise java { "models.service.composition.fitness.MinimiseResponseTime" }
 objective ServiceReliability maximise java { "models.service.composition.fitness.MaximiseServiceReliability" }
 objective EnergyConsumption minimise java { "models.service.composition.fitness.MinimiseEnergyConsumption" }
-mutate using <orchestration.henshin> unit "createOrchestrator"
-mutate using <orchestration.henshin> unit "deleteOrchestrator"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 100 population 100 batches 1
+constraint EnsureAllAbstractServicesAreOrchestrated java { "models.service.composition.fitness.EnsureAllAbstractServicesAreOrchestrated" }
+mutate {"Orchestrator"}
+optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 batches 1

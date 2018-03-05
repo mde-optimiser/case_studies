@@ -12,6 +12,8 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.List;
+
 import org.rosuda.JRI.REXP;
 import org.rosuda.JRI.Rengine;
 
@@ -143,25 +145,25 @@ public class SurrogateModelsWrapper {
 	public void shutdownR() {
 		re.end();
 	}
-//
-//	public static void main(String[] args) throws IOException {
-//		
-//		
-//		List<Integer> values = new ArrayList<Integer>();
-//		values.add(1);
-//		values.add(22);
-//		values.add(2);
-//		values.add(3);
-//		values.add(2);
-//		values.add(3);
-//		values.add(4);
-//		values.add(6);
-//		values.add(3);
-//		
-//		for (int i = 0; i < 10; i++) {
-//			SurrogateModelsWrapper tool = new SurrogateModelsWrapper();
-//			System.out.println(tool.evaluate(values));
-//		}
-//		// tool.shutdownR();
-//	}
+
+	public static void main(String[] args) throws IOException {
+		
+		
+		ArrayList<Integer> values = new ArrayList<Integer>();
+		values.add(1);
+		values.add(22);
+		values.add(2);
+		values.add(3);
+		values.add(2);
+		values.add(3);
+		values.add(4);
+		values.add(6);
+		values.add(3);
+		
+		for (int i = 0; i < 10; i++) {
+			SurrogateModelsWrapper tool = new SurrogateModelsWrapper();
+			System.out.println(tool.evaluate(values));
+		}
+		// tool.shutdownR();
+	}
 }

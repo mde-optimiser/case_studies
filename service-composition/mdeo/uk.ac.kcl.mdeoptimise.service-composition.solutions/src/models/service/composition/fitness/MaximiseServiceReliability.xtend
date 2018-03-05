@@ -10,9 +10,7 @@ class MaximiseServiceReliability  extends AbstractRemoteGuidanceFunction {
 		
 		println(this.getName + ": " + fitness)
 
-		
-
-		return fitness.get(1) * -1
+		return fitness.get(1)
 	}
 	
 	override getName() {

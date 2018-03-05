@@ -7,19 +7,15 @@
     xsi:schemaLocation="http://OrchestrationMM/1.0 OrchestrationMM.ecore">
   <concretePlans>
     <orchestrators
-        abstractServices="//@abstractPlan/@abstractServices.3"
         concreteServices="//@concreteServices.52"
         deployedOn="//@networkNodes.52"/>
     <orchestrators
-        abstractServices="//@abstractPlan/@abstractServices.0"
         concreteServices="//@concreteServices.0"
         deployedOn="//@networkNodes.0"/>
     <orchestrators
-        abstractServices="//@abstractPlan/@abstractServices.1"
         concreteServices="//@concreteServices.20"
         deployedOn="//@networkNodes.20"/>
     <orchestrators
-        abstractServices="//@abstractPlan/@abstractServices.2"
         concreteServices="//@concreteServices.37"
         deployedOn="//@networkNodes.37"/>
     <orchestrators
