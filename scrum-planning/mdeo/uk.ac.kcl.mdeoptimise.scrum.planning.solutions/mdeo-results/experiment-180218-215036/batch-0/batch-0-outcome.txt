@@ -1,0 +1,162 @@
+
+============================================
+
+Batch 0 duration: 00:01:00.425
+
+--------------------------------------------
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/3914AE38.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.4686231582273457
+MinimiseSprintEffortDeviation: -1.292692009559488
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/67414700.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -0.8575447874162431
+MinimiseSprintEffortDeviation: -3.9319875782852463
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/78536B86.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.0332025705081342
+MinimiseSprintEffortDeviation: -2.2682012349227887
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/036F7D33.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.2915283921612486
+MinimiseSprintEffortDeviation: -2.1490511982341367
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/177189C6.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -0.908519992928491
+MinimiseSprintEffortDeviation: -3.8234043799514037
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/665E165E.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -0.9295523974706112
+MinimiseSprintEffortDeviation: -3.1434978841043333
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/56E8942D.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.0330198752161532
+MinimiseSprintEffortDeviation: -2.593006789525688
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/6B0AC071.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -0.988745054328098
+MinimiseSprintEffortDeviation: -2.76966651992238
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/7D7F7B1D.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.3225950524543977
+MinimiseSprintEffortDeviation: -2.0487480130686233
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/684AC48D.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.3945382874012275
+MinimiseSprintEffortDeviation: -1.8883298106221302
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/6AD7F922.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.4131251176458732
+MinimiseSprintEffortDeviation: -1.51744244666721
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/4C8F9157.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.4020265440423108
+MinimiseSprintEffortDeviation: -1.8027756377319946
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/1A5CE1AF.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -0.9466066339390332
+MinimiseSprintEffortDeviation: -2.881428739175649
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/14F7209D.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -0.9455324461085192
+MinimiseSprintEffortDeviation: -2.9535883617265144
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/1C11FBAC.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.439828708269116
+MinimiseSprintEffortDeviation: -1.446411166701189
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/3EDB6598.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.4586679608831465
+MinimiseSprintEffortDeviation: -1.4095538674570611
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180218-215036/batch-0/1276A86E.xmi
+
+Objective values:
+MinimiseCustomerSatisfactionIndex: -1.3076653655695307
+MinimiseSprintEffortDeviation: -2.1244194253340942
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: -2.0
+
+============================================
+

@@ -1,0 +1,17 @@
+
+============================================
+
+Batch 0 duration: 00:00:30.745
+
+--------------------------------------------
+Evaluation data for solution: /home/alxbrd/projects/alxbrd/github/case_studies/scrum-planning/mdeo/uk.ac.kcl.mdeoptimise.scrum.planning.solutions/mdeo-results/experiment-180216-202716/batch-0/7B7E4B20.xmi
+
+Objective values:
+MinimiseSprintEffortDeviation: -0.7071067811865476
+
+Constraint values:
+HasNoUnassignedWorkItems: 0.0
+HasTheAllowedMaximalNumberOfSprints: 0.0
+
+============================================
+

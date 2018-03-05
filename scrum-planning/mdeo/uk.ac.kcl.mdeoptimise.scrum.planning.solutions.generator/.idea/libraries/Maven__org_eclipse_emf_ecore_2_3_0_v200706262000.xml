@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.emf:ecore:2.3.0-v200706262000">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/ecore/2.3.0-v200706262000/ecore-2.3.0-v200706262000.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/ecore/2.3.0-v200706262000/ecore-2.3.0-v200706262000-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/ecore/2.3.0-v200706262000/ecore-2.3.0-v200706262000-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
