@@ -25,8 +25,8 @@ local.properties
 .recommenders
 
 # Eclipse core
-# .project
-# .classpath
+.project
+.classpath
 
 mdeo-results/
 xtend-gen/
