@@ -4,19 +4,17 @@ import org.eclipse.emf.ecore.EObject
 import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.common.util.EList
 
-class MinimiseSprintsWithInvalidEffort implements IGuidanceFunction {
+class MinimiseSprintsWithInvalidLBEffort implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
 		var invalidSprints = (model.getFeature("sprints") as EList<EObject>).filter[ sprint | 
 			
-			var size = (sprint.getFeature("committedItem") as EList<EObject>).fold(0)[ result, item |
+			((sprint.getFeature("committedItem") as EList<EObject>).fold(0)[ result, item |
 				
 				result + item.getFeature("Effort") as Integer
 				
-			] as Integer
-			
-			 size > 35
+			] as Integer) < 25
 			
 		].toList
 		
@@ -26,7 +24,7 @@ class MinimiseSprintsWithInvalidEffort implements IGuidanceFunction {
 			fitness = invalidSprints.length	
 		}
 		
-		println("Counted invalid UB sprints: " + fitness)
+		println("Counted invalid LB sprints: " + fitness)
 		
 		return fitness
 	}

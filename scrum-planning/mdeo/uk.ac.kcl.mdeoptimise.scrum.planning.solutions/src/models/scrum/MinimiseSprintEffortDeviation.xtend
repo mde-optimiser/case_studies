@@ -5,12 +5,10 @@ import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.common.util.EList
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation
 
-class MaximiseAverageSprintEffort implements IGuidanceFunction {
+class MinimiseSprintEffortDeviation implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
-		
-		
-		
+				
 		var fitness = (model.getFeature("sprints") as EList<EObject>).map[ sprint | 
 			
 			new Double((sprint.getFeature("committedItem") as EList<EObject>).fold(0d)[ result, item |
@@ -26,7 +24,7 @@ class MaximiseAverageSprintEffort implements IGuidanceFunction {
 		println("Sprint effort distribution: " + fitness)
 		println("Sprint effort standard deviation: " + effortStandardDeviation)
 		
-		return effortStandardDeviation * -1
+		return effortStandardDeviation
 	}
 	
 	override getName() {

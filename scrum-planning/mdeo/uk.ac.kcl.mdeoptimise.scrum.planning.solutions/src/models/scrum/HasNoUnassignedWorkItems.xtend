@@ -4,7 +4,7 @@ import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
 import uk.ac.kcl.interpreter.IGuidanceFunction
 
-class MinimiseUnassignedWorkItems implements IGuidanceFunction {
+class HasNoUnassignedWorkItems implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
@@ -17,7 +17,7 @@ class MinimiseUnassignedWorkItems implements IGuidanceFunction {
 		
 		println("Unassigned backlog work items: " + fitness)
 		
-		return fitness * -1
+		return fitness
 	}
 	
 	override getName() {
@@ -35,7 +35,5 @@ class MinimiseUnassignedWorkItems implements IGuidanceFunction {
 		
 		o.eGet(o.eClass.getEStructuralFeature(feature))
 		
-	}	
-	
+	}
 }
-	

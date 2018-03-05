@@ -1,0 +1,508 @@
+
+Found 0 sprints
+Backlog items: 26039
+Backlog effort points size: 111121
+
+
+Found 100 stakeholders
+
+	Stakeholder-0 stats:
+		Items: 440
+		Total Effort: 1849
+		Total Importance: 1959
+
+	Stakeholder-1 stats:
+		Items: 108
+		Total Effort: 439
+		Total Importance: 425
+
+	Stakeholder-2 stats:
+		Items: 181
+		Total Effort: 773
+		Total Importance: 787
+
+	Stakeholder-3 stats:
+		Items: 369
+		Total Effort: 1546
+		Total Importance: 1606
+
+	Stakeholder-4 stats:
+		Items: 275
+		Total Effort: 1166
+		Total Importance: 1148
+
+	Stakeholder-5 stats:
+		Items: 169
+		Total Effort: 690
+		Total Importance: 753
+
+	Stakeholder-6 stats:
+		Items: 350
+		Total Effort: 1463
+		Total Importance: 1410
+
+	Stakeholder-7 stats:
+		Items: 412
+		Total Effort: 1700
+		Total Importance: 1741
+
+	Stakeholder-8 stats:
+		Items: 442
+		Total Effort: 1813
+		Total Importance: 1973
+
+	Stakeholder-9 stats:
+		Items: 137
+		Total Effort: 583
+		Total Importance: 600
+
+	Stakeholder-10 stats:
+		Items: 478
+		Total Effort: 2061
+		Total Importance: 2025
+
+	Stakeholder-11 stats:
+		Items: 206
+		Total Effort: 901
+		Total Importance: 823
+
+	Stakeholder-12 stats:
+		Items: 433
+		Total Effort: 1856
+		Total Importance: 1967
+
+	Stakeholder-13 stats:
+		Items: 153
+		Total Effort: 689
+		Total Importance: 685
+
+	Stakeholder-14 stats:
+		Items: 486
+		Total Effort: 2111
+		Total Importance: 1977
+
+	Stakeholder-15 stats:
+		Items: 481
+		Total Effort: 2091
+		Total Importance: 2012
+
+	Stakeholder-16 stats:
+		Items: 355
+		Total Effort: 1574
+		Total Importance: 1463
+
+	Stakeholder-17 stats:
+		Items: 23
+		Total Effort: 110
+		Total Importance: 95
+
+	Stakeholder-18 stats:
+		Items: 88
+		Total Effort: 387
+		Total Importance: 425
+
+	Stakeholder-19 stats:
+		Items: 381
+		Total Effort: 1627
+		Total Importance: 1578
+
+	Stakeholder-20 stats:
+		Items: 185
+		Total Effort: 811
+		Total Importance: 798
+
+	Stakeholder-21 stats:
+		Items: 310
+		Total Effort: 1315
+		Total Importance: 1325
+
+	Stakeholder-22 stats:
+		Items: 273
+		Total Effort: 1147
+		Total Importance: 1179
+
+	Stakeholder-23 stats:
+		Items: 389
+		Total Effort: 1676
+		Total Importance: 1591
+
+	Stakeholder-24 stats:
+		Items: 203
+		Total Effort: 929
+		Total Importance: 842
+
+	Stakeholder-25 stats:
+		Items: 267
+		Total Effort: 1095
+		Total Importance: 1186
+
+	Stakeholder-26 stats:
+		Items: 251
+		Total Effort: 1040
+		Total Importance: 1058
+
+	Stakeholder-27 stats:
+		Items: 100
+		Total Effort: 432
+		Total Importance: 441
+
+	Stakeholder-28 stats:
+		Items: 446
+		Total Effort: 1837
+		Total Importance: 1826
+
+	Stakeholder-29 stats:
+		Items: 311
+		Total Effort: 1301
+		Total Importance: 1317
+
+	Stakeholder-30 stats:
+		Items: 293
+		Total Effort: 1248
+		Total Importance: 1251
+
+	Stakeholder-31 stats:
+		Items: 328
+		Total Effort: 1368
+		Total Importance: 1330
+
+	Stakeholder-32 stats:
+		Items: 431
+		Total Effort: 1767
+		Total Importance: 1879
+
+	Stakeholder-33 stats:
+		Items: 372
+		Total Effort: 1551
+		Total Importance: 1606
+
+	Stakeholder-34 stats:
+		Items: 33
+		Total Effort: 150
+		Total Importance: 133
+
+	Stakeholder-35 stats:
+		Items: 82
+		Total Effort: 334
+		Total Importance: 363
+
+	Stakeholder-36 stats:
+		Items: 469
+		Total Effort: 2005
+		Total Importance: 2042
+
+	Stakeholder-37 stats:
+		Items: 285
+		Total Effort: 1130
+		Total Importance: 1231
+
+	Stakeholder-38 stats:
+		Items: 480
+		Total Effort: 2051
+		Total Importance: 1991
+
+	Stakeholder-39 stats:
+		Items: 221
+		Total Effort: 976
+		Total Importance: 978
+
+	Stakeholder-40 stats:
+		Items: 343
+		Total Effort: 1508
+		Total Importance: 1496
+
+	Stakeholder-41 stats:
+		Items: 239
+		Total Effort: 968
+		Total Importance: 965
+
+	Stakeholder-42 stats:
+		Items: 228
+		Total Effort: 980
+		Total Importance: 1039
+
+	Stakeholder-43 stats:
+		Items: 185
+		Total Effort: 720
+		Total Importance: 770
+
+	Stakeholder-44 stats:
+		Items: 489
+		Total Effort: 2089
+		Total Importance: 2101
+
+	Stakeholder-45 stats:
+		Items: 171
+		Total Effort: 764
+		Total Importance: 700
+
+	Stakeholder-46 stats:
+		Items: 377
+		Total Effort: 1592
+		Total Importance: 1587
+
+	Stakeholder-47 stats:
+		Items: 433
+		Total Effort: 1818
+		Total Importance: 1855
+
+	Stakeholder-48 stats:
+		Items: 391
+		Total Effort: 1684
+		Total Importance: 1616
+
+	Stakeholder-49 stats:
+		Items: 179
+		Total Effort: 735
+		Total Importance: 780
+
+	Stakeholder-50 stats:
+		Items: 22
+		Total Effort: 93
+		Total Importance: 93
+
+	Stakeholder-51 stats:
+		Items: 417
+		Total Effort: 1733
+		Total Importance: 1763
+
+	Stakeholder-52 stats:
+		Items: 393
+		Total Effort: 1680
+		Total Importance: 1676
+
+	Stakeholder-53 stats:
+		Items: 28
+		Total Effort: 140
+		Total Importance: 122
+
+	Stakeholder-54 stats:
+		Items: 91
+		Total Effort: 390
+		Total Importance: 390
+
+	Stakeholder-55 stats:
+		Items: 358
+		Total Effort: 1539
+		Total Importance: 1533
+
+	Stakeholder-56 stats:
+		Items: 129
+		Total Effort: 560
+		Total Importance: 583
+
+	Stakeholder-57 stats:
+		Items: 210
+		Total Effort: 925
+		Total Importance: 906
+
+	Stakeholder-58 stats:
+		Items: 14
+		Total Effort: 55
+		Total Importance: 61
+
+	Stakeholder-59 stats:
+		Items: 354
+		Total Effort: 1498
+		Total Importance: 1514
+
+	Stakeholder-60 stats:
+		Items: 212
+		Total Effort: 919
+		Total Importance: 902
+
+	Stakeholder-61 stats:
+		Items: 125
+		Total Effort: 538
+		Total Importance: 532
+
+	Stakeholder-62 stats:
+		Items: 186
+		Total Effort: 754
+		Total Importance: 750
+
+	Stakeholder-63 stats:
+		Items: 128
+		Total Effort: 539
+		Total Importance: 577
+
+	Stakeholder-64 stats:
+		Items: 75
+		Total Effort: 340
+		Total Importance: 334
+
+	Stakeholder-65 stats:
+		Items: 5
+		Total Effort: 20
+		Total Importance: 16
+
+	Stakeholder-66 stats:
+		Items: 326
+		Total Effort: 1373
+		Total Importance: 1355
+
+	Stakeholder-67 stats:
+		Items: 123
+		Total Effort: 547
+		Total Importance: 515
+
+	Stakeholder-68 stats:
+		Items: 290
+		Total Effort: 1253
+		Total Importance: 1228
+
+	Stakeholder-69 stats:
+		Items: 425
+		Total Effort: 1876
+		Total Importance: 1759
+
+	Stakeholder-70 stats:
+		Items: 448
+		Total Effort: 1902
+		Total Importance: 1839
+
+	Stakeholder-71 stats:
+		Items: 398
+		Total Effort: 1758
+		Total Importance: 1686
+
+	Stakeholder-72 stats:
+		Items: 113
+		Total Effort: 491
+		Total Importance: 469
+
+	Stakeholder-73 stats:
+		Items: 52
+		Total Effort: 236
+		Total Importance: 252
+
+	Stakeholder-74 stats:
+		Items: 418
+		Total Effort: 1805
+		Total Importance: 1755
+
+	Stakeholder-75 stats:
+		Items: 313
+		Total Effort: 1309
+		Total Importance: 1320
+
+	Stakeholder-76 stats:
+		Items: 119
+		Total Effort: 496
+		Total Importance: 465
+
+	Stakeholder-77 stats:
+		Items: 65
+		Total Effort: 269
+		Total Importance: 321
+
+	Stakeholder-78 stats:
+		Items: 142
+		Total Effort: 627
+		Total Importance: 623
+
+	Stakeholder-79 stats:
+		Items: 50
+		Total Effort: 225
+		Total Importance: 179
+
+	Stakeholder-80 stats:
+		Items: 463
+		Total Effort: 1986
+		Total Importance: 1932
+
+	Stakeholder-81 stats:
+		Items: 142
+		Total Effort: 623
+		Total Importance: 591
+
+	Stakeholder-82 stats:
+		Items: 218
+		Total Effort: 924
+		Total Importance: 919
+
+	Stakeholder-83 stats:
+		Items: 355
+		Total Effort: 1451
+		Total Importance: 1518
+
+	Stakeholder-84 stats:
+		Items: 439
+		Total Effort: 1936
+		Total Importance: 1801
+
+	Stakeholder-85 stats:
+		Items: 249
+		Total Effort: 1100
+		Total Importance: 1126
+
+	Stakeholder-86 stats:
+		Items: 305
+		Total Effort: 1367
+		Total Importance: 1226
+
+	Stakeholder-87 stats:
+		Items: 373
+		Total Effort: 1573
+		Total Importance: 1580
+
+	Stakeholder-88 stats:
+		Items: 160
+		Total Effort: 663
+		Total Importance: 705
+
+	Stakeholder-89 stats:
+		Items: 206
+		Total Effort: 956
+		Total Importance: 878
+
+	Stakeholder-90 stats:
+		Items: 27
+		Total Effort: 108
+		Total Importance: 107
+
+	Stakeholder-91 stats:
+		Items: 64
+		Total Effort: 267
+		Total Importance: 289
+
+	Stakeholder-92 stats:
+		Items: 116
+		Total Effort: 501
+		Total Importance: 461
+
+	Stakeholder-93 stats:
+		Items: 399
+		Total Effort: 1699
+		Total Importance: 1695
+
+	Stakeholder-94 stats:
+		Items: 307
+		Total Effort: 1342
+		Total Importance: 1344
+
+	Stakeholder-95 stats:
+		Items: 149
+		Total Effort: 646
+		Total Importance: 632
+
+	Stakeholder-96 stats:
+		Items: 274
+		Total Effort: 1123
+		Total Importance: 1197
+
+	Stakeholder-97 stats:
+		Items: 322
+		Total Effort: 1437
+		Total Importance: 1493
+
+	Stakeholder-98 stats:
+		Items: 490
+		Total Effort: 2101
+		Total Importance: 2144
+
+	Stakeholder-99 stats:
+		Items: 221
+		Total Effort: 978
+		Total Importance: 926
+

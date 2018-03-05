@@ -4,7 +4,8 @@ model <sprint-planning-model-5-stakeholders-119-items.xmi>
 objective MinimiseCustomerSatisfactionIndex minimise java { "models.scrum.MinimiseCustomerSatisfactionIndex" }
 objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MinimiseSprintEffortDeviation" }
 constraint HasNoUnassignedWorkItems java { "models.scrum.HasNoUnassignedWorkItems" }
-constraint HasTheAllowedMaximalNumberOfSprints java { "models.scrum.HasTheAllowedMaximalNumberOfSprints" }
+constraint MinimiseUnassignedWorkItems java { "models.scrum.MinimiseUnassignedWorkItems" }
+constraint HasTheAllowedMinimalNumberOfSprints java { "models.scrum.HasTheAllowedMinimalNumberOfSprints" }
 mutate using <sprint-repair.henshin> unit "createSprint"
 mutate using <sprint-repair.henshin> unit "addItemToSprint"
 mutate using <sprint-repair.henshin> unit "createSprint_lb_repair"

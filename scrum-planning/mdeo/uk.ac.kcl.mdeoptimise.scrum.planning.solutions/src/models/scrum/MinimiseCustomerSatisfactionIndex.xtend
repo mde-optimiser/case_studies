@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList
 import java.util.ArrayList
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation
 
-class MaximiseAverageStakeholderImportance implements IGuidanceFunction {
+class MinimiseCustomerSatisfactionIndex implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
@@ -32,13 +32,13 @@ class MaximiseAverageStakeholderImportance implements IGuidanceFunction {
 		var importanceStandardDeviation = standardDeviationCalculator.evaluate(stakeholderImportanceSprintDeviation)
 		
 		println("Sprint stakeholder importance distribution: " + stakeholderImportanceSprintDeviation)
-		println("Sprint stakeholder importance standard deviation: " + importanceStandardDeviation)
+		println("Sprint Customer Satisfaction Index: " + importanceStandardDeviation)
 		
-		return importanceStandardDeviation * -1;
+		return importanceStandardDeviation;
 	}
 	
 	override getName() {
-		return "Minimise Next Release Cost"
+		return "Minimise Customer Satisfaction Index"
 	}
 
 	/**
