@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ASCII"?>
+<OrchestrationMM:ConcretePlan xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:OrchestrationMM="http://OrchestrationMM/1.0">
+  <orchestrators>
+    <deployedOn href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@networkNodes.37"/>
+  </orchestrators>
+  <orchestrators>
+    <absConSats>
+      <abstractService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@abstractPlan/@abstractServices.2"/>
+      <concreteService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.43"/>
+    </absConSats>
+    <absConSats>
+      <abstractService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@abstractPlan/@abstractServices.3"/>
+      <concreteService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.65"/>
+    </absConSats>
+    <deployedOn href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.43"/>
+  </orchestrators>
+  <orchestrators>
+    <absConSats>
+      <abstractService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@abstractPlan/@abstractServices.0"/>
+      <concreteService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.0"/>
+    </absConSats>
+    <deployedOn href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.0"/>
+  </orchestrators>
+  <orchestrators>
+    <absConSats>
+      <abstractService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@abstractPlan/@abstractServices.1"/>
+      <concreteService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.35"/>
+    </absConSats>
+    <deployedOn href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.35"/>
+  </orchestrators>
+  <orchestrators>
+    <absConSats>
+      <abstractService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@abstractPlan/@abstractServices.4"/>
+      <concreteService href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.82"/>
+    </absConSats>
+    <deployedOn href="file:/home/alxbrd/projects/alxbrd/github/crepe/crepe.examples/service-composition-de/models/input2.model#//@concreteServices.82"/>
+  </orchestrators>
+</OrchestrationMM:ConcretePlan>

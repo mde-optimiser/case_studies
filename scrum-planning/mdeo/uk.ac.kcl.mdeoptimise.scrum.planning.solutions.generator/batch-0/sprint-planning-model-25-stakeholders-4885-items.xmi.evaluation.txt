@@ -1,0 +1,133 @@
+
+Found 0 sprints
+Backlog items: 4885
+Backlog effort points size: 20643
+
+
+Found 25 stakeholders
+
+	Stakeholder-0 stats:
+		Items: 25
+		Total Effort: 109
+		Total Importance: 109
+
+	Stakeholder-1 stats:
+		Items: 212
+		Total Effort: 849
+		Total Importance: 902
+
+	Stakeholder-2 stats:
+		Items: 55
+		Total Effort: 223
+		Total Importance: 243
+
+	Stakeholder-3 stats:
+		Items: 95
+		Total Effort: 390
+		Total Importance: 396
+
+	Stakeholder-4 stats:
+		Items: 187
+		Total Effort: 858
+		Total Importance: 818
+
+	Stakeholder-5 stats:
+		Items: 279
+		Total Effort: 1188
+		Total Importance: 1232
+
+	Stakeholder-6 stats:
+		Items: 39
+		Total Effort: 142
+		Total Importance: 153
+
+	Stakeholder-7 stats:
+		Items: 438
+		Total Effort: 1941
+		Total Importance: 1894
+
+	Stakeholder-8 stats:
+		Items: 225
+		Total Effort: 993
+		Total Importance: 918
+
+	Stakeholder-9 stats:
+		Items: 185
+		Total Effort: 743
+		Total Importance: 836
+
+	Stakeholder-10 stats:
+		Items: 361
+		Total Effort: 1473
+		Total Importance: 1556
+
+	Stakeholder-11 stats:
+		Items: 30
+		Total Effort: 116
+		Total Importance: 123
+
+	Stakeholder-12 stats:
+		Items: 475
+		Total Effort: 2151
+		Total Importance: 2103
+
+	Stakeholder-13 stats:
+		Items: 36
+		Total Effort: 135
+		Total Importance: 155
+
+	Stakeholder-14 stats:
+		Items: 405
+		Total Effort: 1669
+		Total Importance: 1671
+
+	Stakeholder-15 stats:
+		Items: 60
+		Total Effort: 240
+		Total Importance: 266
+
+	Stakeholder-16 stats:
+		Items: 344
+		Total Effort: 1348
+		Total Importance: 1460
+
+	Stakeholder-17 stats:
+		Items: 86
+		Total Effort: 380
+		Total Importance: 368
+
+	Stakeholder-18 stats:
+		Items: 88
+		Total Effort: 418
+		Total Importance: 366
+
+	Stakeholder-19 stats:
+		Items: 28
+		Total Effort: 120
+		Total Importance: 125
+
+	Stakeholder-20 stats:
+		Items: 156
+		Total Effort: 705
+		Total Importance: 673
+
+	Stakeholder-21 stats:
+		Items: 238
+		Total Effort: 900
+		Total Importance: 1037
+
+	Stakeholder-22 stats:
+		Items: 424
+		Total Effort: 1772
+		Total Importance: 1758
+
+	Stakeholder-23 stats:
+		Items: 149
+		Total Effort: 646
+		Total Importance: 628
+
+	Stakeholder-24 stats:
+		Items: 265
+		Total Effort: 1134
+		Total Importance: 1176
+
