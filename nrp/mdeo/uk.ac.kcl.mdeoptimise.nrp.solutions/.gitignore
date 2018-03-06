@@ -29,3 +29,5 @@ local.properties
 # .classpath
 
 mdeo-results/
+bin/
+xtend-gen/
