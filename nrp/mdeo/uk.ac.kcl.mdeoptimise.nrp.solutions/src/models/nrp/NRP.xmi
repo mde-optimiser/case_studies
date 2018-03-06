@@ -6,31 +6,31 @@
     xsi:schemaLocation="http://model.nrp nextReleaseProblem.ecore">
   <customers
       name="C1"
-      value="0.8"
-      desires="//@requirements.0/@valuations.0"/>
+      importance="0.8"
+      assigns="//@requirements.0/@valuations.0"/>
   <customers
       name="C2"
-      value="0.4"
-      desires="//@requirements.0/@valuations.0 //@requirements.1/@valuations.0"/>
+      importance="0.4"
+      assigns="//@requirements.0/@valuations.0 //@requirements.1/@valuations.0"/>
   <customers
       name="C3"
-      value="0.2"
-      desires="//@requirements.2/@valuations.0"/>
+      importance="0.2"
+      assigns="//@requirements.2/@valuations.0"/>
   <availableArtifacts
       name="a"
-      realisations="//@requirements.0/@realisations.0"
+      contributesTo="//@requirements.0/@realisations.0"
       >
     <costs amount="100.0"/>
   </availableArtifacts>
   <availableArtifacts
       name="b"
-      realisations="//@requirements.1/@realisations.0"
+      contributesTo="//@requirements.1/@realisations.0"
       >
     <costs amount="100.0"/>
   </availableArtifacts>
   <availableArtifacts
       name="c"
-      realisations="//@requirements.2/@realisations.0 //@requirements.1/@realisations.0"
+      contributesTo="//@requirements.2/@realisations.0 //@requirements.1/@realisations.0"
       >
     <costs amount="100.0"/>
   </availableArtifacts>
@@ -38,25 +38,25 @@
       name="A">
     <valuations
         value="1.0"
-        desiredBy="//@customers.0 //@customers.1"/>
+        assignedBy="//@customers.0 //@customers.1"/>
     <realisations
-        softwareartifacts="//@availableArtifacts.0"/>
+        dependsOn="//@availableArtifacts.0"/>
   </requirements>
   <requirements
       name="B">
     <valuations
         value="0.5"
-        desiredBy="//@customers.1"/>
+        assignedBy="//@customers.1"/>
     <realisations
-        softwareartifacts="//@availableArtifacts.1 //@availableArtifacts.2"/>
+        dependsOn="//@availableArtifacts.1 //@availableArtifacts.2"/>
   </requirements>
   <requirements
       name="C">
     <valuations
         value="1.0"
-        desiredBy="//@customers.2"/>
+        assignedBy="//@customers.2"/>
     <realisations
-        softwareartifacts="//@availableArtifacts.2"/>
+        dependsOn="//@availableArtifacts.2"/>
   </requirements>
   <solutions />
 </NRP:NRP>
