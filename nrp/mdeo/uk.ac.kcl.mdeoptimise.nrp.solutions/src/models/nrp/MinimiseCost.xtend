@@ -1,32 +1,31 @@
-package models.scrum
+package models.nrp
 
 import org.eclipse.emf.ecore.EObject
 import uk.ac.kcl.interpreter.IGuidanceFunction
-import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.common.util.BasicEList
 
-class MinimiseEmptySprints implements IGuidanceFunction {
+class MinimiseCost  implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
-		var sprints = (model.getFeature("sprints") as EList<EObject>).filter[ 
-			sprint | (sprint.getFeature("committedItem") as EList<EObject>).length == 0].toList
+		val selectedArtifactsCost =  model.getReferenceFeature("solutions").head
+				.getReferenceFeature("selectedArtifacts").fold(0d)[
+					result, artifact | 
+					
+					//This assumes money for now only
+					result + artifact.getReferenceFeature("costs").head.getFeature("amount") as Double
+				]
 		
-		var fitness = 0
+		println("Calculated selectedArtifacts cost: " + selectedArtifactsCost)
 		
-		if(sprints != null) {
-			fitness = sprints.length	
-		}
+		return selectedArtifactsCost
 		
-		println("Counted empty sprints: " + fitness)
-		
-		return fitness
 	}
 	
 	override getName() {
-		return "Mimise empty sprints"
+		return "Minimise Next Release Cost"
 	}
-	
+
 	/**
 	 * Helper function getting the value of the named feature (if it exists) for the given EObject.
 	 */
@@ -38,7 +37,7 @@ class MinimiseEmptySprints implements IGuidanceFunction {
 		
 		o.eGet(o.eClass.getEStructuralFeature(feature))
 		
-	}	
+	}
 	
 	def Iterable<EObject> getReferenceFeature(EObject o, String feature) {
 		
