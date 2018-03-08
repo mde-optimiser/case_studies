@@ -1,5 +1,5 @@
 basepath <src/models/scrum/>
-metamodel <planning.ecore>
+metamodel <SprintPlanning.ecore>
 model <sprint-planning-model-5-stakeholders-119-items.xmi>
 objective MinimiseSprints minimise java { "models.scrum.MinimiseSprints" }
 objective MinimiseSprintEffortDeviation minimise java { "models.scrum.MinimiseSprintEffortDeviation" }
