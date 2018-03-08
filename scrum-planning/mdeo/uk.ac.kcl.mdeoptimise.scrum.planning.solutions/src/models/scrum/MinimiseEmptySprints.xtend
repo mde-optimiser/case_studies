@@ -3,6 +3,7 @@ package models.scrum
 import org.eclipse.emf.ecore.EObject
 import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.common.util.EList
+import org.eclipse.emf.common.util.BasicEList
 
 class MinimiseEmptySprints implements IGuidanceFunction {
 	
@@ -51,4 +52,4 @@ class MinimiseEmptySprints implements IGuidanceFunction {
 		}		
 		return features
 	}	
-	
+}

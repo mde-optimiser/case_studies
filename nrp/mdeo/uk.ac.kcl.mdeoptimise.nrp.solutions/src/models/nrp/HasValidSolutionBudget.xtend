@@ -4,7 +4,7 @@ import org.eclipse.emf.ecore.EObject
 import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.common.util.BasicEList
 
-class MinimiseCost  implements IGuidanceFunction {
+class HasValidSolutionBudget  implements IGuidanceFunction {
 	
 	override computeFitness(EObject model) {
 		
@@ -18,7 +18,14 @@ class MinimiseCost  implements IGuidanceFunction {
 		
 		println("Calculated selectedArtifacts cost: " + selectedArtifactsCost)
 		
-		return selectedArtifactsCost
+		var budget = 2000;
+		
+		//If within budget
+		if(budget - selectedArtifactsCost > 0){
+			return 0
+		}
+		
+		return budget - selectedArtifactsCost
 		
 	}
 	

@@ -40,9 +40,13 @@ class MaximiseSatisfaction  implements IGuidanceFunction {
 	 * 
 	 */
 	override computeFitness(EObject model) {
-		model.getReferenceFeature('customers').fold(0.0d)[result, customer | 
+		var satisfaction = model.getReferenceFeature('customers').fold(0.0d)[result, customer | 
 			result + ((customer.getFeature('importance') as Double) * customer.calculateSatisfaction)
 		]
+		
+		println("Found satisfaction: " + satisfaction)
+		
+		return -1 * satisfaction;
 	}
 	
 	/**
