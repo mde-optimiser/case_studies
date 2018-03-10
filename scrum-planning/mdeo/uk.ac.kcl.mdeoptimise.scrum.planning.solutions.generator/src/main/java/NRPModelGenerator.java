@@ -77,7 +77,8 @@ public class NRPModelGenerator {
             modelRoot.add("requirements", requirement);
 
             //Add Valuations
-            for(int j = 0; j < valuations; j++){
+            //TODO randomise
+            for(int j = 0; j < getRandom(valuations); j++){
                 EObjectWrapper valuation = metamodel.create("Valuation");
 
                 valuation.set("value", (double) getRandom(10));
@@ -96,7 +97,8 @@ public class NRPModelGenerator {
             }
 
             //Add Realisations
-            for(int j = 0; j < requirementRealisations; j++){
+            //TODO randomise
+            for(int j = 0; j < getRandom(requirementRealisations); j++){
                 EObjectWrapper realisation = metamodel.create("RequirementRealisation");
 
                 realisation.set("percentage", round(new Random().nextDouble(), 2));
@@ -113,14 +115,14 @@ public class NRPModelGenerator {
             EObjectWrapper softwareArtifact = getSoftwareArtifact(metamodel, faker);
 
             //Build dependency tree on other artifacts for this artifact
-
+            //TODO add multiple realisations randomly for a software artifact
             EObjectWrapper saRequirementRealisation = requirementRealisationObjects
                     .get(getRandom(0, requirementRealisationObjects.size()-1));
 
             saRequirementRealisation.add("dependsOn", softwareArtifact);
 
             //Generate dependencies bool
-            if(getRandom(12)%getRandom(4) == 0){
+            if(new Random().nextDouble() > 0.7){
 
                 //How many dependencies
                 int dependencies = getRandom(maximumSoftwareArtifactsDependencies);
