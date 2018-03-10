@@ -1,8 +1,0 @@
-loadMedium - 5
-loadSmall - 4
-devSlow - 8
-devFast - 2
-hops - 8
-loadBig - 1
-orchestrators - 4
-devMedium - 0
