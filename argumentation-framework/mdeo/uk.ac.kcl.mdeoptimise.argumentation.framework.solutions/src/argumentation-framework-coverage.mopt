@@ -3,4 +3,4 @@ metamodel <argumentation.ecore>
 model <argumentation.xmi>
 objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation." }
 mutate using <argumentation.henshin> unit "addArgument"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 experiments 1
+optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 batches 1
