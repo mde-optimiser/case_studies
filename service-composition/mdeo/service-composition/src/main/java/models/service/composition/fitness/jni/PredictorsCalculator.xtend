@@ -30,7 +30,7 @@ class PredictorsCalculator {
 
 			var classLoader = getClass().getClassLoader();
 
-			var nodesModelFile = new File(classLoader.getResource("models/connected-nodes.xmi").getFile());
+			var nodesModelFile = new File(classLoader.getResource("models/service/composition/connected-nodes.xmi").getFile());
 
 			PredictorsCalculator.predictors = loadPlatformResource(nodesModelFile)
 		}
@@ -113,9 +113,14 @@ class PredictorsCalculator {
 	def int calculateHops(EObject model, EObject predictors) {
 
 		var hops = 0;
-
+		
 		var orchestrators = model.getFeatureList("concretePlans").head.getFeatureList("orchestrators")
-
+		
+		//If there are no orchestrators, return 0 hops
+		if(orchestrators.empty){
+			return hops
+		}
+		
 		// Measure the number of hops between the first node and the first orchestrator
 		if (orchestrators.head !== null) {
 

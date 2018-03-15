@@ -1,4 +1,4 @@
-basepath <src/main/resources/models/>
+basepath <src/main/resources/models/service/composition/>
 metamodel <OrchestrationMM.ecore>
 model <original-input.xmi>
 objective ResponseTime minimise java { "models.service.composition.fitness.jni.MinimiseResponseTime" }
