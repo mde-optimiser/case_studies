@@ -1127,7 +1127,7 @@
       </children>
     </children>
     <element xmi:type="henshin:Rule" href="selection.henshin#_Lc2NEMuZEeeDh6mgHe3vQw"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Lc20IcuZEeeDh6mgHe3vQw" x="3578" y="371" width="476" height="272"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Lc20IcuZEeeDh6mgHe3vQw" x="3684" y="1252" width="476" height="272"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_j_hcMMuaEeeDh6mgHe3vQw" type="Note" fontName="Segoe UI" description="Select a dependency only if this dependency is not yet (implicitly) selected." fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
     <children xmi:type="notation:BasicDecorationNode" xmi:id="_j_iqUMuaEeeDh6mgHe3vQw" type="DiagramName">
