@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<argumentation:ArgumentationFramework
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:argumentation="http://www.kcl.ac.uk/mdeo/argumentation/1.0"
+    xsi:schemaLocation="http://www.kcl.ac.uk/mdeo/argumentation/1.0 argumentation.ecore">
+  <persuadeeargumentationframework
+      hasArgument="//@hasArgument.3 //@hasArgument.4 //@hasArgument.5 //@hasArgument.0 //@hasArgument.2 //@hasArgument.8">
+    <hasPersuadee
+        hasTopic="//@topic.0"/>
+  </persuadeeargumentationframework>
+  <hasPersuader/>
+  <topic ID="1"
+      hasPersuadee="//@persuadeeargumentationframework.0/@hasPersuadee"
+      argument="//@hasArgument.0"/>
+  <hasArgument
+      ID="9"
+      topic="//@topic.0"/>
+  <hasArgument
+      attacks="//@hasArgument.0"
+      ID="8"/>
+  <hasArgument
+      attacks="//@hasArgument.0"
+      ID="6"/>
+  <hasArgument
+      attacks="//@hasArgument.2"
+      ID="1"/>
+  <hasArgument
+      attacks="//@hasArgument.6 //@hasArgument.7"
+      ID="2"/>
+  <hasArgument
+      attacks="//@hasArgument.7 //@hasArgument.8 //@hasArgument.1"
+      ID="3"/>
+  <hasArgument
+      attacks="//@hasArgument.3 //@hasArgument.4"
+      ID="4"/>
+  <hasArgument
+      attacks="//@hasArgument.4 //@hasArgument.5"
+      ID="5"/>
+  <hasArgument
+      attacks="//@hasArgument.0"
+      ID="7"/>
+</argumentation:ArgumentationFramework>

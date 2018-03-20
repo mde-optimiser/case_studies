@@ -33,6 +33,14 @@ public class SurrogateModelsWrapper {
 	// Chosen Surrogate Model - Available Models: LR, MARS, CART, RF
 	private String surrogateModel = "LR";
 	private int objectives = 3;
+	private File tempFileR;
+	private File tempFileSet;
+	private File csv;
+	
+	
+	public SurrogateModelsWrapper() {
+		loadSurrogateModel(surrogateModel);
+	}
 	
 	/**
 	 * Evaluates the fitness function of an individual based on the values of the considered predictor variables.
@@ -41,9 +49,6 @@ public class SurrogateModelsWrapper {
 	 * @return
 	 */
 	public ArrayList<Double> evaluate(ArrayList<Integer> values) {
-	
-		
-		loadSurrogateModel(surrogateModel);
 
 		// Populate the predictors of an example composition configuration
 		PredictorsTuple pred = new PredictorsTuple(predictors, values);
@@ -54,7 +59,7 @@ public class SurrogateModelsWrapper {
 			results.add(predictData(pred, i));
 			System.out.println("Objective " + i + " : " + results.get(i - 1));
 		}
-
+		
 		return results;
 	}
 	
@@ -103,10 +108,10 @@ public class SurrogateModelsWrapper {
 			
 			
 			// Store the R model code into a temporary file
-			File tempFileR = FilesUtils.createTempFile(Resources.toString(modelFile, Charsets.UTF_8));
+			this.tempFileR = FilesUtils.createTempFile(Resources.toString(modelFile, Charsets.UTF_8));
 			// File tempFileR = FilesUtils.createTempFile(FilesUtils.readFile("resources/build" + modelName + ".R"));
 			// Store the training dataset into a temporary file too
-			File tempFileSet = FilesUtils.createTempFile(Resources.toString(trainingSet, Charsets.UTF_8));
+			this.tempFileSet = FilesUtils.createTempFile(Resources.toString(trainingSet, Charsets.UTF_8));
 			// Store to a variable on R the path name of the training set
 			re.eval(String.format("path <- '%s'", tempFileSet.getAbsolutePath().toString())).asString();
 
@@ -132,9 +137,9 @@ public class SurrogateModelsWrapper {
 	 */
 	private double predictData(PredictorsTuple pred, int metric) {
 		// Create a temporary .csv file containing the predictor variables of the configuration
-		File csv = FilesUtils.writePredictorsCsv(pred.getNames(), pred.getValues());
+		this.csv = FilesUtils.writePredictorsCsv(pred.getNames(), pred.getValues());
 		// Let know R about the position of the compary .csv file
-		re.eval(String.format("path <- '%s'", csv.getAbsolutePath().toString())).asString();
+		re.eval(String.format("path <- '%s'", this.csv.getAbsolutePath().toString())).asString();
 
 		// Read the .csv file
 		re.eval("newData <- read.csv(file=path,head=T,sep=',')").getContent().toString();
@@ -143,7 +148,9 @@ public class SurrogateModelsWrapper {
 
 		// Do the actual prediction
 		REXP prediction = re.eval("predict(modelQoS" + metric + ", newData[newData$ID == 1,])"); //
-
+		
+		this.csv.delete();
+		
 		return prediction.asDouble();
 	}
 

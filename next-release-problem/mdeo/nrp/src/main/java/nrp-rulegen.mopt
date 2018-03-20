@@ -1,6 +1,6 @@
 basepath <src/main/resources/models/nrp/>
 metamodel <nextReleaseProblem.ecore>
-model <nrp-model-5-cus-39-req-135-sa.xmi>
+model <nrp-model-5-cus-25-req-63-sa.xmi>
 refine metamodel {"Solution", "selectedArtifacts", 1, -1}
 objective MinimiseCost minimise java { "models.nrp.fitness.MinimiseCost" }
 objective MaximiseSatisfaction maximise java { "models.nrp.fitness.MaximiseSatisfaction" }

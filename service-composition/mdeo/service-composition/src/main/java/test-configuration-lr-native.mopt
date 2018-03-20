@@ -6,4 +6,4 @@ objective ServiceReliability maximise java { "models.service.composition.fitness
 objective EnergyConsumption minimise java { "models.service.composition.fitness.jni.MinimiseEnergyConsumption" }
 constraint EnsureAllAbstractServicesAreOrchestrated java { "models.service.composition.fitness.jni.EnsureAllAbstractServicesAreOrchestrated" }
 mutate {"Orchestrator"}
-optimisation provider moea algorithm NSGAII variation mutation evolutions 100 population 30 batches 1
+optimisation provider moea algorithm NSGAII variation mutation evolutions 30 population 96 batches 1
