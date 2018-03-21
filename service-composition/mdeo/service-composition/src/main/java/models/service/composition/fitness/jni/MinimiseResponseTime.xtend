@@ -11,12 +11,13 @@ class MinimiseResponseTime  extends AbstractNativeGuidanceFunction {
 		var fitness = this.evaluatePredictors(predictors)
 		
 		var responseTime = fitness.get(0);
-		
+
 		if(responseTime < 0){
-			return responseTime * -1
+			return responseTime * -1;
 		}
-		
-		return fitness.get(0)
+
+		return responseTime * -1
+
 	}
 	
 	override getName() {

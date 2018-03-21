@@ -11,10 +11,10 @@ class MaximiseServiceReliability  extends AbstractNativeGuidanceFunction {
 		
 		println(this.getName + ": " + fitness)
 
-		return fitness.get(1)
+		return fitness.get(1) * -1
 	}
 	
 	override getName() {
-		return "Minimise Service Reliability"
+		return "Maximise Service Reliability"
 	}	
 }

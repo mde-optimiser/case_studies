@@ -189,7 +189,7 @@
       </children>
     </children>
     <element xmi:type="henshin:Rule" href="sprint.henshin#_kj_l8AF2EeiuyJvX_087sA"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dQZR4SbYEeiuzazXSaJLVA" x="1441"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dQZR4SbYEeiuzazXSaJLVA" x="1027" y="413"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_m4RyICbYEeiuzazXSaJLVA" type="2001" fontName="Cantarell" italic="true" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_thKxsCbYEeiuzazXSaJLVA" source="defaultAction">

@@ -10,6 +10,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <xtend.version>2.13.0</xtend.version>
 	</properties>
+	
+	<repositories>
+    	<repository>
+      		<id>local-repository</id>
+      		<url>http://blog.onboot.org/mdeo-repository/repository/final/</url>
+    	</repository>
+  	</repositories>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -46,11 +54,6 @@
 			<groupId>org.eclipse.xtend</groupId>
 			<artifactId>org.eclipse.xtend.lib</artifactId>
 			<version>${xtend.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>uk.ac.kcl.mdeoptimise</groupId>
-			<artifactId>standalone</artifactId>
-			<version>1.0</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -1,9 +1,10 @@
 basepath <src/main/resources/models/nrp/>
 metamodel <nextReleaseProblem.ecore>
-model <nrp-model-5-cus-25-req-63-sa.xmi>
+model <nrp-model-25-cus-50-req-203-sa.xmi>
 objective MinimiseCost minimise java { "models.nrp.fitness.MinimiseCost" }
 objective MaximiseSatisfaction maximise java { "models.nrp.fitness.MaximiseSatisfaction" }
 mutate using <mutation.henshin> unit "modifySelectionWithHierarchy"
 mutate using <mutation.henshin> unit "modifySingleSelection"
 mutate using <mutation.henshin> unit "selectHighestRealisation"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 30 batches 1
+mutate using <mutation.henshin> unit "fixDependencies"
+optimisation provider moea algorithm NSGAII variation mutation evolutions 1000 population 40 batches 1
