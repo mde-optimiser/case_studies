@@ -2087,7 +2087,7 @@
       </nodes>
       <nodes xmi:id="_bFMDYCteEeitN9N2SB8pmw" name="trc" outgoing="_d5wcwCteEeitN9N2SB8pmw">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
-        <attributes xmi:id="_b8jJMCteEeitN9N2SB8pmw" value="&quot;moved&quot;">
+        <attributes xmi:id="_b8jJMCteEeitN9N2SB8pmw" value="&quot;processed&quot;">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>
@@ -2101,7 +2101,7 @@
       </nodes>
       <nodes xmi:id="_bFMDYSteEeitN9N2SB8pmw" name="trc" outgoing="_d5xD0CteEeitN9N2SB8pmw">
         <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
-        <attributes xmi:id="_b8jJMSteEeitN9N2SB8pmw" value="&quot;moved&quot;">
+        <attributes xmi:id="_b8jJMSteEeitN9N2SB8pmw" value="&quot;processed&quot;">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
         </attributes>
       </nodes>

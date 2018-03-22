@@ -29,11 +29,9 @@
         isEncapsulatedBy="/0/@classes.1"/>
   </architectureCRA:ClassModel>
   <trace:Trace
-      source="/0/@features.0"
-      target="/0/@features.2"
+      source="/0/@features.0 /0/@features.2"
       name="mark"/>
   <trace:Trace
-      source="/0/@features.0"
-      target="/0/@features.1"
+      source="/0/@features.0 /0/@features.1"
       name="mark"/>
 </xmi:XMI>

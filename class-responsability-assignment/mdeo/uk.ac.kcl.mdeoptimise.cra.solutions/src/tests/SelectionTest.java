@@ -35,21 +35,23 @@ class SelectionTest {
 	public static void createTransformationEnvironment() {
 		rs = new HenshinResourceSet("src/models/cra");
 		rs.registerDynamicEPackages("architectureCRA.ecore");
-		selection = rs.getModule("selection.henshin");
 		engine = new EngineImpl();		
 	}
 	
 	@BeforeEach
 	public void resetUnitApp() {
 		unitApp = new UnitApplicationImpl(engine);
+		selection = rs.getModule("selection.henshin");
 	}
 
+	// Dependency Selection
+	
 	@Test
 	@DisplayName("Mark dependencies.")
 	public void testMarkDependencies() {
 		model = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi").getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
-		unitApp.setUnit(selection.getUnit("markModelDependencies"));
+		unitApp.setUnit(selection.getUnit("markMixedModelDependencies"));
 		unitApp.setParameterValue("model", model);
 		unitApp.execute(null);
 				
@@ -59,77 +61,189 @@ class SelectionTest {
 	}
 	
 	@Test
-	@DisplayName("Remove dependency marks")
-	public void testDeleteDependencyMarks() {
-		roots = rs.getResource("../../tests/models/selection/markedDependencies.xmi").getContents();
-		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
-		unitApp.setEGraph(new EGraphImpl(roots));
-		unitApp.setUnit(selection.getUnit("decreaseDependencyCounter"));
+	@DisplayName("Mark fulfilled dependencies (no dependencies).")
+	public void testMarkFulfilledDependencies() {
+		model = rs.getResource("../../tests/models/selection/noDependency.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
 		unitApp.execute(null);
 				
-		roots = unitApp.getEGraph().getRoots();
-		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
-		assertEquals(1, traces.size());
-	}
-	
-	@Test
-	@DisplayName("Select single data dependency")
-	public void testSelectSingleDataDependency() {
-		roots = rs.getResource("../../tests/models/selection/singleDataDependency.xmi").getContents();
-		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
-		unitApp.setEGraph(new EGraphImpl(roots));
-		unitApp.setUnit(selection.getUnit("selectDependency"));
-		unitApp.setParameterValue("model", model);
-		unitApp.execute(new LoggingApplicationMonitor());
-		roots = unitApp.getEGraph().getRoots();
-		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
-		assertEquals(1, traces.size());
-		
-	}
-	
-	@Test
-	@DisplayName("Select single functional dependency")
-	public void testSelectSingleFunctionalDependency() {
-		roots = rs.getResource("../../tests/models/selection/singleFunctionalDependency.xmi").getContents();
-		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
-		unitApp.setEGraph(new EGraphImpl(roots));
-		unitApp.setUnit(selection.getUnit("selectDependency"));
-		unitApp.setParameterValue("model", model);
-		unitApp.execute(null);
-		roots = unitApp.getEGraph().getRoots();
-		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
-		assertEquals(1, traces.size());
-	}
-		
-	@Test
-	@DisplayName("Select no dependency")
-	public void testSelectNoDependency() {
-		roots = rs.getResource("../../tests/models/selection/noDependency.xmi").getContents();
-		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
-		unitApp.setEGraph(new EGraphImpl(roots));
-		unitApp.setUnit(selection.getUnit("selectDependency"));
-		unitApp.setParameterValue("model", model);
-		unitApp.execute(null);
 		roots = unitApp.getEGraph().getRoots();
 		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
 		assertEquals(0, traces.size());
 	}
 	
 	@Test
-	@DisplayName("Select features of selected dependencies in two models")
-	public void testSelectFeaturesOfSelectedDependenciesInTwoModels() {
-		roots = rs.getResource("../../tests/models/selection/selectedDependenciesInTwoModels.xmi").getContents();
-		unitApp.setEGraph(new EGraphImpl(roots));
-		unitApp.setUnit(selection.getUnit("selectDependencyFeatures"));
+	@DisplayName("Mark fulfilled dependencies (only fulfilled).")
+	public void testMarkFulfilledDependenciesOnlyFulfilled() {
+		model = rs.getResource("../../tests/models/selection/singleFulfilledFunctionalDependency.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
+		unitApp.setParameterValue("model", model);
 		unitApp.execute(null);
 				
 		roots = unitApp.getEGraph().getRoots();
 		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
-		EStructuralFeature nameAttribute = traces.get(0).eClass().getEStructuralFeature("name");
-		List<EObject> sels = traces.stream().filter(t -> t.eGet(nameAttribute).equals("selected")).collect(Collectors.toList());
-		assertEquals(6, sels.size());
+		assertEquals(1, traces.size());
 	}
+	
+	@Test
+	@DisplayName("Mark fulfilled dependencies (only nonfulfilled).")
+	public void testMarkFulfilledDependenciesOnlyNonfulfilled() {
+		model = rs.getResource("../../tests/models/selection/singleNonfulfilledDataDependency.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
+		unitApp.setParameterValue("model", model);
+		unitApp.execute(null);
+				
+		roots = unitApp.getEGraph().getRoots();
+		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+		assertEquals(0, traces.size());
+	}
+	
+	@Test
+	@DisplayName("Mark fulfilled dependencies (mixed).")
+	public void testMarkFulfilledDependenciesMixed() {
+		model = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
+		unitApp.setParameterValue("model", model);
+		unitApp.execute(null);
+				
+		roots = unitApp.getEGraph().getRoots();
+		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+		assertEquals(1, traces.size());
+	}
+	
+	@Test
+	@DisplayName("Mark unfulfilled dependencies (no dependencies).")
+	public void testMarkUnfulfilledDependencies() {
+		model = rs.getResource("../../tests/models/selection/noDependency.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
+		unitApp.setParameterValue("model", model);
+		unitApp.execute(null);
+				
+		roots = unitApp.getEGraph().getRoots();
+		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+		assertEquals(0, traces.size());
+	}
+	
+	@Test
+	@DisplayName("Mark unfulfilled dependencies (only fulfilled).")
+	public void testMarkUnfulfilledDependenciesOnlyFulfilled() {
+		model = rs.getResource("../../tests/models/selection/singleFulfilledFunctionalDependency.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
+		unitApp.setParameterValue("model", model);
+		unitApp.execute(null);
+				
+		roots = unitApp.getEGraph().getRoots();
+		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+		assertEquals(0, traces.size());
+	}
+	
+	@Test
+	@DisplayName("Mark unfulfilled dependencies (only nonfulfilled).")
+	public void testMarkUnfulfilledDependenciesOnlyNonfulfilled() {
+		model = rs.getResource("../../tests/models/selection/singleNonfulfilledDataDependency.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
+		unitApp.setParameterValue("model", model);
+		unitApp.execute(null);
+				
+		roots = unitApp.getEGraph().getRoots();
+		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+		assertEquals(1, traces.size());
+	}
+	
+	@Test
+	@DisplayName("Mark unfulfilled dependencies (mixed).")
+	public void testMarkUnfulfilledDependenciesMixed() {
+		model = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi").getContents().get(0);
+		unitApp.setEGraph(new EGraphImpl(model));
+		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
+		unitApp.setParameterValue("model", model);
+		unitApp.execute(null);
+				
+		roots = unitApp.getEGraph().getRoots();
+		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+		assertEquals(1, traces.size());
+	}
+	
+//	@Test
+//	@DisplayName("Remove dependency marks")
+//	public void testDeleteDependencyMarks() {
+//		roots = rs.getResource("../../tests/models/selection/markedDependencies.xmi").getContents();
+//		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
+//		unitApp.setEGraph(new EGraphImpl(roots));
+//		unitApp.setUnit(selection.getUnit("decreaseDependencyCounter"));
+//		unitApp.setParameterValue("model", model);
+//		unitApp.execute(null);
+//				
+//		roots = unitApp.getEGraph().getRoots();
+//		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+//		assertEquals(1, traces.size());
+//	}
+	
+//	@Test
+//	@DisplayName("Select single data dependency")
+//	public void testSelectSingleDataDependency() {
+//		roots = rs.getResource("../../tests/models/selection/singleNonfulfilledDataDependency.xmi").getContents();
+//		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
+//		unitApp.setEGraph(new EGraphImpl(roots));
+//		unitApp.setUnit(selection.getUnit("selectDependency"));
+//		unitApp.setParameterValue("model", model);
+//		unitApp.execute(new LoggingApplicationMonitor());
+//		roots = unitApp.getEGraph().getRoots();
+//		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+//		assertEquals(1, traces.size());
+//		
+//	}
+	
+//	@Test
+//	@DisplayName("Select single functional dependency")
+//	public void testSelectSingleFunctionalDependency() {
+//		roots = rs.getResource("../../tests/models/selection/singleFulfilledFunctionalDependency.xmi").getContents();
+//		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
+//		unitApp.setEGraph(new EGraphImpl(roots));
+//		unitApp.setUnit(selection.getUnit("selectDependency"));
+//		unitApp.setParameterValue("model", model);
+//		unitApp.execute(null);
+//		roots = unitApp.getEGraph().getRoots();
+//		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+//		assertEquals(1, traces.size());
+//	}
+		
+//	@Test
+//	@DisplayName("Select no dependency")
+//	public void testSelectNoDependency() {
+//		roots = rs.getResource("../../tests/models/selection/noDependency.xmi").getContents();
+//		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
+//		unitApp.setEGraph(new EGraphImpl(roots));
+//		unitApp.setUnit(selection.getUnit("selectDependency"));
+//		unitApp.setParameterValue("model", model);
+//		unitApp.execute(null);
+//		roots = unitApp.getEGraph().getRoots();
+//		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+//		assertEquals(0, traces.size());
+//	}
+	
+//	@Test
+//	@DisplayName("Select features of selected dependencies in two models")
+//	public void testSelectFeaturesOfSelectedDependenciesInTwoModels() {
+//		roots = rs.getResource("../../tests/models/selection/selectedDependenciesInTwoModels.xmi").getContents();
+//		unitApp.setEGraph(new EGraphImpl(roots));
+//		unitApp.setUnit(selection.getUnit("selectDependencyFeatures"));
+//		unitApp.execute(null);
+//				
+//		roots = unitApp.getEGraph().getRoots();
+//		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
+//		EStructuralFeature nameAttribute = traces.get(0).eClass().getEStructuralFeature("name");
+//		List<EObject> sels = traces.stream().filter(t -> t.eGet(nameAttribute).equals("selected")).collect(Collectors.toList());
+//		assertEquals(6, sels.size());
+//	}
 
 	@Test
 	@DisplayName("Select all dependencies")
@@ -140,12 +254,12 @@ class SelectionTest {
 		
 		// Remove noop for deterministic behavior
 		Unit maybe = selection.getUnit("maybeSelectDependency");
-		Unit noop = selection.getUnit("noop");			
-		((List)maybe.eGet(maybe.eClass().getEStructuralFeature("subUnits"))).remove(noop);
+		Unit removeDep = selection.getUnit("removeDependency");			
+		((List)maybe.eGet(maybe.eClass().getEStructuralFeature("subUnits"))).remove(removeDep);
 			
-		unitApp.setUnit(selection.getUnit("selectDependenciesOne"));
+		unitApp.setUnit(selection.getUnit("selectMixedDependenciesForModel"));
 		unitApp.setParameterValue("model", model);
-		unitApp.execute(null);
+		unitApp.execute(new LoggingApplicationMonitor());
 				
 		roots = unitApp.getEGraph().getRoots();
 		List<EObject> traces = roots.stream().filter(r -> r.eClass().getName().equals("Trace")).collect(Collectors.toList());
@@ -159,6 +273,7 @@ class SelectionTest {
 				() -> assertEquals(2, deps.size()),
 				() -> assertEquals(3, sels.size())
 		);
-
 	}	
+	
+	
 }
