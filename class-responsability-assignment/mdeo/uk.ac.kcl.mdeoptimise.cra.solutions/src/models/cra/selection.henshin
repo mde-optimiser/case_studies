@@ -1035,14 +1035,12 @@
     <parameterMappings xmi:id="_h-s0si3WEeiWeOp4rOZWZQ" source="_xNMqEC3UEeiWeOp4rOZWZQ" target="_SKULYC3VEeiWeOp4rOZWZQ"/>
     <parameterMappings xmi:id="_h-s0sy3WEeiWeOp4rOZWZQ" source="_SKULYC3VEeiWeOp4rOZWZQ" target="_xNMqEC3UEeiWeOp4rOZWZQ"/>
   </units>
-  <units xsi:type="henshin:IndependentUnit" xmi:id="_17OLwMulEeeDh6mgHe3vQw" name="maybeSelectDependency" subUnits="_MkfrQMuREeeDh6mgHe3vQw _GgNcEC3SEeiWeOp4rOZWZQ">
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_17OLwMulEeeDh6mgHe3vQw" name="maybeSelectDependency" subUnits="_MkfrQMuREeeDh6mgHe3vQw">
     <parameters xmi:id="_uOAuYC3PEeiWeOp4rOZWZQ" name="dep" kind="IN">
       <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
     </parameters>
     <parameterMappings xmi:id="__MBusi3PEeiWeOp4rOZWZQ" source="_uOAuYC3PEeiWeOp4rOZWZQ" target="_9DlbgC3PEeiWeOp4rOZWZQ"/>
     <parameterMappings xmi:id="__MBusy3PEeiWeOp4rOZWZQ" source="_9DlbgC3PEeiWeOp4rOZWZQ" target="_uOAuYC3PEeiWeOp4rOZWZQ"/>
-    <parameterMappings xmi:id="_cBE8gC3SEeiWeOp4rOZWZQ" source="_uOAuYC3PEeiWeOp4rOZWZQ" target="_Icp6oC3SEeiWeOp4rOZWZQ"/>
-    <parameterMappings xmi:id="_cBE8gS3SEeiWeOp4rOZWZQ" source="_Icp6oC3SEeiWeOp4rOZWZQ" target="_uOAuYC3PEeiWeOp4rOZWZQ"/>
   </units>
   <units xsi:type="henshin:LoopUnit" xmi:id="_wuSXYMumEeeDh6mgHe3vQw" name="selectDependencies" subUnit="_RFDJQC3REeiWeOp4rOZWZQ">
     <parameters xmi:id="_yciB4MumEeeDh6mgHe3vQw" name="model" kind="IN">

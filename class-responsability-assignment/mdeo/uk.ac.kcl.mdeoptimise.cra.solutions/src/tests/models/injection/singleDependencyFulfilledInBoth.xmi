@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:architectureCRA="http://momot.big.tuwien.ac.at/architectureCRA/1.0"
+    xmlns:trace="http://www.eclipse.org/emf/2011/Henshin/Trace"
+    xsi:schemaLocation="http://momot.big.tuwien.ac.at/architectureCRA/1.0 ../../../models/cra/architectureCRA.ecore">
+  <architectureCRA:ClassModel
+      name="Solution 1">
+    <classes
+        name="C1.1"
+        encapsulates="/0/@features.1 /0/@features.0 /1/@features.1"/>
+    <features
+        xsi:type="architectureCRA:Method"
+        name="M1"
+        isEncapsulatedBy="/0/@classes.0"
+        dataDependency="/0/@features.1"/>
+    <features
+        xsi:type="architectureCRA:Attribute"
+        name="A1"
+        isEncapsulatedBy="/0/@classes.0"/>
+  </architectureCRA:ClassModel>
+  <architectureCRA:ClassModel
+      name="Solution 2">
+    <classes
+        name="C2.1"
+        encapsulates="/1/@features.0"/>
+    <features
+        xsi:type="architectureCRA:Method"
+        name="M1"
+        isEncapsulatedBy="/1/@classes.0"
+        dataDependency="/1/@features.1"/>
+    <features
+        xsi:type="architectureCRA:Attribute"
+        name="A1"
+        isEncapsulatedBy="/0/@classes.0"/>
+  </architectureCRA:ClassModel>
+  <trace:Trace
+      source="/0 /0/@classes.0"
+      target="/0/@features.0"
+      name="selected"/>
+  <trace:Trace
+      source="/0 /0/@classes.0"
+      target="/0/@features.1"
+      name="selected"/>
+  <trace:Trace
+      source="/1 /1/@classes.0"
+      target="/1/@features.0"
+      name="selected"/>
+  <trace:Trace
+      source="/1 /1/@classes.0"
+      target="/1/@features.1"
+      name="selected"/>
+</xmi:XMI>
