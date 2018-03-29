@@ -1,0 +1,8 @@
+injectPreservingDistribution 
+
+version 225d21
+too slow!
+
+version 1887929
+Before: Doing merge as long as possible, then split or skip and directly do merge again if the split or skip enabled it.
+Now: The pre-selection of the moved feature mixes merge, split and skip arbitrarily. Could this lead to couples of already processed features which do not keep to the desired distribution? 

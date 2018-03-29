@@ -52,10 +52,12 @@ class InjectionTest {
 	@DisplayName("Preserving distribution: All features need to be split")
 	def public void testDistrSplit() {
 		roots = rs.getResource("../../tests/models/injection/allDistributedVsAllCombined.xmi").contents
+		var targetModel = roots.get(1)
 		unitApp.setEGraph(new EGraphImpl(roots))
 		unitApp.setUnit(injection.getUnit("injectPreservingDistribution"));
 		// The following assert will not trigger if the root unit of the rule always returns true (e.g. loop unit) 
 		assertTrue(unitApp.execute(new LoggingApplicationMonitor), "Rule not executed");
+		assertEquals(3, targetModel.getFeature("classes").toCollection.size);
 	}
 	
 	// Dependency Selection
