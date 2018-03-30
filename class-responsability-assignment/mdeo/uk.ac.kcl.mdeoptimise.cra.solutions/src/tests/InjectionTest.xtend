@@ -48,6 +48,9 @@ class InjectionTest {
 		injection = rs.getModule("injection.henshin");
 	}
 
+
+	// Preserving Distribution
+
 	@Test
 	@DisplayName("Preserving distribution: All features need to be split")
 	def public void testDistrSplit() {
@@ -60,13 +63,12 @@ class InjectionTest {
 		assertEquals(3, targetModel.getFeature("classes").toCollection.size);
 	}
 	
-	// Dependency Selection
+	// Preserving Dependency
 	
 	@Test
-	@DisplayName("Preserving distribution: ")
+	@DisplayName("Preserving dependencies")
 	def public void testMarkDependencies() {
-		//roots = rs.getResource("../../tests/models/injection/singleDependencyDifferentInBothPlain_transformed.xmi").contents
-
+		
 		val model1 = newModel("model1")
 		val c11 = newClass("c1")
 		val m11 = newMethod("m1")
