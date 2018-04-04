@@ -47,59 +47,59 @@ class ClassModelExtensions {
 	
 	def static EObject createModelObject(EClass type, String name) {
 		var object = fac.create(type)
-		object.setFeature("name", name)
+		object.setEFeature("name", name)
 		object
 	}
 	
 	def static EObject newTrace(String name) {
 		var trace = trcPack.EFactoryInstance.create(mmTrc)
-		trace.setFeature("name", name)
+		trace.setEFeature("name", name)
 		trace
 	}
 		
 	def static EObject addClass(EObject classmodel, EObject clazz) {
-		classmodel.getFeature("classes").toCollection.add(clazz)
+		classmodel.getEFeature("classes").toCollection.add(clazz)
 		classmodel
 	}
 	
 	def static EObject addFeature(EObject classmodel, EObject feature) {
-		classmodel.getFeature("features").toCollection.add(feature)
+		classmodel.getEFeature("features").toCollection.add(feature)
 		classmodel
 	}
 	
 	def static EObject assignFeature(EObject clazz, EObject feature) {
-		clazz.getFeature("encapsulates").toCollection.add(feature)
+		clazz.getEFeature("encapsulates").toCollection.add(feature)
 		clazz
 	}
 	
 	def static EObject addDataDependency(EObject method, EObject feature) {
-		method.getFeature("dataDependency").toCollection.add(feature)
+		method.getEFeature("dataDependency").toCollection.add(feature)
 		method
 	}
 	
 	def static EObject addFunctionalDependency(EObject method, EObject feature) {
-		method.getFeature("functionalDependency").toCollection.add(feature)
+		method.getEFeature("functionalDependency").toCollection.add(feature)
 		method
 	}
 	
 	def static EObject addSource(EObject trace, EObject feature) {
-		trace.getFeature("source").toCollection.add(feature)
+		trace.getEFeature("source").toCollection.add(feature)
 		trace
 	}
 	
 	def static EObject addTarget(EObject trace, EObject feature) {
-		trace.getFeature("target").toCollection.add(feature)
+		trace.getEFeature("target").toCollection.add(feature)
 		trace
 	}
 	
-	def static Object getFeature (EObject o, String featureName) {		
+	def static Object getEFeature (EObject o, String featureName) {		
 		if(o === null){
 			println("Null object given")
 		}		
 		o.eGet(o.eClass.getEStructuralFeature(featureName))		
 	}
 	
-	def static void setFeature(EObject o, String featureName, Object feature) {
+	def static void setEFeature(EObject o, String featureName, Object feature) {
 		o.eSet(o.eClass.getEStructuralFeature(featureName), feature)	
 	}	
 	
@@ -110,5 +110,10 @@ class ClassModelExtensions {
 			println("Object is no collection")
 			null
 		}
+	}
+	
+	
+	def static EObject getElement(EObject classmodel, String elementName) {
+		classmodel.eAllContents.findFirst[o | o.getEFeature("name") != null &&  o.getEFeature("name").equals(elementName)]
 	}
 }

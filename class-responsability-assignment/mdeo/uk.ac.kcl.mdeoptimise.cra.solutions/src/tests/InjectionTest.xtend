@@ -60,14 +60,42 @@ class InjectionTest {
 		unitApp.setUnit(injection.getUnit("injectPreservingDistribution"));
 		// The following assert will not trigger if the root unit of the rule always returns true (e.g. loop unit) 
 		assertTrue(unitApp.execute(new LoggingApplicationMonitor), "Rule not executed");
-		assertEquals(3, targetModel.getFeature("classes").toCollection.size);
+		assertEquals(3, targetModel.getEFeature("classes").toCollection.size);
+	}
+	
+	@Test
+	@DisplayName("Preserving distribution: All features need to be merged")
+	def public void testDistrMerge() {
+		roots = rs.getResource("../../tests/models/injection/allCombinedVsAllDistributed.xmi").contents
+		var targetModel = roots.get(1)
+		unitApp.setEGraph(new EGraphImpl(roots))
+		unitApp.setUnit(injection.getUnit("injectPreservingDistribution"));
+		// The following assert will not trigger if the root unit of the rule always returns true (e.g. loop unit) 
+		assertTrue(unitApp.execute(new LoggingApplicationMonitor), "Rule not executed");
+		assertEquals(1, targetModel.getEFeature("classes").toCollection.size);
 	}
 	
 	// Preserving Dependency
 	
 	@Test
-	@DisplayName("Preserving dependencies")
-	def public void testMarkDependencies() {
+	@DisplayName("Preserving dependencies: Test split, merge-split and skip")
+	def public void testDepSplitMergeSplitSkip() {
+		roots = rs.getResource("../../tests/models/injection/preserveDependenciesComplete.xmi").contents
+		val targetModel = roots.get(1)
+		unitApp.setEGraph(new EGraphImpl(roots))
+		unitApp.setUnit(injection.getUnit("injectPreservingDistribution"));
+		// The following assert will not trigger if the root unit of the rule always returns true (e.g. loop unit) 
+		assertTrue(unitApp.execute(new LoggingApplicationMonitor), "Rule not executed");
+		assertAll("correct distribution of features",
+			[assertEquals(1, (targetModel.getElement("M1").getEFeature("isEncapsulatedBy") as EObject).getEFeature("encapsulates").toCollection.size)],
+			[assertEquals(1, (targetModel.getElement("A1").getEFeature("isEncapsulatedBy") as EObject).getEFeature("encapsulates").toCollection.size)],
+			[assertTrue(targetModel.getElement("M2").getEFeature("isEncapsulatedBy") === targetModel.getElement("M3").getEFeature("isEncapsulatedBy"))]
+		)
+	}	
+	
+	@Test
+	@DisplayName("Preserving dependencies: Exchange of a contrary dependency")
+	def public void testDepContraryDependency() {
 		
 		val model1 = newModel("model1")
 		val c11 = newClass("c1")
@@ -124,7 +152,11 @@ class InjectionTest {
 //		// The following assert will not trigger if the root unit of the rule always returns true (e.g. loop unit) 
 		assertTrue(unitApp.execute(new LoggingApplicationMonitor), "Rule not executed");
 	
-		assertTrue(model1.getFeature("classes").toCollection.size > 1);
-		assertTrue(m21.getFeature("isEncapsulatedBy") == a21.getFeature("isEncapsulatedBy"))
+		assertAll("",
+			[assertEquals(2, model1.getEFeature("classes").toCollection.size)],
+			[assertFalse(m11.getEFeature("isEncapsulatedBy") == a11.getEFeature("isEncapsulatedBy"))],
+			[assertEquals(1, model2.getEFeature("classes").toCollection.size)],
+			[assertTrue(m21.getEFeature("isEncapsulatedBy") == a21.getEFeature("isEncapsulatedBy"))]			
+		)
 	}	
 }
