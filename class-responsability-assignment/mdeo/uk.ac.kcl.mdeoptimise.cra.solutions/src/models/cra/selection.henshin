@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_NA0eIK_2Eee_bbiNPfCysw" name="">
-  <imports href="http://www.eclipse.org/emf/2011/Henshin/Trace#/"/>
   <imports href="architectureCRA.ecore#/"/>
+  <imports href="http://www.eclipse.org/emf/2011/Henshin/Trace#/"/>
   <units xsi:type="henshin:Rule" xmi:id="_aW018K_2Eee_bbiNPfCysw" name="selectClass">
     <lhs xmi:id="_aXEGgK_2Eee_bbiNPfCysw" name="Lhs">
       <nodes xmi:id="_4jJOIK_3Eee_bbiNPfCysw" name="solA" outgoing="_cF7K0LsUEeep85rjRuvYGQ">
@@ -1262,7 +1262,7 @@
     <mappings xmi:id="_muFCojdSEeinP9BKKZ_JlA" origin="_muFCoDdSEeinP9BKKZ_JlA" image="_muFCoTdSEeinP9BKKZ_JlA"/>
     <mappings xmi:id="_njhc4DdSEeinP9BKKZ_JlA" origin="_njg10DdSEeinP9BKKZ_JlA" image="_njg10TdSEeinP9BKKZ_JlA"/>
   </units>
-  <units xsi:type="henshin:SequentialUnit" xmi:id="_RFDJQC3REeiWeOp4rOZWZQ" name="selectDependency" subUnits="_KfAVsMuiEeeDh6mgHe3vQw _17OLwMulEeeDh6mgHe3vQw">
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_RFDJQC3REeiWeOp4rOZWZQ" name="selectDependency" subUnits="_KfAVsMuiEeeDh6mgHe3vQw _dq26IDgMEeid1ZZ0CJeEPQ _17OLwMulEeeDh6mgHe3vQw">
     <parameters xmi:id="_WFT-IC3REeiWeOp4rOZWZQ" name="model" kind="IN">
       <type xsi:type="ecore:EClass" href="architectureCRA.ecore#//ClassModel"/>
     </parameters>
@@ -1275,6 +1275,8 @@
     <parameterMappings xmi:id="_-Oy_gy3REeiWeOp4rOZWZQ" source="_feMD8C3PEeiWeOp4rOZWZQ" target="_z-yIQC3REeiWeOp4rOZWZQ"/>
     <parameterMappings xmi:id="_APV68C3SEeiWeOp4rOZWZQ" source="_z-yIQC3REeiWeOp4rOZWZQ" target="_uOAuYC3PEeiWeOp4rOZWZQ"/>
     <parameterMappings xmi:id="_APV68S3SEeiWeOp4rOZWZQ" source="_uOAuYC3PEeiWeOp4rOZWZQ" target="_z-yIQC3REeiWeOp4rOZWZQ"/>
+    <parameterMappings xmi:id="_VSMJkDgNEeid1ZZ0CJeEPQ" source="_z-yIQC3REeiWeOp4rOZWZQ" target="_gPuDkDgMEeid1ZZ0CJeEPQ"/>
+    <parameterMappings xmi:id="_VSMJkTgNEeid1ZZ0CJeEPQ" source="_gPuDkDgMEeid1ZZ0CJeEPQ" target="_z-yIQC3REeiWeOp4rOZWZQ"/>
   </units>
   <units xsi:type="henshin:Rule" xmi:id="_GgNcEC3SEeiWeOp4rOZWZQ" name="removeDependency">
     <parameters xmi:id="_Icp6oC3SEeiWeOp4rOZWZQ" name="dep" kind="IN">
@@ -1508,6 +1510,9 @@
         </nodes>
         <nodes xmi:id="_hFXusDdHEeinP9BKKZ_JlA" name="equivFeatTrc" outgoing="_C9HsQDdIEeinP9BKKZ_JlA _EUJJkDdIEeinP9BKKZ_JlA _VPHc8DdIEeinP9BKKZ_JlA">
           <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+          <attributes xmi:id="_qiy6EDgFEeid1ZZ0CJeEPQ" value="&quot;selected&quot;">
+            <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+          </attributes>
         </nodes>
         <nodes xmi:id="_L7lcEDdIEeinP9BKKZ_JlA" name="trgModel" incoming="_VPHc8DdIEeinP9BKKZ_JlA" outgoing="_O1Y6wTdIEeinP9BKKZ_JlA">
           <type href="architectureCRA.ecore#//ClassModel"/>
@@ -1674,7 +1679,7 @@
     <parameterMappings xmi:id="_Af4z0DdTEeinP9BKKZ_JlA" source="_wKchUDdQEeinP9BKKZ_JlA" target="_c96JEDdSEeinP9BKKZ_JlA"/>
     <parameterMappings xmi:id="_Af4z0TdTEeinP9BKKZ_JlA" source="_c96JEDdSEeinP9BKKZ_JlA" target="_wKchUDdQEeinP9BKKZ_JlA"/>
   </units>
-  <units xsi:type="henshin:SequentialUnit" xmi:id="_qVVLQDdUEeinP9BKKZ_JlA" name="copySelectedDependencies" subUnits="_E7jLADdMEeinP9BKKZ_JlA _Lc2NEMuZEeeDh6mgHe3vQw">
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_qVVLQDdUEeinP9BKKZ_JlA" name="copySelectedDependencies" subUnits="_E7jLADdMEeinP9BKKZ_JlA _Lc2NEMuZEeeDh6mgHe3vQw _d3M0YDgJEeid1ZZ0CJeEPQ">
     <parameters xmi:id="_1TF5UDdUEeinP9BKKZ_JlA" name="modelOne" kind="IN">
       <type xsi:type="ecore:EClass" href="architectureCRA.ecore#//ClassModel"/>
     </parameters>
@@ -1685,5 +1690,89 @@
     <parameterMappings xmi:id="_2Lv_oTdUEeinP9BKKZ_JlA" source="_LHsK4DdREeinP9BKKZ_JlA" target="_1TF5UDdUEeinP9BKKZ_JlA"/>
     <parameterMappings xmi:id="_D9sFgDdVEeinP9BKKZ_JlA" source="_DDIhwDdVEeinP9BKKZ_JlA" target="_hU9P8C3dEeiWeOp4rOZWZQ"/>
     <parameterMappings xmi:id="_D9sFgTdVEeinP9BKKZ_JlA" source="_hU9P8C3dEeiWeOp4rOZWZQ" target="_DDIhwDdVEeinP9BKKZ_JlA"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_d3M0YDgJEeid1ZZ0CJeEPQ" name="deleteSubTraces">
+    <lhs xmi:id="_d3RF0DgJEeid1ZZ0CJeEPQ" name="Lhs"/>
+    <rhs xmi:id="_d3RF0TgJEeid1ZZ0CJeEPQ" name="Rhs"/>
+    <multiRules xmi:id="_nurP0DgJEeid1ZZ0CJeEPQ">
+      <lhs xmi:id="_nurP0TgJEeid1ZZ0CJeEPQ" name="Lhs">
+        <nodes xmi:id="_knjt4DgJEeid1ZZ0CJeEPQ" name="depTrc" outgoing="_pKGsADgJEeid1ZZ0CJeEPQ">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+        </nodes>
+        <nodes xmi:id="_oFaU0DgJEeid1ZZ0CJeEPQ" name="subTrc" incoming="_pKGsADgJEeid1ZZ0CJeEPQ">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+        </nodes>
+        <edges xmi:id="_pKGsADgJEeid1ZZ0CJeEPQ" source="_knjt4DgJEeid1ZZ0CJeEPQ" target="_oFaU0DgJEeid1ZZ0CJeEPQ">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/subTraces"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_nurP0jgJEeid1ZZ0CJeEPQ" name="Rhs">
+        <nodes xmi:id="_knkU8DgJEeid1ZZ0CJeEPQ" name="depTrc">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+        </nodes>
+      </rhs>
+      <mappings xmi:id="_knkU8TgJEeid1ZZ0CJeEPQ" origin="_knjt4DgJEeid1ZZ0CJeEPQ" image="_knkU8DgJEeid1ZZ0CJeEPQ"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:LoopUnit" xmi:id="_dq26IDgMEeid1ZZ0CJeEPQ" name="removeDuplicates" subUnit="_i-fW8DgMEeid1ZZ0CJeEPQ">
+    <parameters xmi:id="_gPuDkDgMEeid1ZZ0CJeEPQ" name="dep" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+    </parameters>
+    <parameterMappings xmi:id="_Kz5lwDgNEeid1ZZ0CJeEPQ" source="_gPuDkDgMEeid1ZZ0CJeEPQ" target="_l9Xi4DgMEeid1ZZ0CJeEPQ"/>
+    <parameterMappings xmi:id="_Kz5lwTgNEeid1ZZ0CJeEPQ" source="_l9Xi4DgMEeid1ZZ0CJeEPQ" target="_gPuDkDgMEeid1ZZ0CJeEPQ"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_i-fW8DgMEeid1ZZ0CJeEPQ" name="removeDuplicateDependency">
+    <parameters xmi:id="_l9Xi4DgMEeid1ZZ0CJeEPQ" name="dep" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+    </parameters>
+    <lhs xmi:id="_i-f-ADgMEeid1ZZ0CJeEPQ" name="Lhs">
+      <nodes xmi:id="_pU77oDgMEeid1ZZ0CJeEPQ" name="dep" outgoing="_yC-p0DgMEeid1ZZ0CJeEPQ _ySj98DgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+      </nodes>
+      <nodes xmi:id="_qifT4DgMEeid1ZZ0CJeEPQ" name="depFeat" incoming="_ySj98DgMEeid1ZZ0CJeEPQ __s5cIDgMEeid1ZZ0CJeEPQ">
+        <type href="architectureCRA.ecore#//Feature"/>
+      </nodes>
+      <nodes xmi:id="_uY1TUDgMEeid1ZZ0CJeEPQ" name="meth" incoming="_yC-p0DgMEeid1ZZ0CJeEPQ __fIs8DgMEeid1ZZ0CJeEPQ">
+        <type href="architectureCRA.ecore#//Method"/>
+      </nodes>
+      <nodes xmi:id="_8YE1YDgMEeid1ZZ0CJeEPQ" name="duplicate" outgoing="__fIs8DgMEeid1ZZ0CJeEPQ __s5cIDgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+        <attributes xmi:id="_GlxYcDgNEeid1ZZ0CJeEPQ" value="&quot;mark&quot;">
+          <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/name"/>
+        </attributes>
+      </nodes>
+      <edges xmi:id="_yC-p0DgMEeid1ZZ0CJeEPQ" source="_pU77oDgMEeid1ZZ0CJeEPQ" target="_uY1TUDgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+      </edges>
+      <edges xmi:id="_ySj98DgMEeid1ZZ0CJeEPQ" source="_pU77oDgMEeid1ZZ0CJeEPQ" target="_qifT4DgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+      </edges>
+      <edges xmi:id="__fIs8DgMEeid1ZZ0CJeEPQ" source="_8YE1YDgMEeid1ZZ0CJeEPQ" target="_uY1TUDgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+      </edges>
+      <edges xmi:id="__s5cIDgMEeid1ZZ0CJeEPQ" source="_8YE1YDgMEeid1ZZ0CJeEPQ" target="_qifT4DgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_i-f-ATgMEeid1ZZ0CJeEPQ" name="Rhs">
+      <nodes xmi:id="_pU77oTgMEeid1ZZ0CJeEPQ" name="dep" outgoing="_yC-p0TgMEeid1ZZ0CJeEPQ _ySj98TgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+      </nodes>
+      <nodes xmi:id="_qifT4TgMEeid1ZZ0CJeEPQ" name="depFeat" incoming="_ySj98TgMEeid1ZZ0CJeEPQ">
+        <type href="architectureCRA.ecore#//Feature"/>
+      </nodes>
+      <nodes xmi:id="_uY1TUTgMEeid1ZZ0CJeEPQ" name="meth" incoming="_yC-p0TgMEeid1ZZ0CJeEPQ">
+        <type href="architectureCRA.ecore#//Method"/>
+      </nodes>
+      <edges xmi:id="_yC-p0TgMEeid1ZZ0CJeEPQ" source="_pU77oTgMEeid1ZZ0CJeEPQ" target="_uY1TUTgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+      </edges>
+      <edges xmi:id="_ySj98TgMEeid1ZZ0CJeEPQ" source="_pU77oTgMEeid1ZZ0CJeEPQ" target="_qifT4TgMEeid1ZZ0CJeEPQ">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/source"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_pU77ojgMEeid1ZZ0CJeEPQ" origin="_pU77oDgMEeid1ZZ0CJeEPQ" image="_pU77oTgMEeid1ZZ0CJeEPQ"/>
+    <mappings xmi:id="_qifT4jgMEeid1ZZ0CJeEPQ" origin="_qifT4DgMEeid1ZZ0CJeEPQ" image="_qifT4TgMEeid1ZZ0CJeEPQ"/>
+    <mappings xmi:id="_uY1TUjgMEeid1ZZ0CJeEPQ" origin="_uY1TUDgMEeid1ZZ0CJeEPQ" image="_uY1TUTgMEeid1ZZ0CJeEPQ"/>
   </units>
 </henshin:Module>
