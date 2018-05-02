@@ -754,4 +754,154 @@
       </edges>
     </rhs>
   </units>
+  <units xsi:type="henshin:Rule" xmi:id="_TzZ2YE4REei8K_I3M29_rQ" name="repairDependenciesOfSa">
+    <lhs xmi:id="_Tzc5sE4REei8K_I3M29_rQ" name="Lhs">
+      <nodes xmi:id="_fmm-sE4REei8K_I3M29_rQ" name="sa" incoming="_1Bi2QE4REei8K_I3M29_rQ">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_jJf2oE4REei8K_I3M29_rQ" name="sol" outgoing="_1Bi2QE4REei8K_I3M29_rQ">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <edges xmi:id="_1Bi2QE4REei8K_I3M29_rQ" source="_jJf2oE4REei8K_I3M29_rQ" target="_fmm-sE4REei8K_I3M29_rQ">
+        <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+      </edges>
+    </lhs>
+    <rhs xmi:id="_Tzc5sU4REei8K_I3M29_rQ" name="Rhs">
+      <nodes xmi:id="_fmnlwE4REei8K_I3M29_rQ" name="sa" incoming="_1Bi2QU4REei8K_I3M29_rQ">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_jJf2oU4REei8K_I3M29_rQ" name="sol" outgoing="_1Bi2QU4REei8K_I3M29_rQ">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <edges xmi:id="_1Bi2QU4REei8K_I3M29_rQ" source="_jJf2oU4REei8K_I3M29_rQ" target="_fmnlwE4REei8K_I3M29_rQ">
+        <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_fmnlwU4REei8K_I3M29_rQ" origin="_fmm-sE4REei8K_I3M29_rQ" image="_fmnlwE4REei8K_I3M29_rQ"/>
+    <mappings xmi:id="_jJf2ok4REei8K_I3M29_rQ" origin="_jJf2oE4REei8K_I3M29_rQ" image="_jJf2oU4REei8K_I3M29_rQ"/>
+    <multiRules xmi:id="_kF3_UE4REei8K_I3M29_rQ">
+      <lhs xmi:id="_kF4mYE4REei8K_I3M29_rQ" name="Lhs">
+        <nodes xmi:id="_kF5Nck4REei8K_I3M29_rQ" name="sa" incoming="_1BjdUE4REei8K_I3M29_rQ" outgoing="_1pGlgE4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_kF5Nd04REei8K_I3M29_rQ" name="sol" outgoing="_1BjdUE4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//Solution"/>
+        </nodes>
+        <nodes xmi:id="_kF3YQE4REei8K_I3M29_rQ" name="dep" incoming="_1pGlgE4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_1BjdUE4REei8K_I3M29_rQ" source="_kF5Nd04REei8K_I3M29_rQ" target="_kF5Nck4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        </edges>
+        <edges xmi:id="_1pGlgE4REei8K_I3M29_rQ" source="_kF5Nck4REei8K_I3M29_rQ" target="_kF3YQE4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_kF4mYU4REei8K_I3M29_rQ" name="Rhs">
+        <nodes xmi:id="_kF5NcE4REei8K_I3M29_rQ" name="sa" incoming="_1Bi2Qk4REei8K_I3M29_rQ" outgoing="_1pGlgU4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_kF5NdU4REei8K_I3M29_rQ" name="sol" outgoing="_1Bi2Qk4REei8K_I3M29_rQ _49mcIE4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//Solution"/>
+        </nodes>
+        <nodes xmi:id="_kF3YQU4REei8K_I3M29_rQ" name="dep" incoming="_1pGlgU4REei8K_I3M29_rQ _49mcIE4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_1Bi2Qk4REei8K_I3M29_rQ" source="_kF5NdU4REei8K_I3M29_rQ" target="_kF5NcE4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        </edges>
+        <edges xmi:id="_1pGlgU4REei8K_I3M29_rQ" source="_kF5NcE4REei8K_I3M29_rQ" target="_kF3YQU4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+        </edges>
+        <edges xmi:id="_49mcIE4REei8K_I3M29_rQ" source="_kF5NdU4REei8K_I3M29_rQ" target="_kF3YQU4REei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_kF5NdE4REei8K_I3M29_rQ" origin="_kF5Nck4REei8K_I3M29_rQ" image="_kF5NcE4REei8K_I3M29_rQ"/>
+      <mappings xmi:id="_kF5NeU4REei8K_I3M29_rQ" origin="_kF5Nd04REei8K_I3M29_rQ" image="_kF5NdU4REei8K_I3M29_rQ"/>
+      <mappings xmi:id="_kF3YQk4REei8K_I3M29_rQ" origin="_kF3YQE4REei8K_I3M29_rQ" image="_kF3YQU4REei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_kF5NcU4REei8K_I3M29_rQ" origin="_fmnlwE4REei8K_I3M29_rQ" image="_kF5NcE4REei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_kF5Nc04REei8K_I3M29_rQ" origin="_fmm-sE4REei8K_I3M29_rQ" image="_kF5Nck4REei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_kF5Ndk4REei8K_I3M29_rQ" origin="_jJf2oU4REei8K_I3M29_rQ" image="_kF5NdU4REei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_kF5NeE4REei8K_I3M29_rQ" origin="_jJf2oE4REei8K_I3M29_rQ" image="_kF5Nd04REei8K_I3M29_rQ"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_XZJ1EE4REei8K_I3M29_rQ" name="deleteDependenciesOfSa">
+    <lhs xmi:id="_XZLqQE4REei8K_I3M29_rQ" name="Lhs">
+      <nodes xmi:id="_LN8xkE4TEei8K_I3M29_rQ" name="sol">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_LyykAE4TEei8K_I3M29_rQ" name="sa">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <formula xsi:type="henshin:Not" xmi:id="_OR5qwE4TEei8K_I3M29_rQ">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_OR5qwU4TEei8K_I3M29_rQ">
+          <conclusion xmi:id="_OR5qwk4TEei8K_I3M29_rQ">
+            <nodes xmi:id="_OR5qw04TEei8K_I3M29_rQ" name="sol" outgoing="_NUXEcE4TEei8K_I3M29_rQ">
+              <type href="nextReleaseProblem.ecore#//Solution"/>
+            </nodes>
+            <nodes xmi:id="_OR5qxU4TEei8K_I3M29_rQ" name="sa" incoming="_NUXEcE4TEei8K_I3M29_rQ">
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+            </nodes>
+            <edges xmi:id="_NUXEcE4TEei8K_I3M29_rQ" source="_OR5qw04TEei8K_I3M29_rQ" target="_OR5qxU4TEei8K_I3M29_rQ">
+              <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_OR5qxE4TEei8K_I3M29_rQ" origin="_LN8xkE4TEei8K_I3M29_rQ" image="_OR5qw04TEei8K_I3M29_rQ"/>
+          <mappings xmi:id="_OR5qxk4TEei8K_I3M29_rQ" origin="_LyykAE4TEei8K_I3M29_rQ" image="_OR5qxU4TEei8K_I3M29_rQ"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_XZLqQU4REei8K_I3M29_rQ" name="Rhs">
+      <nodes xmi:id="_LN9YoE4TEei8K_I3M29_rQ" name="sol">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_LyykAU4TEei8K_I3M29_rQ" name="sa">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_LN9YoU4TEei8K_I3M29_rQ" origin="_LN8xkE4TEei8K_I3M29_rQ" image="_LN9YoE4TEei8K_I3M29_rQ"/>
+    <mappings xmi:id="_LyykAk4TEei8K_I3M29_rQ" origin="_LyykAE4TEei8K_I3M29_rQ" image="_LyykAU4TEei8K_I3M29_rQ"/>
+    <multiRules xmi:id="_Skao004TEei8K_I3M29_rQ">
+      <lhs xmi:id="_Skao1E4TEei8K_I3M29_rQ" name="Lhs">
+        <nodes xmi:id="_Skao2E4TEei8K_I3M29_rQ" name="sol" outgoing="_UevngE4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//Solution"/>
+        </nodes>
+        <nodes xmi:id="_SkbP404TEei8K_I3M29_rQ" name="sa" outgoing="_UEIIEE4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_Skao0E4TEei8K_I3M29_rQ" name="dep" incoming="_UEIIEE4TEei8K_I3M29_rQ _UevngE4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_UEIIEE4TEei8K_I3M29_rQ" source="_SkbP404TEei8K_I3M29_rQ" target="_Skao0E4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+        </edges>
+        <edges xmi:id="_UevngE4TEei8K_I3M29_rQ" source="_Skao2E4TEei8K_I3M29_rQ" target="_Skao0E4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//Solution/selectedArtifacts"/>
+        </edges>
+      </lhs>
+      <rhs xmi:id="_Skao1U4TEei8K_I3M29_rQ" name="Rhs">
+        <nodes xmi:id="_Skao1k4TEei8K_I3M29_rQ" name="sol">
+          <type href="nextReleaseProblem.ecore#//Solution"/>
+        </nodes>
+        <nodes xmi:id="_SkbP4U4TEei8K_I3M29_rQ" name="sa" outgoing="_UEIIEU4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <nodes xmi:id="_Skao0U4TEei8K_I3M29_rQ" name="dep" incoming="_UEIIEU4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        </nodes>
+        <edges xmi:id="_UEIIEU4TEei8K_I3M29_rQ" source="_SkbP4U4TEei8K_I3M29_rQ" target="_Skao0U4TEei8K_I3M29_rQ">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/requires"/>
+        </edges>
+      </rhs>
+      <mappings xmi:id="_SkbP4E4TEei8K_I3M29_rQ" origin="_Skao2E4TEei8K_I3M29_rQ" image="_Skao1k4TEei8K_I3M29_rQ"/>
+      <mappings xmi:id="_SkbP5U4TEei8K_I3M29_rQ" origin="_SkbP404TEei8K_I3M29_rQ" image="_SkbP4U4TEei8K_I3M29_rQ"/>
+      <mappings xmi:id="_Skao0k4TEei8K_I3M29_rQ" origin="_Skao0E4TEei8K_I3M29_rQ" image="_Skao0U4TEei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_Skao104TEei8K_I3M29_rQ" origin="_LN9YoE4TEei8K_I3M29_rQ" image="_Skao1k4TEei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_Skao2U4TEei8K_I3M29_rQ" origin="_LN8xkE4TEei8K_I3M29_rQ" image="_Skao2E4TEei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_SkbP4k4TEei8K_I3M29_rQ" origin="_LyykAU4TEei8K_I3M29_rQ" image="_SkbP4U4TEei8K_I3M29_rQ"/>
+      <multiMappings xmi:id="_SkbP5E4TEei8K_I3M29_rQ" origin="_LyykAE4TEei8K_I3M29_rQ" image="_SkbP404TEei8K_I3M29_rQ"/>
+    </multiRules>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_eUVMkE4TEei8K_I3M29_rQ" name="fixDependencies" subUnits="_TzZ2YE4REei8K_I3M29_rQ _XZJ1EE4REei8K_I3M29_rQ"/>
 </henshin:Module>
