@@ -20,7 +20,6 @@ import org.junit.jupiter.api.Test
 import static org.junit.jupiter.api.Assertions.*
 
 import static extension tests.ClassModelExtensions.*
-import org.eclipse.emf.henshin.model.Unit
 
 class ModularCompleteTest {
 	

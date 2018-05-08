@@ -4,6 +4,7 @@ import java.util.List
 import org.eclipse.emf.common.util.DiagnosticChain
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EPackage
+import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.util.Diagnostician
 import org.eclipse.emf.henshin.interpreter.Engine
 import org.eclipse.emf.henshin.interpreter.UnitApplication
@@ -21,7 +22,6 @@ import org.junit.jupiter.api.Test
 import static org.junit.jupiter.api.Assertions.*
 
 import static extension tests.ClassModelExtensions.*
-import org.eclipse.emf.ecore.resource.Resource
 
 class InjectionTest {
 	private static EPackage epackage;

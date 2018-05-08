@@ -1,11 +1,9 @@
 package tests
 
-import java.io.IOException
-import java.util.HashMap
 import java.util.List
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EPackage
-import org.eclipse.emf.ecore.xmi.XMIResource
+import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.henshin.interpreter.Engine
 import org.eclipse.emf.henshin.interpreter.UnitApplication
 import org.eclipse.emf.henshin.interpreter.impl.EGraphImpl
@@ -14,7 +12,6 @@ import org.eclipse.emf.henshin.interpreter.impl.LoggingApplicationMonitor
 import org.eclipse.emf.henshin.interpreter.impl.UnitApplicationImpl
 import org.eclipse.emf.henshin.model.Module
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet
-import org.junit.Ignore
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
@@ -23,8 +20,6 @@ import org.junit.jupiter.api.Test
 import static org.junit.jupiter.api.Assertions.*
 
 import static extension tests.ClassModelExtensions.*
-import static extension tests.ModelHelper.*
-import org.eclipse.emf.ecore.resource.Resource
 
 class CompactTest {
 	private static EPackage epackage;
