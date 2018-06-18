@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:architectureCRA="http://momot.big.tuwien.ac.at/architectureCRA/1.0"
+    xsi:schemaLocation="http://momot.big.tuwien.ac.at/architectureCRA/1.0 ../../../models/cra/architectureCRA.ecore">
+  <architectureCRA:ClassModel
+      name="Solution 1">
+    <classes
+        name="C1.1"
+        encapsulates="/0/@features.1 /0/@features.0"/>
+    <classes
+        name="C1.2"
+        encapsulates="/0/@features.2"/>
+    <features
+        xsi:type="architectureCRA:Attribute"
+        name="A1"
+        isEncapsulatedBy="/0/@classes.0"/>
+    <features
+        xsi:type="architectureCRA:Method"
+        name="M1"
+        isEncapsulatedBy="/0/@classes.0"
+        dataDependency="/0/@features.0"
+        functionalDependency="/0/@features.2"/>
+    <features
+        xsi:type="architectureCRA:Method"
+        name="M2"
+        isEncapsulatedBy="/0/@classes.1"/>
+  </architectureCRA:ClassModel>
+</xmi:XMI>
