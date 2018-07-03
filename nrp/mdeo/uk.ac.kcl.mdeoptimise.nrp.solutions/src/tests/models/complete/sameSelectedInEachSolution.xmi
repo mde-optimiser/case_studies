@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:NRP="http://model.nrp"
+    xsi:schemaLocation="http://model.nrp ../../../models/nrp/nextReleaseProblem.ecore">
+  <NRP:NRP>
+    <customers
+        name="C1"
+        importance="1.0"
+        assigns="/0/@requirements.0/@valuations.0"/>
+    <availableArtifacts
+        name="SA1"
+        contributesTo="/0/@requirements.0/@realisations.0"
+        solutions="/0/@solutions.0">
+      <costs/>
+    </availableArtifacts>
+    <availableArtifacts
+        name="SA2"
+        contributesTo="/0/@requirements.0/@realisations.0">
+      <costs/>
+    </availableArtifacts>
+    <requirements
+        name="R1">
+      <valuations
+          value="1.0"
+          assignedBy="/0/@customers.0"
+          name="V1"/>
+      <realisations
+          dependsOn="/0/@availableArtifacts.0 /0/@availableArtifacts.1"
+          name="RE1"/>
+    </requirements>
+    <solutions
+        name="S1"
+        selectedArtifacts="/0/@availableArtifacts.0"/>
+  </NRP:NRP>
+  <NRP:NRP>
+    <customers
+        name="C2"
+        importance="1.0"
+        assigns="/1/@requirements.0/@valuations.0"/>
+    <availableArtifacts
+        name="SA1"
+        contributesTo="/1/@requirements.0/@realisations.0"
+        solutions="/1/@solutions.0">
+      <costs/>
+    </availableArtifacts>
+    <availableArtifacts
+        name="SA2"
+        contributesTo="/1/@requirements.0/@realisations.0">
+      <costs/>
+    </availableArtifacts>
+    <requirements
+        name="R2">
+      <valuations
+          value="1.0"
+          assignedBy="/1/@customers.0"
+          name="V2"/>
+      <realisations
+          dependsOn="/1/@availableArtifacts.0 /1/@availableArtifacts.1"
+          name="RE2"/>
+    </requirements>
+    <solutions
+        name="S2"
+        selectedArtifacts="/1/@availableArtifacts.0"/>
+  </NRP:NRP>
+</xmi:XMI>

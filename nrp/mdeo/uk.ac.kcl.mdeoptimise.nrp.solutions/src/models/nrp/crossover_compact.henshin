@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<henshin:Module xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:henshin="http://www.eclipse.org/emf/2011/Henshin" xmi:id="_xMukYG4cEeiH5oEAd__-Wg">
+  <imports href="http://www.eclipse.org/emf/2011/Henshin/Trace#/"/>
+  <imports href="nextReleaseProblem.ecore#/"/>
+  <units xsi:type="henshin:Rule" xmi:id="_64TR0G4cEeiH5oEAd__-Wg" name="selectArtifact">
+    <parameters xmi:id="_X29roG5AEeiH5oEAd__-Wg" name="srcArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameters xmi:id="_p9cssG48EeiH5oEAd__-Wg" name="trgArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <lhs xmi:id="_64eQ8G4cEeiH5oEAd__-Wg" name="Lhs">
+      <nodes xmi:id="_YpoMkG4dEeiH5oEAd__-Wg" name="solution" incoming="_3-s2YG47EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_aPtZkG4dEeiH5oEAd__-Wg" name="trgArtifact" incoming="_4NzpYG47EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_7PNjsG4hEeiH5oEAd__-Wg" name="trgModel" outgoing="_3-s2YG47EeiH5oEAd__-Wg _4NzpYG47EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP"/>
+      </nodes>
+      <nodes xmi:id="_x6qlcG49EeiH5oEAd__-Wg" name="srcSolution" incoming="_7ZfQUG49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_yv6ycG49EeiH5oEAd__-Wg" name="srcArtifact" outgoing="_7ZfQUG49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_3-s2YG47EeiH5oEAd__-Wg" source="_7PNjsG4hEeiH5oEAd__-Wg" target="_YpoMkG4dEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP/solutions"/>
+      </edges>
+      <edges xmi:id="_4NzpYG47EeiH5oEAd__-Wg" source="_7PNjsG4hEeiH5oEAd__-Wg" target="_aPtZkG4dEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP/availableArtifacts"/>
+      </edges>
+      <edges xmi:id="_7ZfQUG49EeiH5oEAd__-Wg" source="_yv6ycG49EeiH5oEAd__-Wg" target="_x6qlcG49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/solutions"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_nsP3MG4dEeiH5oEAd__-Wg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_nsP3MW4dEeiH5oEAd__-Wg">
+          <conclusion xmi:id="_nsP3Mm4dEeiH5oEAd__-Wg">
+            <nodes xmi:id="_nsP3M24dEeiH5oEAd__-Wg" name="artifact" outgoing="_m7uZMG4dEeiH5oEAd__-Wg">
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+            </nodes>
+            <nodes xmi:id="_nsP3NW4dEeiH5oEAd__-Wg" name="solution" incoming="_m7uZMG4dEeiH5oEAd__-Wg">
+              <type href="nextReleaseProblem.ecore#//Solution"/>
+            </nodes>
+            <edges xmi:id="_m7uZMG4dEeiH5oEAd__-Wg" source="_nsP3M24dEeiH5oEAd__-Wg" target="_nsP3NW4dEeiH5oEAd__-Wg">
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact/solutions"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_nsP3NG4dEeiH5oEAd__-Wg" origin="_aPtZkG4dEeiH5oEAd__-Wg" image="_nsP3M24dEeiH5oEAd__-Wg"/>
+          <mappings xmi:id="_nsQeQG4dEeiH5oEAd__-Wg" origin="_YpoMkG4dEeiH5oEAd__-Wg" image="_nsP3NW4dEeiH5oEAd__-Wg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_64e4AG4cEeiH5oEAd__-Wg" name="Rhs">
+      <nodes xmi:id="_YpozoG4dEeiH5oEAd__-Wg" name="solution" incoming="_oEW1MG4dEeiH5oEAd__-Wg _3-s2YW47EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_aPtZkW4dEeiH5oEAd__-Wg" name="trgArtifact" incoming="_4N0QcG47EeiH5oEAd__-Wg" outgoing="_oEW1MG4dEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_7PNjsW4hEeiH5oEAd__-Wg" name="trgModel" outgoing="_3-s2YW47EeiH5oEAd__-Wg _4N0QcG47EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP"/>
+      </nodes>
+      <nodes xmi:id="_x6qlcW49EeiH5oEAd__-Wg" name="srcSolution" incoming="_7ZfQUW49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_yv6ycW49EeiH5oEAd__-Wg" name="srcArtifact" outgoing="_7ZfQUW49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <edges xmi:id="_oEW1MG4dEeiH5oEAd__-Wg" source="_aPtZkW4dEeiH5oEAd__-Wg" target="_YpozoG4dEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/solutions"/>
+      </edges>
+      <edges xmi:id="_3-s2YW47EeiH5oEAd__-Wg" source="_7PNjsW4hEeiH5oEAd__-Wg" target="_YpozoG4dEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP/solutions"/>
+      </edges>
+      <edges xmi:id="_4N0QcG47EeiH5oEAd__-Wg" source="_7PNjsW4hEeiH5oEAd__-Wg" target="_aPtZkW4dEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP/availableArtifacts"/>
+      </edges>
+      <edges xmi:id="_7ZfQUW49EeiH5oEAd__-Wg" source="_yv6ycW49EeiH5oEAd__-Wg" target="_x6qlcW49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/solutions"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_YpozoW4dEeiH5oEAd__-Wg" origin="_YpoMkG4dEeiH5oEAd__-Wg" image="_YpozoG4dEeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_aPtZkm4dEeiH5oEAd__-Wg" origin="_aPtZkG4dEeiH5oEAd__-Wg" image="_aPtZkW4dEeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_7PNjsm4hEeiH5oEAd__-Wg" origin="_7PNjsG4hEeiH5oEAd__-Wg" image="_7PNjsW4hEeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_x6qlcm49EeiH5oEAd__-Wg" origin="_x6qlcG49EeiH5oEAd__-Wg" image="_x6qlcW49EeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_yv6ycm49EeiH5oEAd__-Wg" origin="_yv6ycG49EeiH5oEAd__-Wg" image="_yv6ycW49EeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_EQHVwG4dEeiH5oEAd__-Wg" name="maybeInjectArtifactSelection" subUnits="_jFhucG5DEeiH5oEAd__-Wg _NDt5YG4dEeiH5oEAd__-Wg">
+    <parameters xmi:id="_wN8BEG5BEeiH5oEAd__-Wg" name="srcArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameterMappings xmi:id="_sLjpYG5EEeiH5oEAd__-Wg" source="_wN8BEG5BEeiH5oEAd__-Wg" target="_mvBksG5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_sLjpYW5EEeiH5oEAd__-Wg" source="_mvBksG5DEeiH5oEAd__-Wg" target="_wN8BEG5BEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_THTsUG5FEeiH5oEAd__-Wg" source="_wN8BEG5BEeiH5oEAd__-Wg" target="_Qxu8EG5FEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_THTsUW5FEeiH5oEAd__-Wg" source="_Qxu8EG5FEeiH5oEAd__-Wg" target="_wN8BEG5BEeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_NDt5YG4dEeiH5oEAd__-Wg" name="skipArtifact">
+    <parameters xmi:id="_Qxu8EG5FEeiH5oEAd__-Wg" name="srcArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <lhs xmi:id="_NDwVoG4dEeiH5oEAd__-Wg" name="Lhs">
+      <nodes xmi:id="_QPB-0G4dEeiH5oEAd__-Wg" name="srcArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_NDwVoW4dEeiH5oEAd__-Wg" name="Rhs">
+      <nodes xmi:id="_QPB-0W4dEeiH5oEAd__-Wg" name="srcArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_QPB-0m4dEeiH5oEAd__-Wg" origin="_QPB-0G4dEeiH5oEAd__-Wg" image="_QPB-0W4dEeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:LoopUnit" xmi:id="__uWlUG4dEeiH5oEAd__-Wg" name="processAllArtifacts" subUnit="_DyPn0G46EeiH5oEAd__-Wg">
+    <parameters xmi:id="_HYVOcG4eEeiH5oEAd__-Wg" name="srcModel" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//NRP"/>
+    </parameters>
+    <parameters xmi:id="_Z-3lkG47EeiH5oEAd__-Wg" name="procTrc" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+    </parameters>
+    <parameterMappings xmi:id="_q4RysG47EeiH5oEAd__-Wg" source="_HYVOcG4eEeiH5oEAd__-Wg" target="_Ns8WYG46EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_q4RysW47EeiH5oEAd__-Wg" source="_Ns8WYG46EeiH5oEAd__-Wg" target="_HYVOcG4eEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_q4Rysm47EeiH5oEAd__-Wg" source="_Z-3lkG47EeiH5oEAd__-Wg" target="_pJIJQG47EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_q4Rys247EeiH5oEAd__-Wg" source="_pJIJQG47EeiH5oEAd__-Wg" target="_Z-3lkG47EeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_KJnqUG4eEeiH5oEAd__-Wg" name="chooseRandomSelectedArtifact">
+    <parameters xmi:id="_QBCwsG4eEeiH5oEAd__-Wg" name="srcModel" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//NRP"/>
+    </parameters>
+    <parameters xmi:id="_4lnEMG4hEeiH5oEAd__-Wg" name="procTrc" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+    </parameters>
+    <parameters xmi:id="_kNxa0G5BEeiH5oEAd__-Wg" name="srcArtifact" kind="OUT">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <lhs xmi:id="_KJpfgG4eEeiH5oEAd__-Wg" name="Lhs">
+      <nodes xmi:id="_Q3IrMG4eEeiH5oEAd__-Wg" name="srcModel" outgoing="_AUQ9sG49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP"/>
+      </nodes>
+      <nodes xmi:id="_R_YFoG4eEeiH5oEAd__-Wg" name="srcArtifact" incoming="_AUQ9sG49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_4WTkQG4eEeiH5oEAd__-Wg" name="procTrc">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+      </nodes>
+      <edges xmi:id="_AUQ9sG49EeiH5oEAd__-Wg" source="_Q3IrMG4eEeiH5oEAd__-Wg" target="_R_YFoG4eEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP/availableArtifacts"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_CVnGAG4fEeiH5oEAd__-Wg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_CVnGAW4fEeiH5oEAd__-Wg">
+          <conclusion xmi:id="_CVnGAm4fEeiH5oEAd__-Wg">
+            <nodes xmi:id="_CVnGA24fEeiH5oEAd__-Wg" name="procTrc" outgoing="_BxHR0G4fEeiH5oEAd__-Wg">
+              <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+            </nodes>
+            <nodes xmi:id="_CVntEG4fEeiH5oEAd__-Wg" name="artifact" incoming="_BxHR0G4fEeiH5oEAd__-Wg">
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+            </nodes>
+            <edges xmi:id="_BxHR0G4fEeiH5oEAd__-Wg" source="_CVnGA24fEeiH5oEAd__-Wg" target="_CVntEG4fEeiH5oEAd__-Wg">
+              <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/target"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_CVnGBG4fEeiH5oEAd__-Wg" origin="_4WTkQG4eEeiH5oEAd__-Wg" image="_CVnGA24fEeiH5oEAd__-Wg"/>
+          <mappings xmi:id="_CVntEW4fEeiH5oEAd__-Wg" origin="_R_YFoG4eEeiH5oEAd__-Wg" image="_CVntEG4fEeiH5oEAd__-Wg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_KJpfgW4eEeiH5oEAd__-Wg" name="Rhs">
+      <nodes xmi:id="_Q3IrMW4eEeiH5oEAd__-Wg" name="srcModel" outgoing="_AUQ9sW49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP"/>
+      </nodes>
+      <nodes xmi:id="_R_YFoW4eEeiH5oEAd__-Wg" name="srcArtifact" incoming="_FbJ6oG4fEeiH5oEAd__-Wg _AUQ9sW49EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_4WULUG4eEeiH5oEAd__-Wg" name="procTrc" outgoing="_FbJ6oG4fEeiH5oEAd__-Wg">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+      </nodes>
+      <edges xmi:id="_FbJ6oG4fEeiH5oEAd__-Wg" source="_4WULUG4eEeiH5oEAd__-Wg" target="_R_YFoW4eEeiH5oEAd__-Wg">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace/target"/>
+      </edges>
+      <edges xmi:id="_AUQ9sW49EeiH5oEAd__-Wg" source="_Q3IrMW4eEeiH5oEAd__-Wg" target="_R_YFoW4eEeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//NRP/availableArtifacts"/>
+      </edges>
+    </rhs>
+    <mappings xmi:id="_Q3IrMm4eEeiH5oEAd__-Wg" origin="_Q3IrMG4eEeiH5oEAd__-Wg" image="_Q3IrMW4eEeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_R_YFom4eEeiH5oEAd__-Wg" origin="_R_YFoG4eEeiH5oEAd__-Wg" image="_R_YFoW4eEeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_4WULUW4eEeiH5oEAd__-Wg" origin="_4WTkQG4eEeiH5oEAd__-Wg" image="_4WULUG4eEeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_DyPn0G46EeiH5oEAd__-Wg" name="processArtifact" subUnits="_KJnqUG4eEeiH5oEAd__-Wg _EQHVwG4dEeiH5oEAd__-Wg">
+    <parameters xmi:id="_Ns8WYG46EeiH5oEAd__-Wg" name="srcModel" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//NRP"/>
+    </parameters>
+    <parameters xmi:id="_pJIJQG47EeiH5oEAd__-Wg" name="procTrc" kind="IN">
+      <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+    </parameters>
+    <parameters xmi:id="_VIxVIG5CEeiH5oEAd__-Wg" name="srcArtifact" kind="VAR">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameterMappings xmi:id="_Xgh2sG5CEeiH5oEAd__-Wg" source="_Ns8WYG46EeiH5oEAd__-Wg" target="_QBCwsG4eEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_Xgh2sW5CEeiH5oEAd__-Wg" source="_QBCwsG4eEeiH5oEAd__-Wg" target="_Ns8WYG46EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_Xgh2sm5CEeiH5oEAd__-Wg" source="_pJIJQG47EeiH5oEAd__-Wg" target="_4lnEMG4hEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_Xgh2s25CEeiH5oEAd__-Wg" source="_4lnEMG4hEeiH5oEAd__-Wg" target="_pJIJQG47EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_Xgh2tG5CEeiH5oEAd__-Wg" source="_VIxVIG5CEeiH5oEAd__-Wg" target="_kNxa0G5BEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_Xgh2tW5CEeiH5oEAd__-Wg" source="_kNxa0G5BEeiH5oEAd__-Wg" target="_VIxVIG5CEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_YjRtIG5CEeiH5oEAd__-Wg" source="_VIxVIG5CEeiH5oEAd__-Wg" target="_wN8BEG5BEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_YjRtIW5CEeiH5oEAd__-Wg" source="_wN8BEG5BEeiH5oEAd__-Wg" target="_VIxVIG5CEeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_egP7gG46EeiH5oEAd__-Wg" name="createProcTrace">
+    <parameters xmi:id="_hvrE4G46EeiH5oEAd__-Wg" name="procTrc" kind="OUT">
+      <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+    </parameters>
+    <lhs xmi:id="_egRJoG46EeiH5oEAd__-Wg" name="Lhs"/>
+    <rhs xmi:id="_egRJoW46EeiH5oEAd__-Wg" name="Rhs">
+      <nodes xmi:id="_i03yYG46EeiH5oEAd__-Wg" name="procTrc">
+        <type href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+      </nodes>
+    </rhs>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_n-Fu8G46EeiH5oEAd__-Wg" name="selectRandomArtifacts_injectPreservingSelection" subUnits="_egP7gG46EeiH5oEAd__-Wg __uWlUG4dEeiH5oEAd__-Wg">
+    <parameters xmi:id="_AbhuMG47EeiH5oEAd__-Wg" name="srcModel" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//NRP"/>
+    </parameters>
+    <parameters xmi:id="_AbhuMW47EeiH5oEAd__-Wg" name="procTrc" kind="VAR">
+      <type xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2011/Henshin/Trace#//Trace"/>
+    </parameters>
+    <parameterMappings xmi:id="_IeLWAG47EeiH5oEAd__-Wg" source="_AbhuMW47EeiH5oEAd__-Wg" target="_hvrE4G46EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_IeLWAW47EeiH5oEAd__-Wg" source="_hvrE4G46EeiH5oEAd__-Wg" target="_AbhuMW47EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_eo8IAG47EeiH5oEAd__-Wg" source="_AbhuMG47EeiH5oEAd__-Wg" target="_HYVOcG4eEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_eo8IAW47EeiH5oEAd__-Wg" source="_HYVOcG4eEeiH5oEAd__-Wg" target="_AbhuMG47EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_eo8IAm47EeiH5oEAd__-Wg" source="_AbhuMW47EeiH5oEAd__-Wg" target="_Z-3lkG47EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_eo8IA247EeiH5oEAd__-Wg" source="_Z-3lkG47EeiH5oEAd__-Wg" target="_AbhuMW47EeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_J7h9cG4-EeiH5oEAd__-Wg" name="deselectArtifact">
+    <parameters xmi:id="_Re5WUG5AEeiH5oEAd__-Wg" name="srcArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameters xmi:id="_OYKg0G4-EeiH5oEAd__-Wg" name="trgArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <lhs xmi:id="_J7jLkG4-EeiH5oEAd__-Wg" name="Lhs">
+      <nodes xmi:id="_RjemQG4-EeiH5oEAd__-Wg" name="srcSolution">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_TNIEoG4-EeiH5oEAd__-Wg" name="srcArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_bZtrkG4-EeiH5oEAd__-Wg" name="trgArtifact" outgoing="_ldwjYG4-EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_dQpYAG4-EeiH5oEAd__-Wg" name="trgSolution" incoming="_ldwjYG4-EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <edges xmi:id="_ldwjYG4-EeiH5oEAd__-Wg" source="_bZtrkG4-EeiH5oEAd__-Wg" target="_dQpYAG4-EeiH5oEAd__-Wg">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact/solutions"/>
+      </edges>
+      <formula xsi:type="henshin:Not" xmi:id="_a2Y8EG4-EeiH5oEAd__-Wg">
+        <child xsi:type="henshin:NestedCondition" xmi:id="_a2Y8EW4-EeiH5oEAd__-Wg">
+          <conclusion xmi:id="_a2Y8Em4-EeiH5oEAd__-Wg">
+            <nodes xmi:id="_a2Y8E24-EeiH5oEAd__-Wg" name="srcArtifact" outgoing="_ZJNBgG4-EeiH5oEAd__-Wg">
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+            </nodes>
+            <nodes xmi:id="_a2Y8FW4-EeiH5oEAd__-Wg" name="srcSolution" incoming="_ZJNBgG4-EeiH5oEAd__-Wg">
+              <type href="nextReleaseProblem.ecore#//Solution"/>
+            </nodes>
+            <edges xmi:id="_ZJNBgG4-EeiH5oEAd__-Wg" source="_a2Y8E24-EeiH5oEAd__-Wg" target="_a2Y8FW4-EeiH5oEAd__-Wg">
+              <type href="nextReleaseProblem.ecore#//SoftwareArtifact/solutions"/>
+            </edges>
+          </conclusion>
+          <mappings xmi:id="_a2Y8FG4-EeiH5oEAd__-Wg" origin="_TNIEoG4-EeiH5oEAd__-Wg" image="_a2Y8E24-EeiH5oEAd__-Wg"/>
+          <mappings xmi:id="_a2Y8Fm4-EeiH5oEAd__-Wg" origin="_RjemQG4-EeiH5oEAd__-Wg" image="_a2Y8FW4-EeiH5oEAd__-Wg"/>
+        </child>
+      </formula>
+    </lhs>
+    <rhs xmi:id="_J7jLkW4-EeiH5oEAd__-Wg" name="Rhs">
+      <nodes xmi:id="_RjemQW4-EeiH5oEAd__-Wg" name="srcSolution">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+      <nodes xmi:id="_TNIEoW4-EeiH5oEAd__-Wg" name="srcArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_bZtrkW4-EeiH5oEAd__-Wg" name="trgArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+      </nodes>
+      <nodes xmi:id="_dQpYAW4-EeiH5oEAd__-Wg" name="trgSolution">
+        <type href="nextReleaseProblem.ecore#//Solution"/>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_RjemQm4-EeiH5oEAd__-Wg" origin="_RjemQG4-EeiH5oEAd__-Wg" image="_RjemQW4-EeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_TNIEom4-EeiH5oEAd__-Wg" origin="_TNIEoG4-EeiH5oEAd__-Wg" image="_TNIEoW4-EeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_bZtrkm4-EeiH5oEAd__-Wg" origin="_bZtrkG4-EeiH5oEAd__-Wg" image="_bZtrkW4-EeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_dQpYAm4-EeiH5oEAd__-Wg" origin="_dQpYAG4-EeiH5oEAd__-Wg" image="_dQpYAW4-EeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:IndependentUnit" xmi:id="_6ax6cG4_EeiH5oEAd__-Wg" name="tryChangeTrgArtifactSelection" subUnits="_J7h9cG4-EeiH5oEAd__-Wg _64TR0G4cEeiH5oEAd__-Wg">
+    <parameters xmi:id="_V-dxkG5DEeiH5oEAd__-Wg" name="srcArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameters xmi:id="_cYNFYG5EEeiH5oEAd__-Wg" name="trgArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameterMappings xmi:id="_KpBRYG5FEeiH5oEAd__-Wg" source="_V-dxkG5DEeiH5oEAd__-Wg" target="_Re5WUG5AEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_KpBRYW5FEeiH5oEAd__-Wg" source="_Re5WUG5AEeiH5oEAd__-Wg" target="_V-dxkG5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_KpBRYm5FEeiH5oEAd__-Wg" source="_cYNFYG5EEeiH5oEAd__-Wg" target="_OYKg0G4-EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_KpBRY25FEeiH5oEAd__-Wg" source="_OYKg0G4-EeiH5oEAd__-Wg" target="_cYNFYG5EEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_MR4FkG5FEeiH5oEAd__-Wg" source="_V-dxkG5DEeiH5oEAd__-Wg" target="_X29roG5AEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_MR4FkW5FEeiH5oEAd__-Wg" source="_X29roG5AEeiH5oEAd__-Wg" target="_V-dxkG5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_MR4Fkm5FEeiH5oEAd__-Wg" source="_cYNFYG5EEeiH5oEAd__-Wg" target="_p9cssG48EeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_MR4Fk25FEeiH5oEAd__-Wg" source="_p9cssG48EeiH5oEAd__-Wg" target="_cYNFYG5EEeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:SequentialUnit" xmi:id="_jFhucG5DEeiH5oEAd__-Wg" name="tryInjectArtifactSelection" subUnits="_oO9tcG5DEeiH5oEAd__-Wg _6ax6cG4_EeiH5oEAd__-Wg">
+    <parameters xmi:id="_mvBksG5DEeiH5oEAd__-Wg" name="srcArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameters xmi:id="_mvBksW5DEeiH5oEAd__-Wg" name="trgArtifact" kind="VAR">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameterMappings xmi:id="_QDpjgG5EEeiH5oEAd__-Wg" source="_mvBksG5DEeiH5oEAd__-Wg" target="_s83nAG5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_QDpjgW5EEeiH5oEAd__-Wg" source="_s83nAG5DEeiH5oEAd__-Wg" target="_mvBksG5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_QDpjgm5EEeiH5oEAd__-Wg" source="_mvBksW5DEeiH5oEAd__-Wg" target="_s83nAW5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_QDpjg25EEeiH5oEAd__-Wg" source="_s83nAW5DEeiH5oEAd__-Wg" target="_mvBksW5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_5TtycG5EEeiH5oEAd__-Wg" source="_mvBksG5DEeiH5oEAd__-Wg" target="_V-dxkG5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_5TtycW5EEeiH5oEAd__-Wg" source="_V-dxkG5DEeiH5oEAd__-Wg" target="_mvBksG5DEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_5Ttycm5EEeiH5oEAd__-Wg" source="_mvBksW5DEeiH5oEAd__-Wg" target="_cYNFYG5EEeiH5oEAd__-Wg"/>
+    <parameterMappings xmi:id="_5Ttyc25EEeiH5oEAd__-Wg" source="_cYNFYG5EEeiH5oEAd__-Wg" target="_mvBksW5DEeiH5oEAd__-Wg"/>
+  </units>
+  <units xsi:type="henshin:Rule" xmi:id="_oO9tcG5DEeiH5oEAd__-Wg" name="getTargetArtifact">
+    <parameters xmi:id="_s83nAG5DEeiH5oEAd__-Wg" name="srcArtifact" kind="IN">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameters xmi:id="_s83nAW5DEeiH5oEAd__-Wg" name="trgArtifact" kind="OUT">
+      <type xsi:type="ecore:EClass" href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+    </parameters>
+    <parameters xmi:id="_z8x_cG5DEeiH5oEAd__-Wg" name="artifactName" kind="VAR">
+      <type xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </parameters>
+    <lhs xmi:id="_oO-7kG5DEeiH5oEAd__-Wg" name="Lhs">
+      <nodes xmi:id="_usVZgG5DEeiH5oEAd__-Wg" name="srcArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <attributes xmi:id="_06uOYG5DEeiH5oEAd__-Wg" value="artifactName">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_vXz_cG5DEeiH5oEAd__-Wg" name="trgArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <attributes xmi:id="_1DB10G5DEeiH5oEAd__-Wg" value="artifactName">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/name"/>
+        </attributes>
+      </nodes>
+    </lhs>
+    <rhs xmi:id="_oO-7kW5DEeiH5oEAd__-Wg" name="Rhs">
+      <nodes xmi:id="_usVZgW5DEeiH5oEAd__-Wg" name="srcArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <attributes xmi:id="_06uOYW5DEeiH5oEAd__-Wg" value="artifactName">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/name"/>
+        </attributes>
+      </nodes>
+      <nodes xmi:id="_vX0mgG5DEeiH5oEAd__-Wg" name="trgArtifact">
+        <type href="nextReleaseProblem.ecore#//SoftwareArtifact"/>
+        <attributes xmi:id="_1DCc4G5DEeiH5oEAd__-Wg" value="artifactName">
+          <type href="nextReleaseProblem.ecore#//SoftwareArtifact/name"/>
+        </attributes>
+      </nodes>
+    </rhs>
+    <mappings xmi:id="_usVZgm5DEeiH5oEAd__-Wg" origin="_usVZgG5DEeiH5oEAd__-Wg" image="_usVZgW5DEeiH5oEAd__-Wg"/>
+    <mappings xmi:id="_vX0mgW5DEeiH5oEAd__-Wg" origin="_vXz_cG5DEeiH5oEAd__-Wg" image="_vX0mgG5DEeiH5oEAd__-Wg"/>
+  </units>
+</henshin:Module>

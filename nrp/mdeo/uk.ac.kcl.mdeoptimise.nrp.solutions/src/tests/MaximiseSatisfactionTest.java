@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.henshin.model.resource.HenshinResourceSet;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -16,6 +18,7 @@ import models.nrp.MaximiseSatisfaction;
 public class MaximiseSatisfactionTest {
 
 	final private static double DELTA = 1e-3;
+	private static HenshinResourceSet rs;
 	private EObject model;
 	private MaximiseSatisfaction objective = new MaximiseSatisfaction();
 	
@@ -29,11 +32,15 @@ public class MaximiseSatisfactionTest {
 //		      System.out.println();
 //		   }
 //	};
+	@BeforeAll
+	public static void prepareEnvironment() {
+		rs = ModelHelper.prepareEnvironment();
+	}
 	
 	@Test
 	@DisplayName("Get all valuations of the dependencies of a requirement. ")
 	public void testCollectingValuationsOfHierarchicalRequirement() {
-		model = ModelLoadHelper.loadModel("simple-dependencies.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/simple-dependencies.xmi");
 		EObject customer = objective.getReferenceFeature(model, "customers").iterator().next();
 		EObject requirement = objective.getReferenceFeature(model, "requirements").iterator().next();
 		List<Double> expected = Arrays.asList(4.0, 1.0);
@@ -49,63 +56,63 @@ public class MaximiseSatisfactionTest {
 	@Test
 	@DisplayName("Fitness: Direct requirement has multiple valuations of the same customer. Only the highest should be considered")
 	public void testFitnessOfMultiValuationsWithoutDependencies() {
-		model = ModelLoadHelper.loadModel("direct-requirement-with-multiple-valuations-for-same-customer.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/direct-requirement-with-multiple-valuations-for-same-customer.xmi");
 		assertEquals(0.9d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: Requirement has a dependency with multiple valuations of the same customer. Only the highest should be considered.")
 	public void testFitnessOfMultiValuationsWithDependencies() {
-		model = ModelLoadHelper.loadModel("dependencies-with-multiple-valuations-for-same-customer.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/dependencies-with-multiple-valuations-for-same-customer.xmi");
 		assertEquals(0.9d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: Direct requirement has multiple partial realisations. Only the highest should be considered.")
 	public void testMultipleRealisations() {
-		model = ModelLoadHelper.loadModel("multiple-realisations.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/multiple-realisations.xmi");
 		assertEquals(0.8d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: Requirement has multiple dependencies with different valuations.")
 	public void testSimpleDependencies() {
-		model = ModelLoadHelper.loadModel("simple-dependencies.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/simple-dependencies.xmi");
 		assertEquals(0.9d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: No artifact is selected for the solution.")
 	public void testEmptySolution() {
-		model = ModelLoadHelper.loadModel("empty-solution.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/empty-solution.xmi");
 		assertEquals(0.0d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: Artifact of single artifact realisation is not selected.")
 	public void testSingleArtifactRealisationMissingArtifact() {
-		model = ModelLoadHelper.loadModel("single-artifact-realisation-missing-artifact.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/single-artifact-realisation-missing-artifact.xmi");
 		assertEquals(0.4d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: Artifact of multiple artifact realisation is not selected.")
 	public void testMultipleArtifactRealisationMissingArtifact() {
-		model = ModelLoadHelper.loadModel("multiple-artifact-realisation-missing-artifact.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/multiple-artifact-realisation-missing-artifact.xmi");
 		assertEquals(0.5d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: Artifact in artifact hierarchy of realisation is not selected.")
 	public void testRealisationMissingArtifactInArtifactHierarchy() {
-		model = ModelLoadHelper.loadModel("realisation-missing-artifact-in-hierarchy.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/realisation-missing-artifact-in-hierarchy.xmi");
 		assertEquals(0.0d, objective.computeFitness(model), DELTA);
 	}
 	
 	@Test
 	@DisplayName("Fitness: Multiple customers have different importance.")
 	public void testMultipleCustomersWithDifferentImportance() {
-		model = ModelLoadHelper.loadModel("multiple-customers-with-different-importance.xmi");
+		model = ModelHelper.loadFirstModel(rs, "../../tests/models/multiple-customers-with-different-importance.xmi");
 		assertEquals(5.0d, objective.computeFitness(model), DELTA);
 	}
 

@@ -5,6 +5,7 @@
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="NRP">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="customers" lowerBound="1"
         upperBound="-1" eType="#//Customer" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="availableArtifacts" lowerBound="1"
@@ -51,8 +52,10 @@
         defaultValueLiteral="1.0"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dependsOn" lowerBound="1"
         upperBound="-1" eType="#//SoftwareArtifact" eOpposite="#//SoftwareArtifact/contributesTo"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Solution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectedArtifacts" upperBound="-1"
         eType="#//SoftwareArtifact" eOpposite="#//SoftwareArtifact/solutions"/>
   </eClassifiers>
@@ -70,5 +73,6 @@
         upperBound="-1" eType="#//Customer" eOpposite="#//Customer/assigns"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contributesTo" upperBound="-1"
         eType="#//Requirement" eOpposite="#//Requirement/combines"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
