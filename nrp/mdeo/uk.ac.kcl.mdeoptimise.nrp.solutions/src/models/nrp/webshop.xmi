@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NRP:NRP xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:NRP="http://model.nrp"
+    xsi:schemaLocation="http://model.nrp nextReleaseProblem.ecore"
+    name="Webshop">
+  <customers
+      name="Community Manager"
+      importance="2.0"
+      assigns="//@requirements.0/@valuations.0 //@requirements.1/@valuations.0 //@requirements.2/@valuations.0"/>
+  <customers
+      name="User"
+      importance="1.0"/>
+  <availableArtifacts
+      name="R: Simple Design"
+      contributesTo="//@requirements.1/@realisations.0"
+      solutions="//@solutions.0">
+    <costs amount="100.0"/>
+  </availableArtifacts>
+  <availableArtifacts
+      name="R: Intuitive Design"
+      contributesTo="//@requirements.1/@realisations.1"
+      solutions="//@solutions.0">
+    <costs amount="250.0"/>
+  </availableArtifacts>
+  <availableArtifacts
+      name="SC: Product Overview"
+      contributesTo="//@requirements.2/@realisations.0"
+      solutions="//@solutions.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts
+      name="Complete Redesign"
+      contributesTo="//@requirements.0/@realisations.0"/>
+  <requirements
+      name="Better Frontend UI"
+      combines="//@requirements.1/@valuations.0 //@requirements.2/@valuations.0">
+    <valuations
+        value="4.0"
+        assignedBy="//@customers.0"
+        name="UI"/>
+    <realisations
+        dependsOn="//@availableArtifacts.3"
+        name="UI"/>
+  </requirements>
+  <requirements
+      name="Registration UI">
+    <valuations
+        value="2.0"
+        assignedBy="//@customers.0"
+        contributesTo="//@requirements.0"
+        name="R"/>
+    <realisations
+        percentage="0.6"
+        dependsOn="//@availableArtifacts.0"
+        name="RS"/>
+    <realisations
+        percentage="0.8"
+        dependsOn="//@availableArtifacts.1"
+        name="RI"/>
+  </requirements>
+  <requirements
+      name="Shopping Cart UI">
+    <valuations
+        value="6.0"
+        assignedBy="//@customers.0"
+        contributesTo="//@requirements.0"
+        name="SC"/>
+    <realisations
+        dependsOn="//@availableArtifacts.2"
+        name="SC"/>
+  </requirements>
+  <solutions
+      name=""
+      selectedArtifacts="//@availableArtifacts.0 //@availableArtifacts.1 //@availableArtifacts.2"/>
+</NRP:NRP>
