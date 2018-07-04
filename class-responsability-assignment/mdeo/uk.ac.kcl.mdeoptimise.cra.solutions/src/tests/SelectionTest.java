@@ -35,8 +35,7 @@ class SelectionTest {
 	
 	@BeforeAll
 	public static void createTransformationEnvironment() {
-		rs = new HenshinResourceSet("src/models/cra");
-		rs.registerDynamicEPackages("architectureCRA.ecore");
+		rs = ModelHelper.prepareEnvironment();
 		engine = new EngineImpl();
 		engine.getOptions().put(Engine.OPTION_DETERMINISTIC, false);
 	}

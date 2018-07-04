@@ -35,8 +35,7 @@ class InjectionTest {
 		
 	@BeforeAll
 	def public static void createTransformationEnvironment() {
-		rs = new HenshinResourceSet("src/models/cra");
-		epackage = rs.registerDynamicEPackages("architectureCRA.ecore").get(0);
+		rs = ModelHelper.prepareEnvironment
 		ClassModelExtensions.setPackage(rs)
 		engine = new EngineImpl();		
 	}

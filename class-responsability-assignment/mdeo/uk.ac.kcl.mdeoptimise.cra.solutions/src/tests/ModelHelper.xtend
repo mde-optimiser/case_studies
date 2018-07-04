@@ -2,30 +2,32 @@ package tests
 
 import java.io.IOException
 import java.util.HashMap
-import java.util.List
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.xmi.XMIResource
 import org.eclipse.emf.henshin.model.resource.HenshinResourceSet
+import org.eclipse.emf.ecore.resource.Resource
 
 class ModelHelper {
 	
-	def static EObject loadModel(String filename, int rootElement) {
-		val HenshinResourceSet resourceSet = new HenshinResourceSet("src/tests/testModels");
-		val String metamodelPath = "../../models/cra/architectureCRA.ecore";
-		resourceSet.registerDynamicEPackages(metamodelPath);
-		resourceSet.getResource(filename).getContents().get(rootElement);
+	var HenshinResourceSet rs
+	
+	def static HenshinResourceSet prepareEnvironment() {
+		val HenshinResourceSet rs = new HenshinResourceSet("src/models/cra");
+		val String metamodelPath = "architectureCRA.ecore";
+		rs.registerDynamicEPackages(metamodelPath).get(0);
+		return rs
 	}
 	
-	def static List<EObject> getAllRootElements(String filename) {
-		val HenshinResourceSet resourceSet = new HenshinResourceSet("src/tests/testModels");
-		val String metamodelPath = "../../models/cra/architectureCRA.ecore";
-		resourceSet.registerDynamicEPackages(metamodelPath);
-		resourceSet.getResource(filename).getContents();
+	def static EObject loadFirstModel(HenshinResourceSet rs, String filename) {
+		rs.getResource(filename).contents.get(0);
 	}
 	
-	def static void save(EObject model, HenshinResourceSet rs) {
-		
-		val resource = rs.createResource("output.xmi")
+	def static EObject getModel(Resource r, int i) {
+		r.contents.get(i)
+	}
+	
+	def static void save(HenshinResourceSet rs, EObject model, String filename) {
+		val resource = rs.createResource(filename)
 		resource.getContents().clear()
 		resource.getContents().add(model);
 		val options = new HashMap<Object,Object>();		
@@ -37,5 +39,4 @@ class ModelHelper {
 			throw new RuntimeException(e);
 		}
 	}	
-	
 }
