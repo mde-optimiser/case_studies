@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.henshin.interpreter.Engine;
 import org.eclipse.emf.henshin.interpreter.UnitApplication;
 import org.eclipse.emf.henshin.interpreter.impl.EGraphImpl;
@@ -25,6 +26,7 @@ import org.junit.jupiter.api.Test;
 class SelectionTest {
 	
 	private static Engine engine;
+	private static Resource modelResource;
 	private static EObject model;
 	private static List<EObject> roots;
 	private static Module selection;
@@ -33,15 +35,18 @@ class SelectionTest {
 	
 	@BeforeAll
 	public static void createTransformationEnvironment() {
-		rs = new HenshinResourceSet("src/models/cra");
-		rs.registerDynamicEPackages("architectureCRA.ecore");
+		rs = ModelHelper.prepareEnvironment();
 		engine = new EngineImpl();
 		engine.getOptions().put(Engine.OPTION_DETERMINISTIC, false);
 	}
 	
 	@BeforeEach
 	public void resetUnitApp() {
+		if (modelResource != null) {
+			modelResource.unload();
+		}
 		unitApp = new UnitApplicationImpl(engine);
+		rs.getResource("selection.henshin").unload();
 		selection = rs.getModule("selection.henshin");
 	}
 
@@ -49,7 +54,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Select all features with matching selection.")
 	public void testSelectAllFeaturesMatching() {
-		roots = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi").getContents();
+		modelResource = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi");
+		roots = modelResource.getContents();
 		unitApp.setEGraph(new EGraphImpl(roots));
 		unitApp.setUnit(selection.getUnit("selectRandomFeatures"));
 		unitApp.setParameterValue("matchingSelection", true);
@@ -70,7 +76,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Select all features without matching selection.")
 	public void testSelectAllFeaturesNoMatching() {
-		roots = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi").getContents();
+		modelResource = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi");
+		roots = modelResource.getContents();
 		unitApp.setEGraph(new EGraphImpl(roots));
 		unitApp.setUnit(selection.getUnit("selectRandomFeatures"));
 		
@@ -94,7 +101,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark dependencies.")
 	public void testMarkDependencies() {
-		model = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markMixedModelDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -108,7 +116,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark fulfilled dependencies (no dependencies).")
 	public void testMarkFulfilledDependencies() {
-		model = rs.getResource("../../tests/models/selection/noDependency.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/noDependency.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -122,7 +131,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark fulfilled dependencies (only fulfilled).")
 	public void testMarkFulfilledDependenciesOnlyFulfilled() {
-		model = rs.getResource("../../tests/models/selection/singleFulfilledFunctionalDependency.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/singleFulfilledFunctionalDependency.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -136,7 +146,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark fulfilled dependencies (only nonfulfilled).")
 	public void testMarkFulfilledDependenciesOnlyNonfulfilled() {
-		model = rs.getResource("../../tests/models/selection/singleNonfulfilledDataDependency.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/singleNonfulfilledDataDependency.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -150,7 +161,7 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark fulfilled dependencies (mixed present).")
 	public void testMarkFulfilledDependenciesMixed() {
-		model = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi");
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markFulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -164,7 +175,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark unfulfilled dependencies (no dependencies present).")
 	public void testMarkUnfulfilledDependencies() {
-		model = rs.getResource("../../tests/models/selection/noDependency.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/noDependency.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -178,7 +190,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark unfulfilled dependencies (only fulfilled present).")
 	public void testMarkUnfulfilledDependenciesOnlyFulfilled() {
-		model = rs.getResource("../../tests/models/selection/singleFulfilledFunctionalDependency.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/singleFulfilledFunctionalDependency.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -192,7 +205,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark unfulfilled dependencies (only nonfulfilled present).")
 	public void testMarkUnfulfilledDependenciesOnlyNonfulfilled() {
-		model = rs.getResource("../../tests/models/selection/singleNonfulfilledDataDependency.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/singleNonfulfilledDataDependency.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -206,7 +220,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Mark unfulfilled dependencies (mixed present).")
 	public void testMarkUnfulfilledDependenciesMixed() {
-		model = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi").getContents().get(0);
+		modelResource = rs.getResource("../../tests/models/selection/unmarkedDependencies.xmi");
+		model = modelResource.getContents().get(0);
 		unitApp.setEGraph(new EGraphImpl(model));
 		unitApp.setUnit(selection.getUnit("markUnfulfilledDependencies"));
 		unitApp.setParameterValue("model", model);
@@ -220,7 +235,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Select features according to selected dependencies")
 	public void testSelectFeaturesFromDependencies() {
-		roots = rs.getResource("../../tests/models/selection/selectedDependenciesInOneModel.xmi").getContents();
+		modelResource = rs.getResource("../../tests/models/selection/selectedDependenciesInOneModel.xmi");
+		roots = modelResource.getContents();
 		unitApp.setEGraph(new EGraphImpl(roots));
 		unitApp.setUnit(selection.getUnit("selectDependencyFeatures"));
 		unitApp.setParameterValue("model", roots.get(0));
@@ -238,7 +254,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Copy selected dependencies and features from one model to the other")
 	public void testCopyDependenciesAndFeatureSelection() {
-		roots = rs.getResource("../../tests/models/selection/selectedDependenciesAndFeaturesInOneModel.xmi").getContents();
+		modelResource = rs.getResource("../../tests/models/selection/selectedDependenciesAndFeaturesInOneModel.xmi");
+		roots = modelResource.getContents();
 		unitApp.setEGraph(new EGraphImpl(roots));
 		unitApp.setUnit(selection.getUnit("copySelectedDependencies"));
 		unitApp.setParameterValue("modelOne", roots.get(0));
@@ -257,7 +274,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Select all dependencies with matching selection")
 	public void testSelectAllDependenciesMatching() {
-		roots = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi").getContents();
+		modelResource = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi");
+		roots = modelResource.getContents();
 		unitApp.setEGraph(new EGraphImpl(roots));
 		
 		// Remove noop for deterministic behavior
@@ -287,7 +305,8 @@ class SelectionTest {
 	@Test
 	@DisplayName("Select all dependencies without matching selection")
 	public void testSelectAllDependenciesNoMatching() {
-		roots = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi").getContents();
+		modelResource = rs.getResource("../../tests/models/selection/twoModelsForCompleteTests.xmi");
+		roots = modelResource.getContents();
 		model = roots.stream().filter(r -> r.eClass().getName().equals("ClassModel")).findFirst().get();
 		unitApp.setEGraph(new EGraphImpl(roots));
 		

@@ -2,9 +2,9 @@ package tests
 
 import java.util.List
 import org.eclipse.emf.common.util.DiagnosticChain
-import org.eclipse.emf.ecore.EFactory
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EPackage
+import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.emf.ecore.util.Diagnostician
 import org.eclipse.emf.henshin.interpreter.Engine
 import org.eclipse.emf.henshin.interpreter.UnitApplication
@@ -22,12 +22,11 @@ import org.junit.jupiter.api.Test
 import static org.junit.jupiter.api.Assertions.*
 
 import static extension tests.ClassModelExtensions.*
-import org.eclipse.emf.henshin.model.Rule
-import org.eclipse.emf.ecore.EClass
 
 class InjectionTest {
 	private static EPackage epackage;
 	private static Engine engine;
+	private static Resource modelResource;
 	private static EObject model;
 	private static List<EObject> roots;
 	private static Module injection;
@@ -36,15 +35,18 @@ class InjectionTest {
 		
 	@BeforeAll
 	def public static void createTransformationEnvironment() {
-		rs = new HenshinResourceSet("src/models/cra");
-		epackage = rs.registerDynamicEPackages("architectureCRA.ecore").get(0);
+		rs = ModelHelper.prepareEnvironment
 		ClassModelExtensions.setPackage(rs)
 		engine = new EngineImpl();		
 	}
 	
 	@BeforeEach
 	def public void resetUnitApp() {
+		if (modelResource !== null) {
+			modelResource.unload;
+		}
 		unitApp = new UnitApplicationImpl(engine);
+		rs.getResource("injection.henshin").unload
 		injection = rs.getModule("injection.henshin");
 	}
 
@@ -54,7 +56,8 @@ class InjectionTest {
 	@Test
 	@DisplayName("Preserving distribution: All features need to be split")
 	def public void testDistrSplit() {
-		roots = rs.getResource("../../tests/models/injection/allDistributedVsAllCombined.xmi").contents
+		modelResource = rs.getResource("../../tests/models/injection/allDistributedVsAllCombined.xmi")
+		roots = modelResource.contents
 		var targetModel = roots.get(1)
 		unitApp.setEGraph(new EGraphImpl(roots))
 		unitApp.setUnit(injection.getUnit("injectPreservingDistribution"));
@@ -66,7 +69,8 @@ class InjectionTest {
 	@Test
 	@DisplayName("Preserving distribution: All features need to be merged")
 	def public void testDistrMerge() {
-		roots = rs.getResource("../../tests/models/injection/allCombinedVsAllDistributed.xmi").contents
+		modelResource = rs.getResource("../../tests/models/injection/allCombinedVsAllDistributed.xmi")
+		roots = modelResource.contents
 		var targetModel = roots.get(1)
 		unitApp.setEGraph(new EGraphImpl(roots))
 		unitApp.setUnit(injection.getUnit("injectPreservingDistribution"));
@@ -80,7 +84,8 @@ class InjectionTest {
 	@Test
 	@DisplayName("Preserving dependencies: Test split, merge-split and skip")
 	def public void testDepSplitMergeSplitSkip() {
-		roots = rs.getResource("../../tests/models/injection/preserveDependenciesComplete.xmi").contents
+		modelResource = rs.getResource("../../tests/models/injection/preserveDependenciesComplete.xmi")
+		roots = modelResource.contents
 		val targetModel = roots.get(1)
 		unitApp.setEGraph(new EGraphImpl(roots))
 		unitApp.setUnit(injection.getUnit("injectPreservingDistribution"));
