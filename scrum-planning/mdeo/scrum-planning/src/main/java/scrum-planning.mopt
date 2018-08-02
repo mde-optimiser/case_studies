@@ -14,6 +14,6 @@ parameters {
 	population: 40
 }
 termination {
-	evolutions: 500
+	time: 60
 }
 batches 1

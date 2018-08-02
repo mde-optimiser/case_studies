@@ -10,6 +10,6 @@ optimisation provider moea algorithm NSGAII variation mutation parameters {
 	population: 40
 }
 termination {
-	evolutions: 500
+	time: 60
 }
 batches 1

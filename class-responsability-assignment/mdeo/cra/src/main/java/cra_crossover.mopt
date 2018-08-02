@@ -8,12 +8,12 @@ mutate using <craEvolvers.henshin> unit "createClass"
 mutate using <craEvolvers.henshin> unit "assignFeature"
 mutate using <craEvolvers.henshin> unit "moveFeature"
 mutate using <craEvolvers.henshin> unit "deleteEmptyClass"
-breed using <crossover.henshin> unit "selectRandomFeatures_injectAsNewClass" parameters { matchingSelection => "models.cra.parameters.BooleanEvolverParameter" } 
+breed using <crossover.henshin> unit "selectRandomFeatures_injectAsNewClass" parameters { matchingSelection => "models.cra.parameters.BooleanEvolverParameterTrue" } 
 optimisation provider moea algorithm NSGAII variation genetic(50, 100) 
 parameters {
 	population: 40
 }
 termination {
-	evolutions: 500
+	time: 60
 }
 batches 1
