@@ -1,11 +1,10 @@
 basepath <src/main/resources/models/cra/>
 metamodel <architectureCRA.ecore>
-model <TTC_InputRDG_C.xmi>
+model <TTC_InputRDG_A.xmi>
+refine metamodel {"Feature", "isEncapsulatedBy", 1, 1}
 objective CRA maximise java { "models.cra.fitness.MaximiseCRA" }
 constraint MinimiseClasslessFeatures java { "models.cra.fitness.MinimiseClasslessFeatures" }
-constraint MinimiseEmptyClasses java { "models.cra.fitness.MinimiseEmptyClasses" }
-mutate using <craEvolvers.henshin> unit "createClass"
-mutate using <craEvolvers.henshin> unit "assignFeature"
+mutate {"Class"}
 optimisation provider moea algorithm NSGAII variation mutation parameters {
 	population: 40
 }

@@ -6,7 +6,11 @@ constraint MinimiseClasslessFeatures java { "models.cra.fitness.MinimiseClassles
 constraint MinimiseEmptyClasses java { "models.cra.fitness.MinimiseEmptyClasses" }
 mutate using <craEvolvers.henshin> unit "createClass"
 mutate using <craEvolvers.henshin> unit "assignFeature"
-optimisation provider moea algorithm NSGAII variation mutation parameters {
+mutate using <craEvolvers.henshin> unit "moveFeature"
+mutate using <craEvolvers.henshin> unit "deleteEmptyClass"
+breed using <crossover.henshin> unit "selectRandomFeatures_injectAsNewClass" parameters { matchingSelection => "models.cra.parameters.BooleanEvolverParameter" } 
+optimisation provider moea algorithm NSGAII variation genetic(50, 100) 
+parameters {
 	population: 40
 }
 termination {
