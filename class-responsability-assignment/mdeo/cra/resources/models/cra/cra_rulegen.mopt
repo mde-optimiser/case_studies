@@ -1,8 +1,0 @@
-basepath <src/main/resources/models/cra/>
-metamodel <architectureCRA.ecore>
-model <TTC_InputRDG_D.xmi>
-refine metamodel {"Feature", "isEncapsulatedBy", 1, 1}
-objective CRA maximise java { "models.cra.fitness.MaximiseCRA" }
-constraint MinimiseClasslessFeatures java { "models.cra.fitness.MinimiseClasslessFeatures" }
-mutate {"Class"}
-optimisation provider moea algorithm NSGAII variation mutation evolutions 500 population 40 batches 30

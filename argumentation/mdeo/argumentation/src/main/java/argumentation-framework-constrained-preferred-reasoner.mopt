@@ -4,4 +4,11 @@ model <PF-200-args-Audience-Members-50-Member-Pf-Size-11-args.xmi>
 objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation.fitness.MaximisePFWithAcceptableTopicsPreferredReasoner" }
 objective MinimiseArgumentsPutForward minimise java { "models.argumentation.fitness.MinimiseArgumentsPutForward" }
 mutate {"Persuader", "putsForward"}
-optimisation provider moea algorithm NSGAII variation mutation evolutions 200 population 30 batches 1
+optimisation provider moea algorithm NSGAII variation mutation 
+parameters {
+	population: 30
+}
+termination {
+	evolutions: 200
+}
+batches 1

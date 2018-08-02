@@ -3,4 +3,10 @@ metamodel <argumentation.ecore>
 model <PF-Tree-52-args-Audience-Members-5-Member-Pf-Size-40-args.xmi>
 objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation.fitness.MaximisePFWithAcceptableTopicsGroundReasoner" }
 mutate {"Persuader", "putsForward"}
-optimisation provider moea algorithm NSGAII variation mutation evolutions 50 population 25 batches 1
+optimisation provider moea algorithm NSGAII variation mutation parameters {
+	population: 30
+}
+termination {
+	evolutions: 200
+}
+batches 1

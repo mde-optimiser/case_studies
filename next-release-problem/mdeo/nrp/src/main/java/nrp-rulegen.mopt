@@ -6,4 +6,10 @@ objective MinimiseCost minimise java { "models.nrp.fitness.MinimiseCost" }
 objective MaximiseSatisfaction maximise java { "models.nrp.fitness.MaximiseSatisfaction" }
 mutate {"Solution","selectedArtifacts"}
 optimisation provider moea algorithm NSGAII 
-variation mutation evolutions 500 population 40 batches 30
+variation mutation parameters {
+	population: 40
+}
+termination {
+	evolutions: 500
+}
+batches 30

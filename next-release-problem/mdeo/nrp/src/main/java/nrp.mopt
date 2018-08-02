@@ -7,4 +7,11 @@ mutate using <mutation.henshin> unit "modifySelectionWithHierarchy"
 mutate using <mutation.henshin> unit "modifySingleSelection"
 mutate using <mutation.henshin> unit "selectHighestRealisation"
 mutate using <mutation.henshin> unit "fixDependencies"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 1000 population 40 batches 1
+optimisation provider moea algorithm NSGAII 
+variation mutation parameters {
+	population: 40
+}
+termination {
+	evolutions: 500
+}
+batches 30

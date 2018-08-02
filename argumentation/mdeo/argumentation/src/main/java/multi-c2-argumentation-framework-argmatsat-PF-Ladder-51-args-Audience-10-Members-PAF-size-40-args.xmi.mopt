@@ -6,4 +6,10 @@ objective MinimiseArgumentsPutForward minimise java { "models.argumentation.fitn
 mutate using <multiADD_edge_putsForward_to_Persuader_rules.henshin> unit "multiAddToPersuader_putsForward_Argument"
 mutate using <multiREMOVE_edge_putsForward_to_Persuader_rules.henshin> unit "multiRemoveFromPersuader_putsForward_Argument"
 mutate {"Persuader", "putsForward"}
-optimisation provider moea algorithm NSGAII variation mutation evolutions 250 population 30 batches 1
+optimisation provider moea algorithm NSGAII variation mutation parameters {
+	population: 30
+}
+termination {
+	evolutions: 250
+}
+batches 10

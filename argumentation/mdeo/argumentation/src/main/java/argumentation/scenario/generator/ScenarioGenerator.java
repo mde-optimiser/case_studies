@@ -138,9 +138,9 @@ public class ScenarioGenerator {
 		Scenario s = sg.generate(10, 50);
 		System.out.println(s);
 		
-		ScenarioGenerator sg = new ScenarioGenerator(new File("/home/josh/Desktop/A/BA_60_70_3.tgf"));
-		Scenario s = sg.generate(30, 20);
-//		System.out.println(s);
+//		ScenarioGenerator sg = new ScenarioGenerator(new File("/home/josh/Desktop/A/BA_60_70_3.tgf"));
+//		Scenario s = sg.generate(30, 20);
+////		System.out.println(s);
 	}
 	
 }
