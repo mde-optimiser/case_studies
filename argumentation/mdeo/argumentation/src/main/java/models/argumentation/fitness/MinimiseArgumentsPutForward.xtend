@@ -1,14 +1,14 @@
 package models.argumentation.fitness
 
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
-import org.eclipse.emf.common.util.EList
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class MinimiseArgumentsPutForward implements IGuidanceFunction {
 	
-	override computeFitness(EObject model) {
+	override computeFitness(Solution solution) {
 		
-		var scenario = new EcoreScenarioParser(model)
+		var scenario = new EcoreScenarioParser(solution.model)
 		
 		var frameworkArguments = scenario.getArgumentationFrameworkArguments()
 		

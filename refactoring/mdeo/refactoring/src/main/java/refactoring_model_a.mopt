@@ -1,0 +1,26 @@
+problem {
+	basepath <src/main/resources/models/refactoring/>
+	metamodel <at.ac.tuwien.big.momot.examples.refactoring.refactoring.RefactoringPackage>
+	model <SeveralRefactorings.xmi>
+}
+goal {
+	objective ContentSize maximise java { "models.refactoring.fitness.MinimiseContentSize" }
+	objective Transformations minimise java { "models.refactoring.fitness.MinimiseTransformations" }
+}
+search {
+	mutate using <Refactoring.henshin> unit "createRootClass"
+	mutate using <Refactoring.henshin> unit "extractSuperClass"
+	mutate using <Refactoring.henshin> unit "pullUpAttribute"
+}
+solver {
+	optimisation provider moea algorithm NSGAII {
+		population: 40
+		variation: mutation
+		mutation.step: 1
+		mutation.strategy: random
+	}
+	termination {
+		evolutions: 500
+	}
+	batches 1
+}

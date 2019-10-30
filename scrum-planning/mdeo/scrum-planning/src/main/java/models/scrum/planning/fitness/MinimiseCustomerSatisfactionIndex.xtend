@@ -1,25 +1,23 @@
 package models.scrum.planning.fitness
 
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.common.util.EList
 import java.util.ArrayList
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class MinimiseCustomerSatisfactionIndex implements IGuidanceFunction {
 	
-	override computeFitness(EObject model) {
+	override computeFitness(Solution solution) {
 		
-		
-		
-		val sprints = (model.getFeature("sprints") as EList<EObject>)
+		val sprints = (solution.model.getFeature("sprints") as EList<EObject>)
 		val standardDeviationCalculator = new StandardDeviation();
 		
 		val stakeholderImportanceSprintDeviation = new ArrayList<Double>();
 		
-		(model.getFeature("stakeholders") as EList<EObject>).forEach[stakeholder |
-			
-			
+		(solution.model.getFeature("stakeholders") as EList<EObject>).forEach[stakeholder |
+						
 			var effortAccrossSprints = sprints.map[
 			sprint | new Double((sprint.getFeature("committedItem") as EList<EObject>)
 				.filter[ item | item.getFeature("stakeholder").equals(stakeholder)]

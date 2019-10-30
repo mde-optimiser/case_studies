@@ -1,15 +1,26 @@
-basepath <src/main/resources/models/argumentation/configuration-2/>
-metamodel <argumentation.ecore>
-model <PF-Tree-52-args-Audience-100-Members-PAF-size-40-args.xmi>
-objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation.fitness.MaximisePFWithAcceptableTopicsArgMatSat" }
-objective MinimiseArgumentsPutForward minimise java { "models.argumentation.fitness.MinimiseArgumentsPutForward" }
-mutate using <multiADD_edge_putsForward_to_Persuader_rules.henshin> unit "multiAddToPersuader_putsForward_Argument"
-mutate using <multiREMOVE_edge_putsForward_to_Persuader_rules.henshin> unit "multiRemoveFromPersuader_putsForward_Argument"
-mutate {"Persuader", "putsForward"}
-optimisation provider moea algorithm NSGAII variation mutation parameters {
-	population: 30
+problem {
+	basepath <src/main/resources/models/argumentation/configuration-2/>
+	metamodel <argumentation.ecore>
+	model <PF-Tree-52-args-Audience-100-Members-PAF-size-40-args.xmi>
 }
-termination {
-	evolutions: 250
+goal {
+	objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation.fitness.MaximisePFWithAcceptableTopicsArgMatSat" }
+	objective MinimiseArgumentsPutForward minimise java { "models.argumentation.fitness.MinimiseArgumentsPutForward" }
 }
-batches 10
+search {
+	mutate using <multiADD_edge_putsForward_to_Persuader_rules.henshin> unit "multiAddToPersuader_putsForward_Argument"
+	mutate using <multiREMOVE_edge_putsForward_to_Persuader_rules.henshin> unit "multiRemoveFromPersuader_putsForward_Argument"
+	mutate {"Persuader", "putsForward"}
+}
+solver {
+	optimisation provider moea algorithm NSGAII {
+		population: 40
+		variation: mutation
+		mutation.step: 1
+		mutation.strategy: random
+	}
+	termination {
+		evolutions: 500
+	}
+	batches 1
+}

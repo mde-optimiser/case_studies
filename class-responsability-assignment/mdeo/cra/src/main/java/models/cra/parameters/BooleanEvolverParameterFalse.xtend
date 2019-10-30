@@ -1,12 +1,13 @@
 package models.cra.parameters
 
-import uk.ac.kcl.interpreter.evolvers.parameters.IEvolverParametersFunction
 import java.util.List
 import org.eclipse.emf.ecore.EObject
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.evolvers.parameters.IEvolverParametersFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class BooleanEvolverParameterFalse implements IEvolverParametersFunction {
 	
-	override sample(List<EObject> arg0) {
+	override sample(List<Solution> arg0) {
 		return false;
 	}
 	

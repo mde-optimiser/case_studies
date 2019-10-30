@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ASCII"?>
+<NRP:NRP xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:NRP="http://model.nrp">
+  <customers name="Randal Blanda" importance="1.0" assigns="//@requirements.1/@valuations.0 //@requirements.2/@valuations.1 //@requirements.2/@valuations.3 //@requirements.3/@valuations.1 //@requirements.3/@valuations.2 //@requirements.4/@valuations.0"/>
+  <customers name="Nadia Hickle" importance="4.0" assigns="//@requirements.0/@valuations.0 //@requirements.1/@valuations.0 //@requirements.2/@valuations.2 //@requirements.3/@valuations.1 //@requirements.3/@valuations.2 //@requirements.4/@valuations.0"/>
+  <customers name="Mr. Rodrigo Waelchi" importance="2.0" assigns="//@requirements.2/@valuations.0 //@requirements.2/@valuations.2 //@requirements.2/@valuations.3 //@requirements.3/@valuations.0 //@requirements.3/@valuations.1 //@requirements.3/@valuations.2"/>
+  <availableArtifacts name="Software artifact Fixflex version 0.0.5" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="90.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Prodder version 1.0.0" contributesTo="//@requirements.1/@realisations.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitwolf version 3.2.7" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 5.72" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="98.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Temp version 8.9" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fix San version 0.1.9" contributesTo="//@requirements.2/@realisations.0 //@requirements.1/@realisations.0">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Toughjoyfax version 0.06" contributesTo="//@requirements.2/@realisations.0 //@requirements.3/@realisations.0">
+    <costs amount="66.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Andalax version 5.1" contributesTo="//@requirements.2/@realisations.0 //@requirements.0/@realisations.0">
+    <costs amount="59.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 6.9.5" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="91.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tres-Zap version 9.5" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="59.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fix San version 0.9.5" requires="//@availableArtifacts.5 //@availableArtifacts.6 //@availableArtifacts.7 //@availableArtifacts.8 //@availableArtifacts.9" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="66.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 0.08" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="61.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Fixflex version 5.6" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="53.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zoolab version 0.52" contributesTo="//@requirements.4/@realisations.0 //@requirements.0/@realisations.0">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonair version 0.0.9" contributesTo="//@requirements.4/@realisations.0 //@requirements.1/@realisations.0">
+    <costs amount="74.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Flowdesk version 0.13" requires="//@availableArtifacts.13 //@availableArtifacts.14" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitwolf version 0.3.2" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="85.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 0.75" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Rank version 5.30" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="79.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Bitchip version 6.3.3" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Hatity version 0.5.2" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="53.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stringtough version 5.90" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Namfix version 0.6.7" contributesTo="//@requirements.3/@realisations.0 //@requirements.1/@realisations.0">
+    <costs amount="94.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 0.18" contributesTo="//@requirements.3/@realisations.0 //@requirements.1/@realisations.0">
+    <costs amount="64.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Cookley version 3.3.1" contributesTo="//@requirements.3/@realisations.0 //@requirements.4/@realisations.0">
+    <costs amount="78.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 9.9.3" requires="//@availableArtifacts.20 //@availableArtifacts.21 //@availableArtifacts.22 //@availableArtifacts.23 //@availableArtifacts.24" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="97.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotlux version 9.68" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="58.0"/>
+  </availableArtifacts>
+  <requirements name="Specification #52798917">
+    <valuations value="8.0" assignedBy="//@customers.1"/>
+    <realisations percentage="0.29" dependsOn="//@availableArtifacts.0 //@availableArtifacts.7 //@availableArtifacts.11 //@availableArtifacts.13 //@availableArtifacts.16 //@availableArtifacts.18 //@availableArtifacts.26"/>
+  </requirements>
+  <requirements name="Specification #17827966">
+    <valuations value="9.0" assignedBy="//@customers.0 //@customers.1"/>
+    <realisations percentage="0.81" dependsOn="//@availableArtifacts.1 //@availableArtifacts.5 //@availableArtifacts.14 //@availableArtifacts.22 //@availableArtifacts.23"/>
+  </requirements>
+  <requirements name="Specification #41711903">
+    <valuations value="6.0" assignedBy="//@customers.2"/>
+    <valuations value="10.0" assignedBy="//@customers.0"/>
+    <valuations value="9.0" assignedBy="//@customers.1 //@customers.2"/>
+    <valuations value="2.0" assignedBy="//@customers.2 //@customers.0"/>
+    <realisations percentage="0.99" dependsOn="//@availableArtifacts.2 //@availableArtifacts.10 //@availableArtifacts.5 //@availableArtifacts.6 //@availableArtifacts.7 //@availableArtifacts.8 //@availableArtifacts.9 //@availableArtifacts.19"/>
+  </requirements>
+  <requirements name="Specification #57202143">
+    <valuations value="2.0" assignedBy="//@customers.2"/>
+    <valuations value="8.0" assignedBy="//@customers.2 //@customers.0 //@customers.1"/>
+    <valuations value="6.0" assignedBy="//@customers.0 //@customers.1 //@customers.2"/>
+    <realisations percentage="0.7" dependsOn="//@availableArtifacts.3 //@availableArtifacts.6 //@availableArtifacts.25 //@availableArtifacts.20 //@availableArtifacts.21 //@availableArtifacts.22 //@availableArtifacts.23 //@availableArtifacts.24"/>
+  </requirements>
+  <requirements name="Specification #55695657">
+    <valuations value="5.0" assignedBy="//@customers.1 //@customers.0"/>
+    <realisations percentage="0.18" dependsOn="//@availableArtifacts.4 //@availableArtifacts.12 //@availableArtifacts.15 //@availableArtifacts.13 //@availableArtifacts.14 //@availableArtifacts.17 //@availableArtifacts.24"/>
+  </requirements>
+  <solutions/>
+</NRP:NRP>

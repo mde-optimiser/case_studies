@@ -2,14 +2,15 @@ package models.stack.fitness
 
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class MinimiseStandardDeviation  implements IGuidanceFunction {
 	
-	override computeFitness(EObject model) {
+	override computeFitness(Solution solution) {
 		
-		var fitness = (model.getFeature("stacks") as EList<EObject>).map[ e | new Double(e.getFeature("load") as Integer)]
+		var fitness = (solution.model.getFeature("stacks") as EList<EObject>).map[ e | new Double(e.getFeature("load") as Integer)]
 		var sD = new StandardDeviation().evaluate(fitness)
 		println("Found deviation: " + sD)
 		return sD;

@@ -1,16 +1,17 @@
 package models.argumentation.fitness
 
-import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.ecore.EObject
 import java.util.HashMap
 import net.sf.tweety.arg.dung.DungTheory
 import net.sf.tweety.arg.dung.syntax.Argument
 import java.util.HashSet
 import java.util.ArrayList
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class MaximiseHeuristicSolver implements IGuidanceFunction {
 	
-	override computeFitness(EObject arg0) {
+	override computeFitness(Solution model) {
 		
 		
 //		DungTheory dt = s.persuadersFramework;

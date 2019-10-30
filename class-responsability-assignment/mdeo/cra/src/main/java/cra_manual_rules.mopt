@@ -1,16 +1,25 @@
-basepath <src/main/resources/models/cra/>
-metamodel <architectureCRA.ecore>
-model <TTC_InputRDG_D.xmi>
-objective CRA maximise java { "models.cra.fitness.MaximiseCRA" }
-constraint MinimiseClasslessFeatures java { "models.cra.fitness.MinimiseClasslessFeatures" }
-mutate using <craEvolvers.henshin> unit "createClass"
-mutate using <craEvolvers.henshin> unit "assignFeature"
-mutate using <craEvolvers.henshin> unit "moveFeature"
-mutate using <craEvolvers.henshin> unit "deleteEmptyClass"
-optimisation provider moea algorithm NSGAII variation mutation parameters {
-	population: 40
+problem {
+	basepath <src/main/resources/models/cra/>
+	metamodel <architectureCRA.ecore>
+	model <TTC_InputRDG_C.xmi>
 }
-termination {
-	time: 60
+goal {
+	refine metamodel {"Feature", "isEncapsulatedBy", 1, 1}
+	objective CRA maximise java { "models.cra.fitness.MaximiseCRA" }
+	constraint MinimiseClasslessFeatures java { "models.cra.fitness.MinimiseClasslessFeatures" }
 }
-batches 1
+search { 
+	mutate {"Class"}
+}
+solver {
+	optimisation provider moea algorithm NSGAII {
+		population: 40
+		variation: mutation
+		mutation.step: 1
+		mutation.strategy: random
+	}
+	termination {
+		evolutions: 500
+	}
+	batches 1
+}

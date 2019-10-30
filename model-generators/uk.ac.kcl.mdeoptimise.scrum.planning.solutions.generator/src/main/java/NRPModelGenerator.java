@@ -37,23 +37,23 @@ public class NRPModelGenerator {
         EObjectWrapper<EObject> modelRoot = metamodel.create("NRP");
         Faker faker = new Faker();
 
-        int maximumCustomers = 25;
-        int customers = 5;//getRandom(maximumCustomers);
+        int maximumCustomers = 25000;
+        int customers = 3;//getRandom(maximumCustomers);
         int maximumCustomerImportance = 5;
 
         int maximumRequirements = 50;
-        int requirements = 25;//getRandom(maximumRequirements) + customers;
+        int requirements = 5;//getRandom(maximumRequirements) + customers;
 
-        int maximumValuations = 5;
+        int maximumValuations = 3;
         int valuations = getRandom(maximumValuations);
 
-        int maximumRequirementRealisations = 5;
+        int maximumRequirementRealisations = 3;
         int requirementRealisations = getRandom(maximumRequirementRealisations);
 
         int maximumSoftwareArtifacts =100;
-        int softwareArtifacts = getRandom(maximumSoftwareArtifacts);
+        int softwareArtifacts = 10; //getRandom(maximumSoftwareArtifacts);
 
-        int maximumSoftwareArtifactsDependencies = 5;
+        int maximumSoftwareArtifactsDependencies = 3;
 
         //Generate customers
         List<EObjectWrapper> customerObjects = new ArrayList<EObjectWrapper>();

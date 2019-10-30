@@ -22,6 +22,7 @@ import argumentation.scenario.generator.TreeGenerator
 import java.util.Set
 import java.util.List
 import java.io.File
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class ScenarioModelGeneratorTests {
 
@@ -214,14 +215,18 @@ class ScenarioModelGeneratorTests {
 	
 	def String getModelFitnessGroundReasoner(EObject model){
 		
-		var fitness = new MaximisePFWithAcceptableTopicsGroundReasoner().computeFitness(model);
+		var solution = new Solution(model);
+		
+		var fitness = new MaximisePFWithAcceptableTopicsGroundReasoner().computeFitness(solution);
 		
 		return String.format("Acceptable topics with the Ground Reasoner: %s", fitness);
 	}
 	
 	def String getModelFitnessArgMatSatReasoner(EObject model){
 		
-		var fitness = new MaximisePFWithAcceptableTopicsArgMatSat().computeFitness(model);
+		var solution = new Solution(model);
+		
+		var fitness = new MaximisePFWithAcceptableTopicsArgMatSat().computeFitness(solution);
 		return String.format("Acceptable topics with the ArgMatSat: %s", fitness);
 	}
 }

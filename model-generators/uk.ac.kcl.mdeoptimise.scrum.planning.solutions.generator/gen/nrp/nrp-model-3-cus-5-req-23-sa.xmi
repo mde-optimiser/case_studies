@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ASCII"?>
+<NRP:NRP xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:NRP="http://model.nrp">
+  <customers name="Daren Bashirian" importance="3.0" assigns="//@requirements.0/@valuations.0 //@requirements.1/@valuations.0 //@requirements.2/@valuations.0 //@requirements.3/@valuations.0"/>
+  <customers name="Dr. Daron Brown" importance="1.0" assigns="//@requirements.1/@valuations.0 //@requirements.4/@valuations.0"/>
+  <customers name="Reilly Mueller" importance="2.0" assigns="//@requirements.0/@valuations.0 //@requirements.2/@valuations.0 //@requirements.3/@valuations.0"/>
+  <availableArtifacts name="Software artifact Rank version 0.44" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Quo Lux version 0.73" contributesTo="//@requirements.1/@realisations.0">
+    <costs amount="75.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Lotstring version 5.6" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sub-Ex version 0.06" contributesTo="//@requirements.2/@realisations.1">
+    <costs amount="91.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Rank version 0.76" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Stim version 4.7.4" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="81.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ronstring version 0.48" contributesTo="//@requirements.4/@realisations.1">
+    <costs amount="87.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Toughjoyfax version 7.00" contributesTo="//@requirements.0/@realisations.0 //@requirements.2/@realisations.0">
+    <costs amount="78.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Ronstring version 1.73" requires="//@availableArtifacts.7" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="82.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Alphazap version 9.03" contributesTo="//@requirements.3/@realisations.0">
+    <costs amount="83.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Daltfresh version 7.4.3" contributesTo="//@requirements.2/@realisations.0 //@requirements.4/@realisations.0">
+    <costs amount="63.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Mat Lam Tam version 0.1.1" requires="//@availableArtifacts.10" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="73.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Veribet version 0.0.3" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="52.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Subin version 0.3.9" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="68.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Job version 7.88" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="63.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Zamit version 3.84" requires="//@availableArtifacts.13 //@availableArtifacts.14" contributesTo="//@requirements.0/@realisations.0">
+    <costs amount="65.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Job version 4.2" contributesTo="//@requirements.2/@realisations.0">
+    <costs amount="96.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Sonair version 8.05" contributesTo="//@requirements.2/@realisations.1">
+    <costs amount="53.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Pannier version 0.0.2" contributesTo="//@requirements.4/@realisations.1">
+    <costs amount="95.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Otcom version 3.8" contributesTo="//@requirements.4/@realisations.1 //@requirements.1/@realisations.0">
+    <costs amount="50.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tampflex version 9.54" contributesTo="//@requirements.4/@realisations.1 //@requirements.2/@realisations.0">
+    <costs amount="99.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Veribet version 2.91" requires="//@availableArtifacts.19 //@availableArtifacts.20" contributesTo="//@requirements.4/@realisations.1">
+    <costs amount="80.0"/>
+  </availableArtifacts>
+  <availableArtifacts name="Software artifact Tampflex version 0.94" contributesTo="//@requirements.4/@realisations.0">
+    <costs amount="52.0"/>
+  </availableArtifacts>
+  <requirements name="Specification #79606028">
+    <valuations value="7.0" assignedBy="//@customers.0 //@customers.2"/>
+    <realisations percentage="0.37" dependsOn="//@availableArtifacts.0 //@availableArtifacts.8 //@availableArtifacts.7 //@availableArtifacts.15 //@availableArtifacts.13 //@availableArtifacts.14"/>
+  </requirements>
+  <requirements name="Specification #06698614">
+    <valuations value="10.0" assignedBy="//@customers.0 //@customers.1"/>
+    <realisations percentage="0.57" dependsOn="//@availableArtifacts.1 //@availableArtifacts.19"/>
+  </requirements>
+  <requirements name="Specification #39522030">
+    <valuations value="9.0" assignedBy="//@customers.2 //@customers.0"/>
+    <realisations percentage="0.56" dependsOn="//@availableArtifacts.2 //@availableArtifacts.7 //@availableArtifacts.11 //@availableArtifacts.10 //@availableArtifacts.12 //@availableArtifacts.16 //@availableArtifacts.20"/>
+    <realisations percentage="0.06" dependsOn="//@availableArtifacts.3 //@availableArtifacts.17"/>
+  </requirements>
+  <requirements name="Specification #35678052">
+    <valuations value="8.0" assignedBy="//@customers.0 //@customers.2"/>
+    <realisations percentage="0.08" dependsOn="//@availableArtifacts.4 //@availableArtifacts.9"/>
+  </requirements>
+  <requirements name="Specification #37079031">
+    <valuations value="10.0" assignedBy="//@customers.1"/>
+    <realisations percentage="0.82" dependsOn="//@availableArtifacts.5 //@availableArtifacts.10 //@availableArtifacts.22"/>
+    <realisations percentage="0.7" dependsOn="//@availableArtifacts.6 //@availableArtifacts.18 //@availableArtifacts.21 //@availableArtifacts.19 //@availableArtifacts.20"/>
+  </requirements>
+  <solutions/>
+</NRP:NRP>

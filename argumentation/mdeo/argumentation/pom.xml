@@ -19,6 +19,14 @@
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
 		</repository>
+		<repository>
+			<id>mdeoptimiser.maven.repository</id>
+			<url>https://mde-optimiser.github.io/mde_optimiser/downloads/develop/maven/</url>
+		</repository>
+		<repository>
+			<id>m2.moeaframework</id>
+			<url>https://mde-optimiser.github.io/mdeo_repo/repository/m2/moeaframework/</url>
+		</repository>
 	</repositories>
 
 	<build>
@@ -108,9 +116,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>uk.ac.kcl.mdeoptimise</groupId>
-			<artifactId>standalone</artifactId>
-			<version>1.0</version>
+			<groupId>uk.ac.kcl.inf.mdeoptimiser.libraries</groupId>
+			<artifactId>uk.ac.kcl.inf.mdeoptimiser.libraries.core</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/net.sf.tweety.arg/dung -->

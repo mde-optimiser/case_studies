@@ -2,12 +2,13 @@ package models.cra.fitness
 
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.common.util.EList
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class MaximiseCRA extends AbstractModelQueryFitnessFunction {
 
-	override double computeFitness(EObject model) {
-		val cohesion = calculateCohesionRatio(model);
-		val coupling = calculateCouplingRatio(model);
+	override double computeFitness(Solution solution) {
+		val cohesion = calculateCohesionRatio(solution.model);
+		val coupling = calculateCouplingRatio(solution.model);
 
 		println("Calculated CRA : " + (cohesion - coupling))
 

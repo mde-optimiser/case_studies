@@ -1,13 +1,24 @@
-basepath <src/main/resources/models/stack/>
-metamodel <stack.ecore>
-model <model_ten_stacks.xmi>
-objective StandardDeviation minimise java { "models.stack.fitness.MinimiseStandardDeviation" }
-mutate using <stack.henshin> unit "shiftLeft" parameters { amount => Random("[0-5]{1}") }
-mutate using <stack.henshin> unit "shiftRight" parameters { amount => Random("[0-5]{1}") }
-optimisation provider moea algorithm NSGAII variation mutation parameters {
-	population: 100
+problem {
+	basepath <src/main/resources/models/stack/>
+	metamodel <stack.ecore>
+	model <model_ten_stacks.xmi>
 }
-termination {
-	evolutions: 1000
+goal {
+	objective StandardDeviation minimise java { "models.stack.fitness.MinimiseStandardDeviation" }
 }
-batches 1
+search {
+	mutate using <stack.henshin> unit "shiftLeft" parameters { amount => Random("[0-5]{1}") }
+	mutate using <stack.henshin> unit "shiftRight" parameters { amount => Random("[0-5]{1}") }
+}
+solver {
+	optimisation provider moea algorithm NSGAII {
+		population: 40
+		variation: mutation
+		mutation.step: 1
+		mutation.strategy: random
+	}
+	termination {
+		evolutions: 500
+	}
+	batches 1
+}

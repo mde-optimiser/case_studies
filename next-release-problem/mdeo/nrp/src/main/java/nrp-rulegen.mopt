@@ -1,15 +1,25 @@
-basepath <src/main/resources/models/nrp/>
-metamodel <nextReleaseProblem.ecore>
-model <nrp-model-5-cus-25-req-63-sa.xmi>
-refine metamodel {"Solution", "selectedArtifacts", 1, -1}
-objective MinimiseCost minimise java { "models.nrp.fitness.MinimiseCost" }
-objective MaximiseSatisfaction maximise java { "models.nrp.fitness.MaximiseSatisfaction" }
-mutate {"Solution","selectedArtifacts"}
-optimisation provider moea algorithm NSGAII 
-variation mutation parameters {
-	population: 40
+problem {
+	basepath <src/main/resources/models/nrp/>
+	metamodel <nextReleaseProblem.ecore>
+	model <nrp-model-5-cus-25-req-63-sa.xmi>
 }
-termination {
-	time: 60
+goal {
+	refine metamodel {"Solution", "selectedArtifacts", 1, -1}
+	objective MinimiseCost minimise java { "models.nrp.fitness.MinimiseCost" }
+	objective MaximiseSatisfaction maximise java { "models.nrp.fitness.MaximiseSatisfaction" }
 }
-batches 30
+search {
+	mutate {"Solution","selectedArtifacts"}
+}
+solver {
+	optimisation provider moea algorithm NSGAII {
+		population: 40
+		variation: mutation
+		mutation.step: 1
+		mutation.strategy: random
+	}
+	termination {
+		evolutions: 500
+	}
+	batches 1
+}

@@ -1,13 +1,23 @@
-basepath <src/main/resources/models/argumentation/>
-metamodel <argumentation.ecore>
-model <PF-Ladder-51-args-Audience-2-Members-PAF-size-40-args.xmi>
-objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation.fitness.MaximisePFWithAcceptableTopicsArgMatSat" }
-mutate {"Persuader", "putsForward"}
-optimisation provider moea algorithm NSGAII variation mutation 
-parameters {
-	population: 30
+problem{
+	basepath <src/main/resources/models/argumentation/>
+	metamodel <argumentation.ecore>
+	model <PF-Ladder-51-args-Audience-2-Members-PAF-size-40-args.xmi>
 }
-termination {
-	evolutions: 100
+goal {
+	objective MaximisePFWithAcceptableTopics maximise java { "models.argumentation.fitness.MaximisePFWithAcceptableTopicsArgMatSat" }
 }
-batches 1
+search {
+	mutate {"Persuader", "putsForward"}
+}
+solver {
+	optimisation provider moea algorithm NSGAII {
+		population: 40
+		variation: mutation
+		mutation.step: 1
+		mutation.strategy: random
+	}
+	termination {
+		evolutions: 500
+	}
+	batches 1
+}

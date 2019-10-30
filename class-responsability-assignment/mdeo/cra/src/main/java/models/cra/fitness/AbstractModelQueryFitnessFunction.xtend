@@ -2,7 +2,7 @@ package models.cra.fitness
 
 import org.eclipse.emf.common.util.BasicEList
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction
 
 abstract class AbstractModelQueryFitnessFunction implements IGuidanceFunction {
 	/**
