@@ -17,6 +17,13 @@
   </availableArtifacts>
   <availableArtifacts
       name="SA2"
+      requires="//@availableArtifacts.2"
+      contributesTo="//@requirements.1/@realisations.0"
+      solutions="//@solutions.0">
+    <costs/>
+  </availableArtifacts>
+  <availableArtifacts
+      name="SA3"
       contributesTo="//@requirements.1/@realisations.0">
     <costs/>
   </availableArtifacts>
@@ -33,8 +40,8 @@
         value="1.0"
         assignedBy="//@customers.0"/>
     <realisations
-        dependsOn="//@availableArtifacts.1"/>
+        dependsOn="//@availableArtifacts.1 //@availableArtifacts.2"/>
   </requirements>
   <solutions
-      selectedArtifacts="//@availableArtifacts.0"/>
+      selectedArtifacts="//@availableArtifacts.0 //@availableArtifacts.1"/>
 </NRP:NRP>

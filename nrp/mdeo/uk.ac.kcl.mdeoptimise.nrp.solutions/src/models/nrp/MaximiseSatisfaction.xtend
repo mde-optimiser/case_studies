@@ -2,7 +2,8 @@ package models.nrp
 
 import org.eclipse.emf.common.util.BasicEList
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class MaximiseSatisfaction  implements IGuidanceFunction {
 	
@@ -39,8 +40,8 @@ class MaximiseSatisfaction  implements IGuidanceFunction {
 	 * </p> 
 	 * 
 	 */
-	override computeFitness(EObject model) {
-		model.getReferenceFeature('customers').fold(0.0d)[result, customer | 
+	override computeFitness(Solution solution) {
+		solution.model.getReferenceFeature('customers').fold(0.0d)[result, customer | 
 			result + ((customer.getFeature('importance') as Double) * customer.calculateSatisfaction)
 		]
 	}
@@ -116,13 +117,16 @@ class MaximiseSatisfaction  implements IGuidanceFunction {
 	 * realisation directly or indirectly depends on are selected in the solution. 
  	 */
 	def isImplemented(EObject realisation) {
-		realisation.getReferenceFeature('dependsOn').forall[sa | sa.isSelected
-			&& sa.getReferenceFeature('requires').forall[reqSa| reqSa.isSelected]
-		]
+		realisation.getReferenceFeature('dependsOn').forall[sa | sa.isSelectedWithRequirements]
 	}
 
-	def isSelected(EObject softwareArtifact) {
-		softwareArtifact.getReferenceFeature('solutions').head !== null
+	def boolean isSelectedWithRequirements(EObject softwareArtifact) {
+		(softwareArtifact.getReferenceFeature('solutions').head !== null)
+			&& softwareArtifact.getReferenceFeature('requires').forall[reqSa| reqSa.isSelectedWithRequirements]
+	}
+	
+	def areRequirementsSelected(EObject softwareArtifact) {
+		//softwareArtifact.
 	}
 
 	def Object getFeature (EObject o, String feature) {		
