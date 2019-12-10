@@ -1,9 +1,29 @@
-basepath <src/models/nrp/>
-metamodel <nextReleaseProblem.ecore>
-model <NRP.xmi>
-objective MinimiseCost minimise java { "models.nrp.MinimiseCost" }
-objective MaximiseSatisfaction maximise java { "models.nrp.MaximiseSatisfaction" }
-mutate using <mutation.henshin> unit "modifySelectionWithHierarchy"
-mutate using <mutation.henshin> unit "modifySingleSelection"
-mutate using <mutation.henshin> unit "selectHighestRealisation"
-optimisation provider moea algorithm NSGAII variation mutation evolutions 150 population 30 experiments 10
+problem {
+	basepath <src/models/nrp/>
+	metamodel <nextReleaseProblem.ecore>
+	model <NRP.xmi>
+}
+
+goal {
+	objective MinimiseCost minimise java { "models.nrp.MinimiseCost" }
+	objective MaximiseSatisfaction maximise java { "models.nrp.MaximiseSatisfaction" }
+}
+
+search {
+	mutate using <mutation.henshin> unit "modifySelectionWithHierarchy"
+	mutate using <mutation.henshin> unit "modifySingleSelection"
+	mutate using <mutation.henshin> unit "selectHighestRealisation"
+}
+
+solver {
+	optimisation provider moea algorithm NSGAII {
+		 population: 30
+		 variation: mutation
+		 mutation.step: 1
+		 mutation.strategy: random
+		 }
+		 termination {
+		 	evolutions: 150
+		 }
+		 batches 1
+}
