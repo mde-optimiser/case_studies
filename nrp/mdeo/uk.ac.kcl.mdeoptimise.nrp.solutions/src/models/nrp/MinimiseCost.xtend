@@ -1,14 +1,15 @@
 package models.nrp
 
 import org.eclipse.emf.ecore.EObject
-import uk.ac.kcl.interpreter.IGuidanceFunction
 import org.eclipse.emf.common.util.BasicEList
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.IGuidanceFunction
+import uk.ac.kcl.inf.mdeoptimiser.libraries.core.optimisation.interpreter.guidance.Solution
 
 class MinimiseCost  implements IGuidanceFunction {
 	
-	override computeFitness(EObject model) {
+	override computeFitness(Solution solution) {
 		
-		val selectedArtifactsCost =  model.getReferenceFeature("solutions").head
+		val selectedArtifactsCost =  solution.model.getReferenceFeature("solutions").head
 				.getReferenceFeature("selectedArtifacts").fold(0d)[
 					result, artifact | 
 					
