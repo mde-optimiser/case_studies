@@ -47,7 +47,7 @@ class MaximiseSatisfaction  implements IGuidanceFunction {
 		
 		println("Found satisfaction: " + satisfaction)
 		
-		return -1 * satisfaction;
+		return -1d * satisfaction;
 	}
 	
 	/**
@@ -121,13 +121,12 @@ class MaximiseSatisfaction  implements IGuidanceFunction {
 	 * realisation directly or indirectly depends on are selected in the solution. 
  	 */
 	def isImplemented(EObject realisation) {
-		realisation.getReferenceFeature('dependsOn').forall[sa | sa.isSelected
-			&& sa.getReferenceFeature('requires').forall[reqSa| reqSa.isSelected]
-		]
+		realisation.getReferenceFeature('dependsOn').forall[sa | sa.isSelectedWithRequirements]
 	}
 
-	def isSelected(EObject softwareArtifact) {
-		softwareArtifact.getReferenceFeature('solutions').head !== null
+	def boolean isSelectedWithRequirements(EObject softwareArtifact) {
+		(softwareArtifact.getReferenceFeature('solutions').head !== null)
+			&& softwareArtifact.getReferenceFeature('requires').forall[reqSa| reqSa.isSelectedWithRequirements]
 	}
 
 	def Object getFeature (EObject o, String feature) {		
