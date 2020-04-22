@@ -47,7 +47,7 @@ class MaximiseSatisfaction  implements IGuidanceFunction {
 		
 		println("Found satisfaction: " + satisfaction)
 		
-		return satisfaction;
+		return -1d * satisfaction;
 	}
 	
 	/**
